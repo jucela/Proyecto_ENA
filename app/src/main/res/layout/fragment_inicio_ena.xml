@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/layout_caratulaFragment"
+    tools:context="pe.gob.inei.encuestahabilidades.fragments.InicioENAFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/caratula_txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ENCUESTA NACIONAL AGROPECUARIA 2017"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/icons"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="@dimen/fab_margin"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="150dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SEGUNDO CURSO DE CAPACITACION – REGION COSTA SELVA Y ESTRATO ESPECIAL"
+            android:textColor="@color/icons"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btn_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="INGRESAR"
+            android:theme="@style/RaisedButtonDark"/>
+    </LinearLayout>
+
+
+</LinearLayout>
