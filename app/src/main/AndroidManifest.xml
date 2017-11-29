@@ -28,7 +28,7 @@
             android:configChanges="screenSize|orientation|keyboardHidden"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".fragments.InicioENAFragment"
+            android:name=".activities.MarcoActivity"
             android:configChanges="screenSize|orientation|keyboardHidden" />
         <activity
             android:name=".activities.EnhatrapeActivity"

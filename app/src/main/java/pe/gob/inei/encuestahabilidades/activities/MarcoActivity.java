@@ -92,12 +92,12 @@ public class MarcoActivity extends AppCompatActivity {
             permisoUsuario = recupera.getString("permisoUsuario");
         }
 
-        spDepartamento = (Spinner) findViewById(R.id.marco_sp_departamento);
-        spProvincia = (Spinner) findViewById(R.id.marco_sp_provincia);
-        spDistrito = (Spinner) findViewById(R.id.marco_sp_distrito);
-        spPeriodo = (Spinner) findViewById(R.id.marco_sp_periodo);
-        btnFiltrar = (Button) findViewById(R.id.marco_btnFiltrar);
-        btnMostrarTodo = (Button) findViewById(R.id.marco_btnMotrarTodo);
+//        spDepartamento = (Spinner) findViewById(R.id.marco_sp_departamento);
+//        spProvincia = (Spinner) findViewById(R.id.marco_sp_provincia);
+//        spDistrito = (Spinner) findViewById(R.id.marco_sp_distrito);
+//        spPeriodo = (Spinner) findViewById(R.id.marco_sp_periodo);
+//        btnFiltrar = (Button) findViewById(R.id.marco_btnFiltrar);
+//        btnMostrarTodo = (Button) findViewById(R.id.marco_btnMotrarTodo);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_encuestado);
 
@@ -105,9 +105,9 @@ public class MarcoActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         inicializarDatos();
-        cargarSpinerDepartamentos(departamentos);
-        cargarSpinerProvincias(provincias);
-        cargarSpinerDistritos(distritos);
+//        cargarSpinerDepartamentos(departamentos);
+//        cargarSpinerProvincias(provincias);
+//        cargarSpinerDistritos(distritos);
         marcoAdapter= new MarcoAdapter(itemMarcos, new MarcoAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
@@ -155,65 +155,65 @@ public class MarcoActivity extends AppCompatActivity {
         });
         recyclerView.setAdapter(marcoAdapter);
 
-        spDepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i > 0) obtenerProvincias(spDepartamento.getSelectedItem().toString());
-                if(i == 0) provincias = new ArrayList<String>();
-                cargarSpinerProvincias(provincias);
-                distritos = new ArrayList<String>();
-                cargarSpinerDistritos(distritos);
-                periodos = new ArrayList<String>();
-                cargarSpinerPeriodos(periodos);
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {}
-        });
-
-        spProvincia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i > 0) obtenerDistritos(spProvincia.getSelectedItem().toString());
-                if(i == 0) distritos = new ArrayList<String>();
-                cargarSpinerDistritos(distritos);
-                periodos = new ArrayList<String>();
-                cargarSpinerPeriodos(periodos);
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {}
-        });
-
-        spDistrito.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i > 0) obtenerPeriodos(spDistrito.getSelectedItem().toString());
-                if(i == 0) periodos = new ArrayList<String>();
-                cargarSpinerPeriodos(periodos);
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {}
-        });
-
-        btnFiltrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(periodos.size() > 1 && spPeriodo.getSelectedItemPosition() != 0){
-                    obtenerMarcoFiltrado(spDepartamento.getSelectedItem().toString(),
-                            spProvincia.getSelectedItem().toString(),
-                            spDistrito.getSelectedItem().toString(),
-                            spPeriodo.getSelectedItem().toString());
-                }else{
-                    Toast.makeText(MarcoActivity.this, "DEBE SELECCIONAR TODOS LOS CAMPOS ANTES DE FILTRAR", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        btnMostrarTodo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                obtenerMarcoTotal();
-                spDepartamento.setSelection(0);
-            }
-        });
+//        spDepartamento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                if(i > 0) obtenerProvincias(spDepartamento.getSelectedItem().toString());
+//                if(i == 0) provincias = new ArrayList<String>();
+////                cargarSpinerProvincias(provincias);
+//                distritos = new ArrayList<String>();
+////                cargarSpinerDistritos(distritos);
+//                periodos = new ArrayList<String>();
+////                cargarSpinerPeriodos(periodos);
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {}
+//        });
+//
+//        spProvincia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                if(i > 0) obtenerDistritos(spProvincia.getSelectedItem().toString());
+//                if(i == 0) distritos = new ArrayList<String>();
+//                //cargarSpinerDistritos(distritos);
+//                periodos = new ArrayList<String>();
+//                //cargarSpinerPeriodos(periodos);
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {}
+//        });
+//
+//        spDistrito.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                if(i > 0) obtenerPeriodos(spDistrito.getSelectedItem().toString());
+//                if(i == 0) periodos = new ArrayList<String>();
+//                //cargarSpinerPeriodos(periodos);
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {}
+//        });
+//
+//        btnFiltrar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(periodos.size() > 1 && spPeriodo.getSelectedItemPosition() != 0){
+//                    obtenerMarcoFiltrado(spDepartamento.getSelectedItem().toString(),
+//                            spProvincia.getSelectedItem().toString(),
+//                            spDistrito.getSelectedItem().toString(),
+//                            spPeriodo.getSelectedItem().toString());
+//                }else{
+//                    Toast.makeText(MarcoActivity.this, "DEBE SELECCIONAR TODOS LOS CAMPOS ANTES DE FILTRAR", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+//        btnMostrarTodo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                obtenerMarcoTotal();
+//                spDepartamento.setSelection(0);
+//            }
+//        });
 
     }
 
@@ -364,28 +364,28 @@ public class MarcoActivity extends AppCompatActivity {
         }
     }
 
-    public void cargarSpinerDepartamentos(ArrayList<String> datos){
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,datos);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spDepartamento.setAdapter(adapter);
-    }
-    public void cargarSpinerProvincias(ArrayList<String> datos){
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,datos);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spProvincia.setAdapter(adapter);
-    }
-
-    public void cargarSpinerDistritos(ArrayList<String> datos){
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,datos);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spDistrito.setAdapter(adapter);
-    }
-
-    public void cargarSpinerPeriodos(ArrayList<String> datos){
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,datos);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spPeriodo.setAdapter(adapter);
-    }
+//    public void cargarSpinerDepartamentos(ArrayList<String> datos){
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,datos);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spDepartamento.setAdapter(adapter);
+//    }
+//    public void cargarSpinerProvincias(ArrayList<String> datos){
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,datos);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spProvincia.setAdapter(adapter);
+//    }
+//
+//    public void cargarSpinerDistritos(ArrayList<String> datos){
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,datos);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spDistrito.setAdapter(adapter);
+//    }
+//
+//    public void cargarSpinerPeriodos(ArrayList<String> datos){
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,datos);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spPeriodo.setAdapter(adapter);
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
