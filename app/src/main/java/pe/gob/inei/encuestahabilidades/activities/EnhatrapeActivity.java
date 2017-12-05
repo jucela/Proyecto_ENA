@@ -38,8 +38,8 @@ import pe.gob.inei.encuestahabilidades.adapters.ExpandListAdapter;
 import pe.gob.inei.encuestahabilidades.fragments.CaratulaFragment;
 import pe.gob.inei.encuestahabilidades.fragments.InicioFragment;
 import pe.gob.inei.encuestahabilidades.fragments.Modulo10Fragment1;
-import pe.gob.inei.encuestahabilidades.fragments.Modulo1Fragment1;
-import pe.gob.inei.encuestahabilidades.fragments.Modulo1Fragment2;
+import pe.gob.inei.encuestahabilidades.fragments.Control1Fragment1;
+import pe.gob.inei.encuestahabilidades.fragments.Control1Fragment2;
 import pe.gob.inei.encuestahabilidades.fragments.Modulo1Fragment3;
 import pe.gob.inei.encuestahabilidades.fragments.Modulo2Fragment1;
 import pe.gob.inei.encuestahabilidades.fragments.Modulo2Fragment2;
@@ -341,12 +341,12 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
 //                correcto = inicioFragment.validar();
 //                break;
             case 0:
-                Modulo1Fragment1 modulo1Fragment1 = (Modulo1Fragment1) fragmentActual;
-                correcto = modulo1Fragment1.validar();
+                Control1Fragment1 Control1Fragment1 = (Control1Fragment1) fragmentActual;
+                correcto = Control1Fragment1.validar();
                 break;
             case 1:
-                Modulo1Fragment2 modulo1Fragment2= (Modulo1Fragment2) fragmentActual;
-                correcto = modulo1Fragment2.validar();
+                Control1Fragment2 Control1Fragment2= (Control1Fragment2) fragmentActual;
+                correcto = Control1Fragment2.validar();
                 break;
             case 2:
                 Modulo1Fragment3 modulo1Fragment3= (Modulo1Fragment3) fragmentActual;
@@ -615,11 +615,11 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
 //                InicioFragment inicioFragment = (InicioFragment) fragmentActual;
 //                inicioFragment.guardarDatos();break;
             case 0:
-                Modulo1Fragment1 modulo1Fragment1 = (Modulo1Fragment1) fragmentActual;
-                modulo1Fragment1.guardarDatos();break;
+                Control1Fragment1 Control1Fragment1 = (Control1Fragment1) fragmentActual;
+                Control1Fragment1.guardarDatos();break;
             case 1:
-                Modulo1Fragment2 modulo1Fragment2 = (Modulo1Fragment2) fragmentActual;
-                modulo1Fragment2.guardarDatos();break;
+                Control1Fragment2 Control1Fragment2 = (Control1Fragment2) fragmentActual;
+                Control1Fragment2.guardarDatos();break;
             case 2:
                 Modulo1Fragment3 modulo1Fragment3 = (Modulo1Fragment3) fragmentActual;
                 modulo1Fragment3.guardarDatos();break;
@@ -870,11 +870,11 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
 //                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
 //                break;
             case 0:
-                fragmentActual = new Modulo1Fragment1(idEmpresa,this);
+                fragmentActual = new Control1Fragment1(idEmpresa,this);
                 fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
                 break;
             case 1:
-                fragmentActual = new Modulo1Fragment2(idEmpresa,this);
+                fragmentActual = new Control1Fragment2(idEmpresa,this);
                 fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
                 break;
             case 2:
@@ -1660,8 +1660,8 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
 //                case 1: return new CaratulaFragment();
 //                case 2: return new VisitaFragment2();
 //
-//                case 3: return new Modulo1Fragment1();
-//                case 4: return new Modulo1Fragment2();
+//                case 3: return new Control1Fragment1();
+//                case 4: return new Control1Fragment2();
 //                case 5: return new Modulo1Fragment3();
 //
 //                case 6: return new Modulo2Fragment1();
@@ -1762,12 +1762,12 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
 //                    fragmentTransaction.replace(R.id.container_encuesta_enhatrape, inicioFragment);
 //                    break;
 //                case 3:
-//                    Modulo1Fragment1 modulo1Fragment1 = new Modulo1Fragment1();
-//                    fragmentTransaction.replace(R.id.container_encuesta_enhatrape, modulo1Fragment1);
+//                    Control1Fragment1 Control1Fragment1 = new Control1Fragment1();
+//                    fragmentTransaction.replace(R.id.container_encuesta_enhatrape, Control1Fragment1);
 //                    break;
 //                case 4:
-//                    Modulo1Fragment2 modulo1Fragment2= new Modulo1Fragment2();
-//                    fragmentTransaction.replace(R.id.container_encuesta_enhatrape, modulo1Fragment2);
+//                    Control1Fragment2 Control1Fragment2= new Control1Fragment2();
+//                    fragmentTransaction.replace(R.id.container_encuesta_enhatrape, Control1Fragment2);
 //                    break;
 //                case 5:
 //                    Modulo1Fragment3 modulo1Fragment3= new Modulo1Fragment3();

@@ -17,4 +17,15 @@
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
 
+    <dimen name="texto_very_small">10sp</dimen>
+    <dimen name="texto_small">15sp</dimen>
+    <dimen name="texto_medium">20sp</dimen>
+    <dimen name="texto_grande">25sp</dimen>
+    <dimen name="layout_padding">10dp</dimen>
+    <dimen name="layout_margin5dp">5dp</dimen>
+    <dimen name="layout_margin10dp">10dp</dimen>
+    <dimen name="layout_margin15dp">15dp</dimen>
+    <dimen name="layout_margin20dp">20dp</dimen>
+
+
 </resources>

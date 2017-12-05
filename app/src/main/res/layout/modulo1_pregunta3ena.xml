@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/mod1_p7_lyt"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fab_margin"
+    android:padding="@dimen/fab_margin"
+    android:background="@drawable/borde_layout_preguntas"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/mod1_p7_txtPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/control01_p03"
+        android:layout_marginBottom="@dimen/fab_margin" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin10dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin10dp"
+        android:layout_marginLeft="@dimen/margin10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin15dp"
+            android:text="@string/control01_p03_sub01"/>
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="true"
+            android:hint="Seleccione"
+            android:entries="@array/cuestionario1_pregunta_5_opciones"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mod1_p7_lytSp1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin10dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin10dp"
+        android:layout_marginLeft="@dimen/margin10dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin15dp"
+            android:text="@string/control01_p03_sub02"/>
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/cuestionario1_pregunta_5_opciones"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin10dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin10dp"
+        android:layout_marginLeft="@dimen/margin10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin15dp"
+            android:text="@string/control01_p03_sub03">
+
+        </TextView>
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/cuestionario1_pregunta_5_opciones"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin10dp"
+        android:layout_marginLeft="@dimen/margin10dp"
+        android:layout_marginRight="@dimen/margin10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/mod1_p7_lytSp2"
+        android:padding="@dimen/margin10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin15dp"
+            android:text="@string/control01_p03_sub04" />
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/cuestionario1_pregunta_5_opciones"/>
+    </LinearLayout>
+
+</LinearLayout>

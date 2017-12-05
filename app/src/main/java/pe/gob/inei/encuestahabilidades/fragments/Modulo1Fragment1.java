@@ -169,7 +169,7 @@ public class Modulo1Fragment1 extends Fragment {
         lytEspecifiqueP3 = (LinearLayout) rootView.findViewById(R.id.mod1_p3_lytEspecifique);
         edtEspecifiqueP3 = (EditText) rootView.findViewById(R.id.mod1_p3_edtEspecifique);
 
-        lytFragment1 = (LinearLayout) rootView.findViewById(R.id.mod1_layoutFragment1);
+        //lytFragment1 = (LinearLayout) rootView.findViewById(R.id.mod1_layoutFragment1);
         ckMismoInformante1 = (CheckBox) rootView.findViewById(R.id.cab_ckMismoInformante);
         edtNombYApellidos1 = (EditText)rootView.findViewById(R.id.cab_edtApeYNom);
         spCargo1 = (Spinner) rootView.findViewById(R.id.cab_spCargo);
@@ -446,7 +446,6 @@ public class Modulo1Fragment1 extends Fragment {
             }
         });
     }
-
     public void cargarDatos(){
         data = new Data(context);
         data.open();
@@ -622,9 +621,9 @@ public class Modulo1Fragment1 extends Fragment {
         if(C1_P2_1_NO == 1){vC1_P2_1_1=true;vC1_P2_1_2=true;vC1_P2_2_1=true;vC1_P2_2_2=true;}
         else{
             if(C1_P2_1_1.trim().length() != 0){
-               if(C1_P2_1_1.equals(C1_P2_1_2) || C1_P2_1_1.equals(C1_P1_1)) {
-                   if(mensaje.equals(""))mensaje = "PREGUNTA 2: NO DEBE REGISTRAR 2 VECES LA MISMA ACTIVIDAD ECONOMICA";
-               }else vC1_P2_1_1 = true;
+                if(C1_P2_1_1.equals(C1_P2_1_2) || C1_P2_1_1.equals(C1_P1_1)) {
+                    if(mensaje.equals(""))mensaje = "PREGUNTA 2: NO DEBE REGISTRAR 2 VECES LA MISMA ACTIVIDAD ECONOMICA";
+                }else vC1_P2_1_1 = true;
             }
             else{
                 if(C1_P2_2_1.trim().length() != 0){
@@ -679,3 +678,4 @@ public class Modulo1Fragment1 extends Fragment {
         alertDialog.show();
     }
 }
+

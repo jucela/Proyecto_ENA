@@ -8,6 +8,7 @@
     android:background="@drawable/borde_layout_preguntas"
     android:id="@+id/mod1_p2_lyt"
     android:focusableInTouchMode="true"
+    android:visibility="gone"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
         android:id="@+id/mod1_p2_txtPregunta"

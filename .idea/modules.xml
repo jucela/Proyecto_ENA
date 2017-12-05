@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:\Proyecto_ENHAT\ProyectoHATINEI\ProyectoHATINEI.iml" filepath="D:\Proyecto_ENHAT\ProyectoHATINEI\ProyectoHATINEI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Proyecto_ENA.iml" filepath="$PROJECT_DIR$/Proyecto_ENA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Proyecto_ENA.iml" filepath="$PROJECT_DIR$/.idea/Proyecto_ENA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

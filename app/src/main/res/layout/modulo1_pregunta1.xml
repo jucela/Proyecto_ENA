@@ -8,6 +8,7 @@
     android:padding="@dimen/margin15dp"
     android:id="@+id/mod1_p1_lyt"
     android:focusableInTouchMode="true"
+    android:visibility="gone"
     android:background="@drawable/borde_layout_preguntas">
     <TextView
         android:id="@+id/mod1_p1_txtPregunta"

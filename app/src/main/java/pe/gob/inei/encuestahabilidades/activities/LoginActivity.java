@@ -34,6 +34,10 @@ public class LoginActivity extends AppCompatActivity {
         btnIngresar = (Button) findViewById(R.id.btnIngresar);
         data = new Data(this);
 
+        txtUsuario.setText("OPER001");
+        txtPassword.setText("INEI1");
+
+
         txtUsuario.setFilters(new InputFilter[]{new InputFilter.AllCaps(),new InputFilter.LengthFilter(10)});
         txtPassword.setFilters(new InputFilter[]{new InputFilter.AllCaps(),new InputFilter.LengthFilter(10)});
 
