@@ -557,7 +557,7 @@ public class Modulo1Fragment3 extends Fragment {
                 final String[] departamentos = context.getResources().getStringArray(R.array.DEPARTAMENTOS);
                 data = new Data(context);
                 data.open();
-                modulo1 = data.getModulo1(idempresa);
+                //modulo1 = data.getModulo1(idempresa);
                 if(!modulo1.getC1_P12_CCDD().equals("")){
                     final String[] provincias = context.getResources().getStringArray(arreglosDepartamentos[Integer.parseInt(modulo1.getC1_P12_CCDD())-1]);
                     final String idUbi = checkDigito(Integer.parseInt(modulo1.getC1_P12_CCDD())) + checkDigito(Integer.parseInt(modulo1.getC1_P12_CCPP()));
@@ -628,7 +628,7 @@ public class Modulo1Fragment3 extends Fragment {
         data = new Data(context);
         data.open();
         //verifico si ya existe un objeto con datos llenados previamente
-        modulo1 = data.getModulo1(idempresa);
+       // modulo1 = data.getModulo1(idempresa);
         if(!modulo1.getC1_P8().equals(""))
             ((RadioButton)rgP8.getChildAt(Integer.parseInt(modulo1.getC1_P8()))).setChecked(true);
         edtP9.setText(modulo1.getC1_P9());
@@ -791,30 +791,30 @@ public class Modulo1Fragment3 extends Fragment {
         data = new Data(context);
         data.open();
         ContentValues contentValues = new ContentValues(47);
-        contentValues.put(SQLConstantes.MODULO1_P8,C1_P8+"");
-        contentValues.put(SQLConstantes.MODULO1_P9,C1_P9);
-        contentValues.put(SQLConstantes.MODULO1_P10,C1_P10+"");
-        contentValues.put(SQLConstantes.MODULO1_P11,C1_P11+"");
-        contentValues.put(SQLConstantes.MODULO1_P11_1,C1_P11_1);
-        contentValues.put(SQLConstantes.MODULO1_P11_2,C1_P11_2);
-        contentValues.put(SQLConstantes.MODULO1_P12_NO,C1_P12_NO+"");
-        contentValues.put(SQLConstantes.MODULO1_P12_TIPVIA,C1_P12_TIPVIA+"");
-        contentValues.put(SQLConstantes.MODULO1_P12_NOMVIA ,C1_P12_NOMVIA);
-        contentValues.put(SQLConstantes.MODULO1_P12_NROPTA,C1_P12_NROPTA);
-        contentValues.put(SQLConstantes.MODULO1_P12_BLOCK,C1_P12_BLOCK);
-        contentValues.put(SQLConstantes.MODULO1_P12_INT,C1_P12_INT);
-        contentValues.put(SQLConstantes.MODULO1_P12_PISO,C1_P12_PISO);
-        contentValues.put(SQLConstantes.MODULO1_P12_MZA,C1_P12_MZA);
-        contentValues.put(SQLConstantes.MODULO1_P12_LOTE,C1_P12_LOTE);
-        contentValues.put(SQLConstantes.MODULO1_P12_KM,C1_P12_KM);
-        if(C1_P12_CCDI == 0)contentValues.put(SQLConstantes.MODULO1_P12_CCDI,"");
-        else contentValues.put(SQLConstantes.MODULO1_P12_CCDI,C1_P12_CCDI+"");
-        if(C1_P12_CCPP == 0)contentValues.put(SQLConstantes.MODULO1_P12_CCPP,"");
-        else contentValues.put(SQLConstantes.MODULO1_P12_CCPP,C1_P12_CCPP+"");
-        if(C1_P12_CCDD == 0)contentValues.put(SQLConstantes.MODULO1_P12_CCDD,"");
-        else contentValues.put(SQLConstantes.MODULO1_P12_CCDD,C1_P12_CCDD+"");
-        contentValues.put(SQLConstantes.MODULO1_OBS_MOD_I,OBS_MOD_I);
-        data.actualizarModulo1(idempresa,contentValues);
+//        contentValues.put(SQLConstantes.MODULO1_P8,C1_P8+"");
+//        contentValues.put(SQLConstantes.MODULO1_P9,C1_P9);
+//        contentValues.put(SQLConstantes.MODULO1_P10,C1_P10+"");
+//        contentValues.put(SQLConstantes.MODULO1_P11,C1_P11+"");
+//        contentValues.put(SQLConstantes.MODULO1_P11_1,C1_P11_1);
+//        contentValues.put(SQLConstantes.MODULO1_P11_2,C1_P11_2);
+//        contentValues.put(SQLConstantes.MODULO1_P12_NO,C1_P12_NO+"");
+//        contentValues.put(SQLConstantes.MODULO1_P12_TIPVIA,C1_P12_TIPVIA+"");
+//        contentValues.put(SQLConstantes.MODULO1_P12_NOMVIA ,C1_P12_NOMVIA);
+//        contentValues.put(SQLConstantes.MODULO1_P12_NROPTA,C1_P12_NROPTA);
+//        contentValues.put(SQLConstantes.MODULO1_P12_BLOCK,C1_P12_BLOCK);
+//        contentValues.put(SQLConstantes.MODULO1_P12_INT,C1_P12_INT);
+//        contentValues.put(SQLConstantes.MODULO1_P12_PISO,C1_P12_PISO);
+//        contentValues.put(SQLConstantes.MODULO1_P12_MZA,C1_P12_MZA);
+//        contentValues.put(SQLConstantes.MODULO1_P12_LOTE,C1_P12_LOTE);
+//        contentValues.put(SQLConstantes.MODULO1_P12_KM,C1_P12_KM);
+//        if(C1_P12_CCDI == 0)contentValues.put(SQLConstantes.MODULO1_P12_CCDI,"");
+//        else contentValues.put(SQLConstantes.MODULO1_P12_CCDI,C1_P12_CCDI+"");
+//        if(C1_P12_CCPP == 0)contentValues.put(SQLConstantes.MODULO1_P12_CCPP,"");
+//        else contentValues.put(SQLConstantes.MODULO1_P12_CCPP,C1_P12_CCPP+"");
+//        if(C1_P12_CCDD == 0)contentValues.put(SQLConstantes.MODULO1_P12_CCDD,"");
+//        else contentValues.put(SQLConstantes.MODULO1_P12_CCDD,C1_P12_CCDD+"");
+//        contentValues.put(SQLConstantes.MODULO1_OBS_MOD_I,OBS_MOD_I);
+//        data.actualizarModulo1(idempresa,contentValues);
         data.close();
     }
     public boolean validar(){

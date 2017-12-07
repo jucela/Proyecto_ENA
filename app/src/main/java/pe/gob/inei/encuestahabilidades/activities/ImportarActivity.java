@@ -23,6 +23,7 @@ import pe.gob.inei.encuestahabilidades.R;
 import pe.gob.inei.encuestahabilidades.modelo.Data;
 import pe.gob.inei.encuestahabilidades.modelo.SQLConstantes;
 import pe.gob.inei.encuestahabilidades.pojos.Caratula;
+import pe.gob.inei.encuestahabilidades.pojos.Control1;
 import pe.gob.inei.encuestahabilidades.pojos.DatosEntrevista;
 import pe.gob.inei.encuestahabilidades.pojos.Identificacion;
 import pe.gob.inei.encuestahabilidades.pojos.Marco;
@@ -50,7 +51,7 @@ public class ImportarActivity extends AppCompatActivity {
     private Visita currentVisita;
     private ArrayList<Visita> visitas;
     private Identificacion identificacion;
-    private Modulo1 modulo1;
+    private Control1 control1;
     private Modulo2 modulo2;
     private Modulo3 modulo3;
     private Modulo4 modulo4;
@@ -100,7 +101,7 @@ public class ImportarActivity extends AppCompatActivity {
         datosEntrevista = new DatosEntrevista();
         visitas = new ArrayList<Visita>();
         identificacion = new Identificacion();
-        modulo1 = new Modulo1();
+        control1 = new Control1();
         modulo2 = new Modulo2();
         modulo3 = new Modulo3();
         modulo4 = new Modulo4();
@@ -157,7 +158,7 @@ public class ImportarActivity extends AppCompatActivity {
             if(!datosEntrevista.getID().equals("")){data.deleteDatosEntrevista(idEmpresa);data.insertarDatosEntrevista(datosEntrevista);}
             if(visitas.size()>0){data.deleteAllVisitas(idEmpresa);data.insertarVisitas(visitas);}
             if(!identificacion.getID().equals("")){data.deleteIdentificacion(idEmpresa);data.insertarIdentificacion(identificacion);}
-            if(!modulo1.getMODULO1_ID().equals("")){data.deleteModulo1(idEmpresa);data.insertarModulo1(modulo1);}
+            if(!control1.getCONTROL1_ID().equals("")){data.deleteControl1(idEmpresa);data.insertarControl1(control1);}
             if(!modulo2.getMODULO2_ID().equals("")){data.deleteModulo2(idEmpresa);data.insertarModulo2(modulo2);}
             if(!modulo3.getMODULO3_ID().equals("")){data.deleteModulo3(idEmpresa);data.insertarModulo3(modulo3);}
             if(!modulo4.getMODULO4_ID().equals("")){data.deleteModulo4(idEmpresa);data.insertarModulo4(modulo4);}
@@ -356,53 +357,26 @@ public class ImportarActivity extends AppCompatActivity {
     }
     public void agregarVariableModulo1(String campo, String valor){
         switch (campo){
-            case "ID":modulo1.setMODULO1_ID(valor);break;
-            case SQLConstantes.MODULO1_P0_0:modulo1.setC1_P0_0(valor);break;
-            case SQLConstantes.MODULO1_P0_1:modulo1.setC1_P0_1(valor);break;
-            case SQLConstantes.MODULO1_P0_2:modulo1.setC1_P0_2(valor);break;
-            case SQLConstantes.MODULO1_P0_3:modulo1.setC1_P0_3(valor);break;
-            case SQLConstantes.MODULO1_P1_1:modulo1.setC1_P1_1(valor);break;
-            case SQLConstantes.MODULO1_P1_2:modulo1.setC1_P1_2(valor);break;
-            case SQLConstantes.MODULO1_P1_2_DETALLE:modulo1.setC1_P1_2_DETALLE(valor);break;
-            case SQLConstantes.MODULO1_P2_1_1:modulo1.setC1_P2_1_1(valor);break;
-            case SQLConstantes.MODULO1_P2_1_2:modulo1.setC1_P2_1_2(valor);break;
-            case SQLConstantes.MODULO1_P2_1_2_DETALLE:modulo1.setC1_P2_1_2_DETALLE(valor);break;
-            case SQLConstantes.MODULO1_P2_1_NO:modulo1.setC1_P2_1_NO(valor);break;
-            case SQLConstantes.MODULO1_P2_2_1:modulo1.setC1_P2_2_1(valor);break;
-            case SQLConstantes.MODULO1_P2_2_2:modulo1.setC1_P2_2_2(valor);break;
-            case SQLConstantes.MODULO1_P2_2_2_DETALLE:modulo1.setC1_P2_2_2_DETALLE(valor);break;
-            case SQLConstantes.MODULO1_P2_2_NO:modulo1.setC1_P2_2_NO(valor);break;
-            case SQLConstantes.MODULO1_P3:modulo1.setC1_P3(valor);break;
-            case SQLConstantes.MODULO1_P3_0:modulo1.setC1_P3_0(valor);break;
-            case SQLConstantes.MODULO1_P4_1_1:modulo1.setC1_P4_1_1(valor);break;
-            case SQLConstantes.MODULO1_P4_2_1:modulo1.setC1_P4_2_1(valor);break;
-            case SQLConstantes.MODULO1_P5:modulo1.setC1_P5(valor);break;
-            case SQLConstantes.MODULO1_P6_0:modulo1.setC1_P6_0(valor);break;
-            case SQLConstantes.MODULO1_P6_1:modulo1.setC1_P6_1(valor);break;
-            case SQLConstantes.MODULO1_P7_1_1:modulo1.setC1_P7_1_1(valor);break;
-            case SQLConstantes.MODULO1_P7_2_1:modulo1.setC1_P7_2_1(valor);break;
-            case SQLConstantes.MODULO1_P7_1_2:modulo1.setC1_P7_1_2(valor);break;
-            case SQLConstantes.MODULO1_P7_2_2:modulo1.setC1_P7_2_2(valor);break;
-            case SQLConstantes.MODULO1_P8:modulo1.setC1_P8(valor);break;
-            case SQLConstantes.MODULO1_P9:modulo1.setC1_P9(valor);break;
-            case SQLConstantes.MODULO1_P10:modulo1.setC1_P10(valor);break;
-            case SQLConstantes.MODULO1_P11:modulo1.setC1_P11(valor);break;
-            case SQLConstantes.MODULO1_P11_1:modulo1.setC1_P11_1(valor);break;
-            case SQLConstantes.MODULO1_P11_2:modulo1.setC1_P11_2(valor);break;
-            case SQLConstantes.MODULO1_P12_NO:modulo1.setC1_P12_NO(valor);break;
-            case SQLConstantes.MODULO1_P12_TIPVIA:modulo1.setC1_P12_TIPVIA(valor);break;
-            case SQLConstantes.MODULO1_P12_NOMVIA :modulo1.setC1_P12_NOMVIA(valor);break;
-            case SQLConstantes.MODULO1_P12_NROPTA:modulo1.setC1_P12_NROPTA(valor);break;
-            case SQLConstantes.MODULO1_P12_BLOCK:modulo1.setC1_P12_BLOCK(valor);break;
-            case SQLConstantes.MODULO1_P12_INT:modulo1.setC1_P12_INT(valor);break;
-            case SQLConstantes.MODULO1_P12_PISO:modulo1.setC1_P12_PISO(valor);break;
-            case SQLConstantes.MODULO1_P12_MZA:modulo1.setC1_P12_MZA(valor);break;
-            case SQLConstantes.MODULO1_P12_LOTE:modulo1.setC1_P12_LOTE(valor);break;
-            case SQLConstantes.MODULO1_P12_KM:modulo1.setC1_P12_KM(valor);break;
-            case SQLConstantes.MODULO1_P12_CCDI:modulo1.setC1_P12_CCDI(valor);break;
-            case SQLConstantes.MODULO1_P12_CCPP:modulo1.setC1_P12_CCPP(valor);break;
-            case SQLConstantes.MODULO1_P12_CCDD:modulo1.setC1_P12_CCDD(valor);break;
-            case SQLConstantes.MODULO1_OBS_MOD_I:modulo1.setOBS_MOD_I(valor);break;
+            case "ID":control1.setCONTROL1_ID(valor);break;
+            case SQLConstantes.C1_P1:control1.setC1_P1(valor);break;
+            case SQLConstantes.C1_P2:control1.setC1_P2(valor);break;
+            case SQLConstantes.C1_P3_1:control1.setC1_P3_1(valor);break;
+            case SQLConstantes.C1_P3_2:control1.setC1_P3_2(valor);break;
+            case SQLConstantes.C1_P3_3:control1.setC1_P3_3(valor);break;
+            case SQLConstantes.C1_P3_4:control1.setC1_P3_4(valor);break;
+            case SQLConstantes.C1_P4_1:control1.setC1_P4_1(valor);break;
+            case SQLConstantes.C1_P4_2:control1.setC1_P4_2(valor);break;
+            case SQLConstantes.C1_P4_3:control1.setC1_P4_3(valor);break;
+            case SQLConstantes.C1_P4_4:control1.setC1_P4_4(valor);break;
+            case SQLConstantes.C1_P4_5:control1.setC1_P4_5(valor);break;
+            case SQLConstantes.C1_P4_6:control1.setC1_P4_6(valor);break;
+            case SQLConstantes.C1_P4_7:control1.setC1_P4_7(valor);break;
+            case SQLConstantes.C1_P4_8:control1.setC1_P4_8(valor);break;
+            case SQLConstantes.C1_P4_9:control1.setC1_P4_9(valor);break;
+            case SQLConstantes.C1_P4_10:control1.setC1_P4_10(valor);break;
+            case SQLConstantes.C1_P4_11:control1.setC1_P4_11(valor);break;
+            case SQLConstantes.C1_P4_12:control1.setC1_P4_12(valor);break;
+
         }
     }
     public void agregarVariableModulo2(String campo, String valor){

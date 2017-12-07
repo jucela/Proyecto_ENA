@@ -29,6 +29,25 @@ public class SQLConstantes {
     public static final String tableModulo9 = "modulos9";
     public static final String tableModulo10 = "modulos10";
 
+    public static final String tableControl1 = "control1";
+    public static final String tableControl2 = "control2";
+    public static final String tableControl3 = "control3";
+    public static final String tableControl4 = "control4";
+    public static final String tableControl5 = "control5";
+    public static final String tableControl6 = "control6";
+    public static final String tableControl7 = "control7";
+    public static final String tableEvaluacion1 = "evaluacion1";
+    public static final String tableEvaluacion2 = "evaluacion2";
+    public static final String tableEvaluacion3 = "evaluacion3";
+    public static final String tableEvaluacion4 = "evaluacion4";
+    public static final String tableEvaluacion5 = "evaluacion5";
+    public static final String tableEvaluacion6 = "evaluacion6";
+    public static final String tableEvaluacion7 = "evaluacion7";
+    public static final String tableEvaluacionFinal = "evaluacionfinal";
+
+
+
+
 
     //COLUMNAS USUARIOS
     public static final String USUARIO_ID = "ID";
@@ -186,60 +205,29 @@ public class SQLConstantes {
     public static final String FRAGMENT_AVANCE = "F_AVA";
 
     //MODULO I
-    public static final String MODULO1_ID = "ID";
-    public static final String MODULO1_P0_0 = "C1_P0_0";
-    public static final String MODULO1_P0_1 = "C1_P0_1";
-    public static final String MODULO1_P0_2 = "C1_P0_2";
-    public static final String MODULO1_P0_3 = "C1_P0_3";
-    public static final String MODULO1_P1_1 = "C1_P1_1";
-    public static final String MODULO1_P1_2 = "C1_P1_2";
-    public static final String MODULO1_P1_2_DETALLE = "C1_P1_2_D";
-    public static final String MODULO1_P2_1_1 = "C1_P2_1_1";
-    public static final String MODULO1_P2_1_2 = "C1_P2_1_2";
-    public static final String MODULO1_P2_1_2_DETALLE = "C1_P2_1_2_D";
-    public static final String MODULO1_P2_1_NO = "C1_P2_1_NO";
-    public static final String MODULO1_P2_2_1 = "C1_P2_2_1";
-    public static final String MODULO1_P2_2_2 = "C1_P2_2_2";
-    public static final String MODULO1_P2_2_2_DETALLE = "C1_P2_2_2_D";
-    public static final String MODULO1_P2_2_NO = "C1_P2_2_NO";
-    public static final String MODULO1_P3 = "C1_P3";
-    public static final String MODULO1_P3_0 = "C1_P3_0";
-    public static final String MODULO1_P4_1_1 = "C1_P4_1_1";
-    public static final String MODULO1_P4_2_1 = "C1_P4_2_1";
-    public static final String MODULO1_P5 = "C1_P5";
-    public static final String MODULO1_P6_0 = "C1_P6_0";
-    public static final String MODULO1_P6_1 = "C1_P6_1";
-    public static final String MODULO1_P7_1_1 = "C1_P7_1_1";
-    public static final String MODULO1_P7_2_1 = "C1_P7_2_1";
-    public static final String MODULO1_P7_1_2 = "C1_P7_1_2";
-    public static final String MODULO1_P7_2_2 = "C1_P7_2_2";
-    public static final String MODULO1_P8 = "C1_P8";
-    public static final String MODULO1_P9 = "C1_P9";
-    public static final String MODULO1_P10 = "C1_P10";
-    public static final String MODULO1_P11 = "C1_P11";
-    public static final String MODULO1_P11_1 = "C1_P11_1";
-    public static final String MODULO1_P11_2 = "C1_P11_2";
-    public static final String MODULO1_P12_NO = "C1_P12_NO";
-    public static final String MODULO1_P12_TIPVIA = "C1_P12_TIPVIA";
-    public static final String MODULO1_P12_NOMVIA  = "C1_P12_NOMVIA";
-    public static final String MODULO1_P12_NROPTA = "C1_P12_NROPTA";
-    public static final String MODULO1_P12_BLOCK = "C1_P12_BLOCK";
-    public static final String MODULO1_P12_INT = "C1_P12_INT";
-    public static final String MODULO1_P12_PISO = "C1_P12_PISO";
-    public static final String MODULO1_P12_MZA = "C1_P12_MZA";
-    public static final String MODULO1_P12_LOTE = "C1_P12_LOTE";
-    public static final String MODULO1_P12_KM = "C1_P12_KM";
-    public static final String MODULO1_P12_DIST = "C1_P12_DIST";
-    public static final String MODULO1_P12_CCDI = "C1_P12_CCDI";
-    public static final String MODULO1_P12_PROV = "C1_P12_PROV";
-    public static final String MODULO1_P12_CCPP = "C1_P12_CCPP";
-    public static final String MODULO1_P12_DEP = "C1_P12_DEP";
-    public static final String MODULO1_P12_CCDD = "C1_P12_CCDD";
-    public static final String MODULO1_OBS_MOD_I = "OBS_MOD_I";
-    public static final String MODULO1_USUCREACION = "USU_CREACION";
-    public static final String MODULO1_FECCREACION = "FEC_CREACION";
-    public static final String MODULO1_USUREGISTRO = "USU_REGISTRO";
-    public static final String MODULO1_FECREGISTRO = "FEC_REGISTRO";
+    public static final String C1_ID = "ID";
+    public static final String C1_P1 = "C1_P1";
+    public static final String C1_P2 = "C1_P2";
+    public static final String C1_P3_1 = "C1_P3_1";
+    public static final String C1_P3_2 = "C1_P3_2";
+    public static final String C1_P3_3 = "C1_P3_3";
+    public static final String C1_P3_4 = "C1_P3_4";
+    public static final String C1_P4_1 = "C1_P4_1";
+    public static final String C1_P4_2 = "C1_P4_2";
+    public static final String C1_P4_3 = "C1_P4_3";
+    public static final String C1_P4_4 = "C1_P4_4";
+    public static final String C1_P4_5 = "C1_P4_5";
+    public static final String C1_P4_6 = "C1_P4_6";
+    public static final String C1_P4_7 = "C1_P4_7";
+    public static final String C1_P4_8 = "C1_P4_8";
+    public static final String C1_P4_9 = "C1_P4_9";
+    public static final String C1_P4_10 = "C1_P4_10";
+    public static final String C1_P4_11 = "C1_P4_11";
+    public static final String C1_P4_12 = "C1_P4_12";
+
+
+
+
 
     //MODULO II
     public static final String MODULO2_ID = "ID";
@@ -1965,62 +1953,27 @@ public class SQLConstantes {
 
 
     //TABLA MODULO1
-    public static final String SQL_CREATE_TABLA_MODULO1 =
-            "CREATE TABLE " + tableModulo1 + "(" +
-                    MODULO1_ID  + " TEXT PRIMARY KEY," +
-                    MODULO1_P0_0  + " TEXT," +
-                    MODULO1_P0_1  + " TEXT," +
-                    MODULO1_P0_2  + " TEXT," +
-                    MODULO1_P0_3  + " TEXT," +
-                    MODULO1_P1_1  + " TEXT," +
-                    MODULO1_P1_2  + " TEXT," +
-                    MODULO1_P1_2_DETALLE + " TEXT," +
-                    MODULO1_P2_1_1  + " TEXT," +
-                    MODULO1_P2_1_2  + " TEXT," +
-                    MODULO1_P2_1_2_DETALLE + " TEXT," +
-                    MODULO1_P2_1_NO  + " TEXT," +
-                    MODULO1_P2_2_1  + " TEXT," +
-                    MODULO1_P2_2_2  + " TEXT," +
-                    MODULO1_P2_2_2_DETALLE + " TEXT," +
-                    MODULO1_P2_2_NO  + " TEXT," +
-                    MODULO1_P3  + " TEXT," +
-                    MODULO1_P3_0  + " TEXT," +
-                    MODULO1_P4_1_1  + " TEXT," +
-                    MODULO1_P4_2_1  + " TEXT," +
-                    MODULO1_P5  + " TEXT," +
-                    MODULO1_P6_0  + " TEXT," +
-                    MODULO1_P6_1  + " TEXT," +
-                    MODULO1_P7_1_1  + " TEXT," +
-                    MODULO1_P7_2_1  + " TEXT," +
-                    MODULO1_P7_1_2  + " TEXT," +
-                    MODULO1_P7_2_2  + " TEXT," +
-                    MODULO1_P8  + " TEXT," +
-                    MODULO1_P9  + " TEXT," +
-                    MODULO1_P10  + " TEXT," +
-                    MODULO1_P11  + " TEXT," +
-                    MODULO1_P11_1  + " TEXT," +
-                    MODULO1_P11_2  + " TEXT," +
-                    MODULO1_P12_NO  + " TEXT," +
-                    MODULO1_P12_TIPVIA  + " TEXT," +
-                    MODULO1_P12_NOMVIA   + " TEXT," +
-                    MODULO1_P12_NROPTA  + " TEXT," +
-                    MODULO1_P12_BLOCK  + " TEXT," +
-                    MODULO1_P12_INT  + " TEXT," +
-                    MODULO1_P12_PISO  + " TEXT," +
-                    MODULO1_P12_MZA  + " TEXT," +
-                    MODULO1_P12_LOTE  + " TEXT," +
-                    MODULO1_P12_KM  + " TEXT," +
-                    MODULO1_P12_DIST  + " TEXT," +
-                    MODULO1_P12_CCDI  + " TEXT," +
-                    MODULO1_P12_PROV  + " TEXT," +
-                    MODULO1_P12_CCPP  + " TEXT," +
-                    MODULO1_P12_DEP  + " TEXT," +
-                    MODULO1_P12_CCDD  + " TEXT," +
-                    MODULO1_OBS_MOD_I  + " TEXT," +
-                    MODULO1_USUCREACION + " TEXT," +
-                    MODULO1_FECCREACION + " TEXT," +
-                    MODULO1_USUREGISTRO + " TEXT," +
-                    MODULO1_FECREGISTRO + " TEXT" + ");"
+    public static final String SQL_CREATE_TABLA_CONTROL1 =
+            "CREATE TABLE " + tableControl1 + "(" +
+                    C1_ID  + " TEXT PRIMARY KEY," +
+                    C1_P1  +  " TEXT, " +
+                    C1_P2  +  " TEXT, " +
+                    C1_P3_1  +  " TEXT, " +
+                    C1_P3_2  +  " TEXT, " +
+                    C1_P3_3  +  " TEXT, " +
+                    C1_P3_4  +  " TEXT, " +
+                    C1_P4_1  +  " TEXT, " +
+                    C1_P4_2  +  " TEXT, " +
+                    C1_P4_3  +  " TEXT, " +
+                    C1_P4_4  +  " TEXT, " +
+                    C1_P4_5  +  " TEXT, " +
+                    C1_P4_6  +  " TEXT, " +
+                    C1_P4_7  +  " TEXT, " +
+                    C1_P4_8  +  " TEXT, " +
+                    C1_P4_9  +  " TEXT, " +
+                    C1_P4_10  +  " TEXT, " +
+                    C1_P4_11  +  " TEXT, " +
+                    C1_P4_12  +  " TEXT " +");"
                     ;
     //TABLA MODULO2
     public static final String SQL_CREATE_TABLA_MODULO2=
@@ -3719,16 +3672,27 @@ public class SQLConstantes {
             FRAGMENT_ID, FRAGMENT_HABILITADO, FRAGMENT_AVANCE
     };
 
-    //MODULO 1
-    public static final String[] ALL_COLUMNS_MODULO1 = {
-            MODULO1_ID, MODULO1_P0_0, MODULO1_P0_1, MODULO1_P0_2, MODULO1_P0_3, MODULO1_P1_1, MODULO1_P1_2,MODULO1_P1_2_DETALLE,
-            MODULO1_P2_1_1, MODULO1_P2_1_2, MODULO1_P2_1_2_DETALLE, MODULO1_P2_1_NO, MODULO1_P2_2_1, MODULO1_P2_2_2,MODULO1_P2_2_2_DETALLE,
-            MODULO1_P2_2_NO, MODULO1_P3, MODULO1_P3_0, MODULO1_P4_1_1, MODULO1_P4_2_1, MODULO1_P5, MODULO1_P6_0, MODULO1_P6_1, MODULO1_P7_1_1,
-            MODULO1_P7_2_1, MODULO1_P7_1_2, MODULO1_P7_2_2, MODULO1_P8, MODULO1_P9, MODULO1_P10, MODULO1_P11,
-            MODULO1_P11_1, MODULO1_P11_2, MODULO1_P12_NO, MODULO1_P12_TIPVIA, MODULO1_P12_NOMVIA , MODULO1_P12_NROPTA,
-            MODULO1_P12_BLOCK, MODULO1_P12_INT, MODULO1_P12_PISO, MODULO1_P12_MZA, MODULO1_P12_LOTE,
-            MODULO1_P12_KM, MODULO1_P12_DIST, MODULO1_P12_CCDI, MODULO1_P12_PROV, MODULO1_P12_CCPP, MODULO1_P12_DEP, MODULO1_P12_CCDD,
-            MODULO1_OBS_MOD_I, MODULO1_USUCREACION,MODULO1_FECCREACION, MODULO1_USUREGISTRO,MODULO1_FECREGISTRO
+    //CONTROL 1
+    public static final String[] ALL_COLUMNS_CONTROL1 = {
+            C1_ID,
+            C1_P1,
+            C1_P2,
+            C1_P3_1,
+            C1_P3_2,
+            C1_P3_3,
+            C1_P3_4,
+            C1_P4_1,
+            C1_P4_2,
+            C1_P4_3,
+            C1_P4_4,
+            C1_P4_5,
+            C1_P4_6,
+            C1_P4_7,
+            C1_P4_8,
+            C1_P4_9,
+            C1_P4_10,
+            C1_P4_11,
+            C1_P4_12
     };
 
     //MODULO 2

@@ -450,43 +450,43 @@ public class Modulo1Fragment1 extends Fragment {
         data = new Data(context);
         data.open();
         //verifico si ya existe un objeto con datos llenados previamente
-        if(data.existeModulo1(idempresa)){
-            //si existe traigo el objeto
-            modulo1 = data.getModulo1(idempresa);
-            //saco los datos del objeto para llenarlos en los elementos del fragment
-            //datos cabecera
-            if(modulo1.getC1_P0_0().equals("1")) ckMismoInformante1.setChecked(true);
-            if(modulo1.getC1_P0_0().equals("0")) ckMismoInformante1.setChecked(false);
-            edtNombYApellidos1.setText(modulo1.getC1_P0_1());
-            spCargo1.setSelection(Integer.parseInt(modulo1.getC1_P0_2()));
-            edtEspecifiqueCargo1.setText(modulo1.getC1_P0_3());
-            //pregunta 1
-            mod1_p1_edt1.setText(modulo1.getC1_P1_1());
-            txtP1.setText(modulo1.getC1_P1_2());
-            autoP1.setText(modulo1.getC1_P1_2_DETALLE());
-            //pregunta 2
-            //2.1
-            if(modulo1.getC1_P2_1_NO().equals("1")) ck1P2.setChecked(true);
-            if(modulo1.getC1_P2_1_NO().equals("0")) ck1P2.setChecked(false);
-            mod1_p2_edt1.setText(modulo1.getC1_P2_1_1());
-            txt1P2.setText(modulo1.getC1_P2_1_2());
-            auto1P2.setText(modulo1.getC1_P2_1_2_DETALLE());
-            //2.2
-            if(modulo1.getC1_P2_2_NO().equals("1")) ck2P2.setChecked(true);
-            if(modulo1.getC1_P2_2_NO().equals("0")) ck2P2.setChecked(false);
-            mod1_p2_edt2.setText(modulo1.getC1_P2_2_1());
-            txt2P2.setText(modulo1.getC1_P2_2_2());
-            auto2P2.setText(modulo1.getC1_P2_2_2_DETALLE());
-            //pregunta 3
-            int childPos3 = Integer.parseInt(modulo1.getC1_P3());
-            ((RadioButton)rgP3.getChildAt(childPos3)).setChecked(true);
-            edtEspecifiqueP3.setText(modulo1.getC1_P3_0());
-            //pregunta 4
-            int childPos41 = Integer.parseInt(modulo1.getC1_P4_1_1());
-            ((RadioButton)rgP41.getChildAt(childPos41)).setChecked(true);
-            int childPos42 = Integer.parseInt(modulo1.getC1_P4_2_1());
-            ((RadioButton)rgP42.getChildAt(childPos42)).setChecked(true);
-        }
+//        if(data.existeModulo1(idempresa)){
+//            //si existe traigo el objeto
+//            modulo1 = data.getModulo1(idempresa);
+//            //saco los datos del objeto para llenarlos en los elementos del fragment
+//            //datos cabecera
+//            if(modulo1.getC1_P0_0().equals("1")) ckMismoInformante1.setChecked(true);
+//            if(modulo1.getC1_P0_0().equals("0")) ckMismoInformante1.setChecked(false);
+//            edtNombYApellidos1.setText(modulo1.getC1_P0_1());
+//            spCargo1.setSelection(Integer.parseInt(modulo1.getC1_P0_2()));
+//            edtEspecifiqueCargo1.setText(modulo1.getC1_P0_3());
+//            //pregunta 1
+//            mod1_p1_edt1.setText(modulo1.getC1_P1_1());
+//            txtP1.setText(modulo1.getC1_P1_2());
+//            autoP1.setText(modulo1.getC1_P1_2_DETALLE());
+//            //pregunta 2
+//            //2.1
+//            if(modulo1.getC1_P2_1_NO().equals("1")) ck1P2.setChecked(true);
+//            if(modulo1.getC1_P2_1_NO().equals("0")) ck1P2.setChecked(false);
+//            mod1_p2_edt1.setText(modulo1.getC1_P2_1_1());
+//            txt1P2.setText(modulo1.getC1_P2_1_2());
+//            auto1P2.setText(modulo1.getC1_P2_1_2_DETALLE());
+//            //2.2
+//            if(modulo1.getC1_P2_2_NO().equals("1")) ck2P2.setChecked(true);
+//            if(modulo1.getC1_P2_2_NO().equals("0")) ck2P2.setChecked(false);
+//            mod1_p2_edt2.setText(modulo1.getC1_P2_2_1());
+//            txt2P2.setText(modulo1.getC1_P2_2_2());
+//            auto2P2.setText(modulo1.getC1_P2_2_2_DETALLE());
+//            //pregunta 3
+//            int childPos3 = Integer.parseInt(modulo1.getC1_P3());
+//            ((RadioButton)rgP3.getChildAt(childPos3)).setChecked(true);
+//            edtEspecifiqueP3.setText(modulo1.getC1_P3_0());
+//            //pregunta 4
+//            int childPos41 = Integer.parseInt(modulo1.getC1_P4_1_1());
+//            ((RadioButton)rgP41.getChildAt(childPos41)).setChecked(true);
+//            int childPos42 = Integer.parseInt(modulo1.getC1_P4_2_1());
+//            ((RadioButton)rgP42.getChildAt(childPos42)).setChecked(true);
+//        }
         data.close();
     }
     public void llenarMapaVariables(){
@@ -536,54 +536,54 @@ public class Modulo1Fragment1 extends Fragment {
     public void guardarDatos(){
         data = new Data(context);
         data.open();
-        if(data.existeModulo1(idempresa)){
-            ContentValues contentValues = new ContentValues(50);
-            contentValues.put(SQLConstantes.MODULO1_P0_0,C1_P0_0+"");
-            contentValues.put(SQLConstantes.MODULO1_P0_1,C1_P0_1);
-            contentValues.put(SQLConstantes.MODULO1_P0_2,C1_P0_2+"");
-            contentValues.put(SQLConstantes.MODULO1_P0_3,C1_P0_3);
-            contentValues.put(SQLConstantes.MODULO1_P1_1,C1_P1_1);
-            contentValues.put(SQLConstantes.MODULO1_P1_2,C1_P1_2);
-            contentValues.put(SQLConstantes.MODULO1_P1_2_DETALLE,C1_P1_2_DETALLE);
-            contentValues.put(SQLConstantes.MODULO1_P2_1_1,C1_P2_1_1);
-            contentValues.put(SQLConstantes.MODULO1_P2_1_2,C1_P2_1_2);
-            contentValues.put(SQLConstantes.MODULO1_P2_1_2_DETALLE,C1_P2_1_2_DETALLE);
-            contentValues.put(SQLConstantes.MODULO1_P2_1_NO,C1_P2_1_NO+"");
-            contentValues.put(SQLConstantes.MODULO1_P2_2_1,C1_P2_2_1);
-            contentValues.put(SQLConstantes.MODULO1_P2_2_2,C1_P2_2_2);
-            contentValues.put(SQLConstantes.MODULO1_P2_2_2_DETALLE,C1_P2_2_2_DETALLE);
-            contentValues.put(SQLConstantes.MODULO1_P2_2_NO,C1_P2_2_NO+"");
-            contentValues.put(SQLConstantes.MODULO1_P3,C1_P3+"");
-            contentValues.put(SQLConstantes.MODULO1_P3_0,C1_P3_0);
-            contentValues.put(SQLConstantes.MODULO1_P4_1_1,C1_P4_1_1+"");
-            contentValues.put(SQLConstantes.MODULO1_P4_2_1,C1_P4_2_1+"");
-            data.actualizarModulo1(idempresa,contentValues);
-        }else{
-            //si no existe el elemento, lo construye para insertarlo
-            modulo1 = new Modulo1();
-            //llena el objeto a insertar
-            modulo1.setMODULO1_ID(idempresa);
-            modulo1.setC1_P0_0(C1_P0_0+"");
-            modulo1.setC1_P0_1(C1_P0_1);
-            modulo1.setC1_P0_2(C1_P0_2+"");
-            modulo1.setC1_P0_3(C1_P0_3);
-            modulo1.setC1_P1_1(C1_P1_1);
-            modulo1.setC1_P1_2(C1_P1_2);
-            modulo1.setC1_P1_2_DETALLE(C1_P1_2_DETALLE);
-            modulo1.setC1_P2_1_1(C1_P2_1_1);
-            modulo1.setC1_P2_1_2(C1_P2_1_2);
-            modulo1.setC1_P2_1_2_DETALLE(C1_P2_1_2_DETALLE);
-            modulo1.setC1_P2_1_NO(C1_P2_1_NO+"");
-            modulo1.setC1_P2_2_1(C1_P2_2_1);
-            modulo1.setC1_P2_2_2(C1_P2_2_2);
-            modulo1.setC1_P2_2_2_DETALLE(C1_P2_2_2_DETALLE);
-            modulo1.setC1_P2_2_NO(C1_P2_2_NO+"");
-            modulo1.setC1_P3(C1_P3+"");
-            modulo1.setC1_P3_0(C1_P3_0);
-            modulo1.setC1_P4_1_1(C1_P4_1_1+"");
-            modulo1.setC1_P4_2_1(C1_P4_2_1+"");
-            data.insertarModulo1(modulo1);
-        }
+//        if(data.existeModulo1(idempresa)){
+//            ContentValues contentValues = new ContentValues(50);
+//            contentValues.put(SQLConstantes.MODULO1_P0_0,C1_P0_0+"");
+//            contentValues.put(SQLConstantes.MODULO1_P0_1,C1_P0_1);
+//            contentValues.put(SQLConstantes.MODULO1_P0_2,C1_P0_2+"");
+//            contentValues.put(SQLConstantes.MODULO1_P0_3,C1_P0_3);
+//            contentValues.put(SQLConstantes.MODULO1_P1_1,C1_P1_1);
+//            contentValues.put(SQLConstantes.MODULO1_P1_2,C1_P1_2);
+//            contentValues.put(SQLConstantes.MODULO1_P1_2_DETALLE,C1_P1_2_DETALLE);
+//            contentValues.put(SQLConstantes.MODULO1_P2_1_1,C1_P2_1_1);
+//            contentValues.put(SQLConstantes.MODULO1_P2_1_2,C1_P2_1_2);
+//            contentValues.put(SQLConstantes.MODULO1_P2_1_2_DETALLE,C1_P2_1_2_DETALLE);
+//            contentValues.put(SQLConstantes.MODULO1_P2_1_NO,C1_P2_1_NO+"");
+//            contentValues.put(SQLConstantes.MODULO1_P2_2_1,C1_P2_2_1);
+//            contentValues.put(SQLConstantes.MODULO1_P2_2_2,C1_P2_2_2);
+//            contentValues.put(SQLConstantes.MODULO1_P2_2_2_DETALLE,C1_P2_2_2_DETALLE);
+//            contentValues.put(SQLConstantes.MODULO1_P2_2_NO,C1_P2_2_NO+"");
+//            contentValues.put(SQLConstantes.MODULO1_P3,C1_P3+"");
+//            contentValues.put(SQLConstantes.MODULO1_P3_0,C1_P3_0);
+//            contentValues.put(SQLConstantes.MODULO1_P4_1_1,C1_P4_1_1+"");
+//            contentValues.put(SQLConstantes.MODULO1_P4_2_1,C1_P4_2_1+"");
+//            data.actualizarModulo1(idempresa,contentValues);
+//        }else{
+//            //si no existe el elemento, lo construye para insertarlo
+//            modulo1 = new Modulo1();
+//            //llena el objeto a insertar
+//            modulo1.setMODULO1_ID(idempresa);
+//            modulo1.setC1_P0_0(C1_P0_0+"");
+//            modulo1.setC1_P0_1(C1_P0_1);
+//            modulo1.setC1_P0_2(C1_P0_2+"");
+//            modulo1.setC1_P0_3(C1_P0_3);
+//            modulo1.setC1_P1_1(C1_P1_1);
+//            modulo1.setC1_P1_2(C1_P1_2);
+//            modulo1.setC1_P1_2_DETALLE(C1_P1_2_DETALLE);
+//            modulo1.setC1_P2_1_1(C1_P2_1_1);
+//            modulo1.setC1_P2_1_2(C1_P2_1_2);
+//            modulo1.setC1_P2_1_2_DETALLE(C1_P2_1_2_DETALLE);
+//            modulo1.setC1_P2_1_NO(C1_P2_1_NO+"");
+//            modulo1.setC1_P2_2_1(C1_P2_2_1);
+//            modulo1.setC1_P2_2_2(C1_P2_2_2);
+//            modulo1.setC1_P2_2_2_DETALLE(C1_P2_2_2_DETALLE);
+//            modulo1.setC1_P2_2_NO(C1_P2_2_NO+"");
+//            modulo1.setC1_P3(C1_P3+"");
+//            modulo1.setC1_P3_0(C1_P3_0);
+//            modulo1.setC1_P4_1_1(C1_P4_1_1+"");
+//            modulo1.setC1_P4_2_1(C1_P4_2_1+"");
+//            data.insertarModulo1(modulo1);
+//        }
         data.close();
     }
     public boolean validar(){

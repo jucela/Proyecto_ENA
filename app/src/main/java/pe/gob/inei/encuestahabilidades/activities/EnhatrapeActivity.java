@@ -266,8 +266,8 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
                             if(posicionFragment >= 4 && posicionFragment <= 5){
 
                                     ContentValues contentValues = new ContentValues(1);
-                                    contentValues.put(SQLConstantes.MODULO1_OBS_MOD_I,observaciones);
-                                    data.actualizarModulo1(idEmpresa,contentValues);
+                                    //contentValues.put(SQLConstantes.MODULO1_OBS_MOD_I,observaciones);
+                                    data.actualizarControl1(idEmpresa,contentValues);
 
                             }
                             if(posicionFragment >= 7 && posicionFragment <= 11){
@@ -814,7 +814,7 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
         data = new Data(this);
         data.open();
         if(posicionFragment >= 4 && posicionFragment <= 6){
-            observaciones = data.getModulo1(idEmpresa).getOBS_MOD_I();
+            //observaciones = data.getControl1(idEmpresa).getOBS_MOD_I();
         }
         if(posicionFragment >= 7 && posicionFragment <= 12){
             observaciones = data.getModulo2(idEmpresa).getOBS_MOD_II();

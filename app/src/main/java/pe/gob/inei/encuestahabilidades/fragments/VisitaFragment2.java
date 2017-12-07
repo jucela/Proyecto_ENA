@@ -805,7 +805,7 @@ public class VisitaFragment2 extends Fragment {
         boolean correcto = false;
         data = new Data(context);
         data.open();
-        boolean existenModulos = data.existeModulo1(idEmpresa) && data.existeModulo2(idEmpresa) &&
+        boolean existenModulos = data.existeControl1(idEmpresa) && data.existeModulo2(idEmpresa) &&
                 data.existeModulo3(idEmpresa) && data.existeModulo4(idEmpresa) &&
                 data.existeModulo5(idEmpresa) && data.existeModulo6(idEmpresa) &&
                 data.existeModulo7(idEmpresa) && data.existeModulo8(idEmpresa) &&
@@ -897,16 +897,16 @@ public class VisitaFragment2 extends Fragment {
         boolean correcto = false;
         data = new Data(context);
         data.open();
-        Modulo1 modulo1 = data.getModulo1(idEmpresa);
-        data.close();
-        if(!modulo1.getC1_P3().equals("") && !modulo1.getC1_P5().equals("") && !modulo1.getC1_P8().equals("")){
-            if(!modulo1.getC1_P1_1().equals("") &&
-                    Integer.parseInt(modulo1.getC1_P3())>-1 &&
-                    Integer.parseInt(modulo1.getC1_P5())>-1 &&
-                    Integer.parseInt(modulo1.getC1_P8())>-1){
-                correcto = true;
-            }
-        }
+//        Modulo1 modulo1 = data.getModulo1(idEmpresa);
+//        data.close();
+//        if(!modulo1.getC1_P3().equals("") && !modulo1.getC1_P5().equals("") && !modulo1.getC1_P8().equals("")){
+//            if(!modulo1.getC1_P1_1().equals("") &&
+//                    Integer.parseInt(modulo1.getC1_P3())>-1 &&
+//                    Integer.parseInt(modulo1.getC1_P5())>-1 &&
+//                    Integer.parseInt(modulo1.getC1_P8())>-1){
+//                correcto = true;
+//            }
+//        }
         if(!correcto){
             if(mensajeCoberturaModulo1.equals("")) mensajeCoberturaModulo1 = "FALTA COMPLETAR EL MODULO 1";
         }

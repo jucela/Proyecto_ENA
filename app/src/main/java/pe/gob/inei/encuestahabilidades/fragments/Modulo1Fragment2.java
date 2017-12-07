@@ -202,18 +202,18 @@ public class Modulo1Fragment2 extends Fragment {
     public void cargarDatos(){
         data = new Data(context);
         data.open();
-        modulo1 = data.getModulo1(idempresa);
-        if(!modulo1.getC1_P5().equals("")) ((RadioButton)rgP5.getChildAt(Integer.parseInt(modulo1.getC1_P5()))).setChecked(true);
-        txtPaisSeleccionado.setText(modulo1.getC1_P6_0());
-        if(!modulo1.getC1_P7_1_1().equals("") && Integer.parseInt(modulo1.getC1_P7_1_1()) != -1)
-        ((RadioButton)rg1P7.getChildAt(Integer.parseInt(modulo1.getC1_P7_1_1()))).setChecked(true);
-        if(!modulo1.getC1_P7_1_2().equals("") && Integer.parseInt(modulo1.getC1_P7_1_2()) != -1)
-        ((RadioButton)rgP7Sp1.getChildAt(Integer.parseInt(modulo1.getC1_P7_1_2()))).setChecked(true);
-        if(!modulo1.getC1_P7_2_1().equals("") && Integer.parseInt(modulo1.getC1_P7_2_1()) != -1)
-        ((RadioButton)rg2P7.getChildAt(Integer.parseInt(modulo1.getC1_P7_2_1()))).setChecked(true);
-        if(!modulo1.getC1_P7_2_2().equals("") && Integer.parseInt(modulo1.getC1_P7_2_2()) != -1)
-        ((RadioButton)rgP7Sp2.getChildAt(Integer.parseInt(modulo1.getC1_P7_2_2()))).setChecked(true);
-        data.close();
+//        modulo1 = data.getModulo1(idempresa);
+//        if(!modulo1.getC1_P5().equals("")) ((RadioButton)rgP5.getChildAt(Integer.parseInt(modulo1.getC1_P5()))).setChecked(true);
+//        txtPaisSeleccionado.setText(modulo1.getC1_P6_0());
+//        if(!modulo1.getC1_P7_1_1().equals("") && Integer.parseInt(modulo1.getC1_P7_1_1()) != -1)
+//        ((RadioButton)rg1P7.getChildAt(Integer.parseInt(modulo1.getC1_P7_1_1()))).setChecked(true);
+//        if(!modulo1.getC1_P7_1_2().equals("") && Integer.parseInt(modulo1.getC1_P7_1_2()) != -1)
+//        ((RadioButton)rgP7Sp1.getChildAt(Integer.parseInt(modulo1.getC1_P7_1_2()))).setChecked(true);
+//        if(!modulo1.getC1_P7_2_1().equals("") && Integer.parseInt(modulo1.getC1_P7_2_1()) != -1)
+//        ((RadioButton)rg2P7.getChildAt(Integer.parseInt(modulo1.getC1_P7_2_1()))).setChecked(true);
+//        if(!modulo1.getC1_P7_2_2().equals("") && Integer.parseInt(modulo1.getC1_P7_2_2()) != -1)
+//        ((RadioButton)rgP7Sp2.getChildAt(Integer.parseInt(modulo1.getC1_P7_2_2()))).setChecked(true);
+//        data.close();
     }
     public void llenarMapaVariables(){
         C1_P5 = rgP5.indexOfChild(rgP5.findViewById(rgP5.getCheckedRadioButtonId()));
@@ -228,15 +228,15 @@ public class Modulo1Fragment2 extends Fragment {
     public void guardarDatos(){
         data = new Data(context);
         data.open();
-        ContentValues contentValues = new ContentValues(47);
-        contentValues.put(SQLConstantes.MODULO1_P5,C1_P5+"");
-        contentValues.put(SQLConstantes.MODULO1_P6_0,C1_P6_0);
-        contentValues.put(SQLConstantes.MODULO1_P6_1,C1_P6_1);
-        contentValues.put(SQLConstantes.MODULO1_P7_1_1,C1_P7_1_1+"");
-        contentValues.put(SQLConstantes.MODULO1_P7_2_1,C1_P7_2_1+"");
-        contentValues.put(SQLConstantes.MODULO1_P7_1_2,C1_P7_1_2+"");
-        contentValues.put(SQLConstantes.MODULO1_P7_2_2,C1_P7_2_2+"");
-        data.actualizarModulo1(idempresa,contentValues);
+//        ContentValues contentValues = new ContentValues(47);
+//        contentValues.put(SQLConstantes.MODULO1_P5,C1_P5+"");
+//        contentValues.put(SQLConstantes.MODULO1_P6_0,C1_P6_0);
+//        contentValues.put(SQLConstantes.MODULO1_P6_1,C1_P6_1);
+//        contentValues.put(SQLConstantes.MODULO1_P7_1_1,C1_P7_1_1+"");
+//        contentValues.put(SQLConstantes.MODULO1_P7_2_1,C1_P7_2_1+"");
+//        contentValues.put(SQLConstantes.MODULO1_P7_1_2,C1_P7_1_2+"");
+//        contentValues.put(SQLConstantes.MODULO1_P7_2_2,C1_P7_2_2+"");
+//        data.actualizarModulo1(idempresa,contentValues);
         data.close();
     }
 
