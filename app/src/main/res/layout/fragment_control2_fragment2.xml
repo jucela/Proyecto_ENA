@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:id="@+id/con1_layoutFragment1"
     android:focusableInTouchMode="true"
-    tools:context="pe.gob.inei.encuestahabilidades.fragments.Control1Fragment2">
+    tools:context="pe.gob.inei.encuestahabilidades.fragments.Control1Fragment1">
 
     <!-- TODO: Update blank fragment layout -->
     <!--<include layout="@layout/cabecera_titulo_layout"/>-->
@@ -16,7 +16,7 @@
             android:id="@+id/txtCabecera1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/modulo1_nombre"
+            android:text="@string/modulo2_nombre"
             android:background="@color/colorPrimary"
             android:textColor="@color/icons"
             android:gravity="center"
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <include layout="@layout/fragment_c1_p2" />
+            <include layout="@layout/fragment_c2_p2" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

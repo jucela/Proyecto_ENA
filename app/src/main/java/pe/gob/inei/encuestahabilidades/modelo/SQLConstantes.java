@@ -204,7 +204,7 @@ public class SQLConstantes {
     public static final String FRAGMENT_HABILITADO = "F_HAB";
     public static final String FRAGMENT_AVANCE = "F_AVA";
 
-    //MODULO I
+    //CONTROL I
     public static final String C1_ID = "ID";
     public static final String C1_P1 = "C1_P1";
     public static final String C1_P2 = "C1_P2";
@@ -224,6 +224,32 @@ public class SQLConstantes {
     public static final String C1_P4_10 = "C1_P4_10";
     public static final String C1_P4_11 = "C1_P4_11";
     public static final String C1_P4_12 = "C1_P4_12";
+
+    //CONTROL II
+    public static final String C2_ID = "ID";
+    public static final String C2_P1_1 = "C2_P1_1";
+    public static final String C2_P1_2 = "C2_P1_2";
+    public static final String C2_P1_3 = "C2_P1_3";
+    public static final String C2_P1_4 = "C2_P1_4";
+    public static final String C2_P1_5 = "C2_P1_5";
+    public static final String C2_P1_6 = "C2_P1_6";
+    public static final String C2_P1_7 = "C2_P1_7";
+    public static final String C2_P1_8 = "C2_P1_8";
+    public static final String C2_P1_9 = "C2_P1_9";
+    public static final String C2_P1_10 = "C2_P1_10";
+    public static final String C2_P1_11 = "C2_P1_11";
+    public static final String C2_P1_12 = "C2_P1_12";
+    public static final String C2_P1_13 = "C2_P1_13";
+    public static final String C2_P2_1 = "C2_P2_1";
+    public static final String C2_P2_2 = "C2_P2_2";
+    public static final String C2_P2_3 = "C2_P2_3";
+    public static final String C2_P2_4 = "C2_P2_4";
+    public static final String C2_P2_5 = "C2_P2_5";
+    public static final String C2_P2_6 = "C2_P2_6";
+    public static final String C2_P2_7 = "C2_P2_7";
+
+
+
 
 
 
@@ -1952,7 +1978,7 @@ public class SQLConstantes {
             ;
 
 
-    //TABLA MODULO1
+    //TABLA CONTROL1
     public static final String SQL_CREATE_TABLA_CONTROL1 =
             "CREATE TABLE " + tableControl1 + "(" +
                     C1_ID  + " TEXT PRIMARY KEY," +
@@ -1975,6 +2001,32 @@ public class SQLConstantes {
                     C1_P4_11  +  " TEXT, " +
                     C1_P4_12  +  " TEXT " +");"
                     ;
+    //TABLA CONTROL2
+    public static final String SQL_CREATE_TABLA_CONTROL2 =
+            "CREATE TABLE " + tableControl2 + "(" +
+                    C2_ID  + " TEXT PRIMARY KEY," +
+                    C2_P1_1  +  " TEXT, " +
+                    C2_P1_2  +  " TEXT, " +
+                    C2_P1_3  +  " TEXT, " +
+                    C2_P1_4  +  " TEXT, " +
+                    C2_P1_5  +  " TEXT, " +
+                    C2_P1_6  +  " TEXT, " +
+                    C2_P1_7  +  " TEXT, " +
+                    C2_P1_8  +  " TEXT, " +
+                    C2_P1_9  +  " TEXT, " +
+                    C2_P1_10  +  " TEXT, " +
+                    C2_P1_11  +  " TEXT, " +
+                    C2_P1_12  +  " TEXT, " +
+                    C2_P1_13  +  " TEXT, " +
+                    C2_P2_1  +  " TEXT, " +
+                    C2_P2_2  +  " TEXT, " +
+                    C2_P2_3  +  " TEXT, " +
+                    C2_P2_4  +  " TEXT, " +
+                    C2_P2_5  +  " TEXT, " +
+                    C2_P2_6  +  " TEXT, " +
+                    C2_P2_7  +  " TEXT " +");"
+            ;
+
     //TABLA MODULO2
     public static final String SQL_CREATE_TABLA_MODULO2=
             "CREATE TABLE " + tableModulo2 + "(" +
@@ -3693,6 +3745,32 @@ public class SQLConstantes {
             C1_P4_10,
             C1_P4_11,
             C1_P4_12
+    };
+
+    //CONTROL 2
+    public static final String[] ALL_COLUMNS_CONTROL2 = {
+            C2_ID,
+            C2_P1_1,
+            C2_P1_2,
+            C2_P1_3,
+            C2_P1_4,
+            C2_P1_5,
+            C2_P1_6,
+            C2_P1_7,
+            C2_P1_8,
+            C2_P1_9,
+            C2_P1_10,
+            C2_P1_11,
+            C2_P1_12,
+            C2_P1_13,
+            C2_P2_1,
+            C2_P2_2,
+            C2_P2_3,
+            C2_P2_4,
+            C2_P2_5,
+            C2_P2_6,
+            C2_P2_7
+
     };
 
     //MODULO 2

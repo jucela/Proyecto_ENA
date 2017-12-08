@@ -17,6 +17,7 @@ import pe.gob.inei.encuestahabilidades.pojos.DatosEntrevista;
 import pe.gob.inei.encuestahabilidades.pojos.Identificacion;
 import pe.gob.inei.encuestahabilidades.pojos.Marco;
 import pe.gob.inei.encuestahabilidades.pojos.Control1;
+import pe.gob.inei.encuestahabilidades.pojos.Control2;
 import pe.gob.inei.encuestahabilidades.pojos.Modulo10;
 import pe.gob.inei.encuestahabilidades.pojos.Modulo2;
 import pe.gob.inei.encuestahabilidades.pojos.Modulo3;
@@ -703,9 +704,6 @@ public class Data {
                 control1.setC1_P4_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C1_P4_10)));
                 control1.setC1_P4_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C1_P4_11)));
                 control1.setC1_P4_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C1_P4_12)));
-
-
-
             }
         }finally {
             if(cursor != null)cursor.close();
@@ -787,8 +785,109 @@ public class Data {
         String[] whereArgs = new String[]{idEmpresa};
         sqLiteDatabase.delete(SQLConstantes.tableControl1,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
     }
-//----------------------------------------------FIN MODULO 1-----------------------------------------------------------------------
+//----------------------------------------------FIN CONTROL 1-----------------------------------------------------------------------
 
+    //---------------------------------CONTROL2-------------------------------------------------------------
+    public Control2 getControl2(String idEmpresa){
+        Control2 control2 = new Control2();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl2,
+                SQLConstantes.ALL_COLUMNS_CONTROL2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            control2.setCONTROL2_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_ID)));
+            control2.setC2_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_1)));
+            control2.setC2_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_2)));
+            control2.setC2_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_3)));
+            control2.setC2_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_4)));
+            control2.setC2_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_5)));
+            control2.setC2_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_6)));
+            control2.setC2_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_7)));
+            control2.setC2_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_8)));
+            control2.setC2_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_9)));
+            control2.setC2_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_10)));
+            control2.setC2_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_11)));
+            control2.setC2_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_12)));
+            control2.setC2_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_13)));
+            control2.setC2_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_1)));
+            control2.setC2_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_2)));
+            control2.setC2_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_3)));
+            control2.setC2_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_4)));
+            control2.setC2_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_5)));
+            control2.setC2_P2_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_6)));
+            control2.setC2_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_7)));
+        }
+        cursor.close();
+        return control2;
+    }
+    public ArrayList<Control2> getAllControl2(){
+        ArrayList<Control2> modulos2 = new ArrayList<Control2>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl2,
+                SQLConstantes.ALL_COLUMNS_CONTROL2,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Control2 control2 = new Control2();
+            control2.setCONTROL2_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_ID)));
+            control2.setC2_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_1)));
+            control2.setC2_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_2)));
+            control2.setC2_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_3)));
+            control2.setC2_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_4)));
+            control2.setC2_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_5)));
+            control2.setC2_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_6)));
+            control2.setC2_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_7)));
+            control2.setC2_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_8)));
+            control2.setC2_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_9)));
+            control2.setC2_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_10)));
+            control2.setC2_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_11)));
+            control2.setC2_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_12)));
+            control2.setC2_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P1_13)));
+            control2.setC2_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_1)));
+            control2.setC2_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_2)));
+            control2.setC2_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_3)));
+            control2.setC2_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_4)));
+            control2.setC2_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_5)));
+            control2.setC2_P2_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_6)));
+            control2.setC2_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_7)));
+
+
+            modulos2.add(control2);
+        }
+        cursor.close();
+        return modulos2;
+    }
+    public boolean existeControl2(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl2,
+                SQLConstantes.ALL_COLUMNS_CONTROL2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarControl2(Control2 control2){
+        ContentValues contentValues = control2.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableControl2,null,contentValues);
+    }
+//    public void insertarModulos2(ArrayList<Control2> modulos2){
+//        long items = getNumeroItemscontrol2();
+//        if(items == 0){
+//            for (control2 control2 : modulos2) {
+//                try {
+//                    insertarcontrol2(control2);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarcontrol2(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableControl2,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deletecontrol2(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableControl2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN MODULO2-----------------------------------------------------------------
 
 
     //---------------------------------MODULO2-------------------------------------------------------------

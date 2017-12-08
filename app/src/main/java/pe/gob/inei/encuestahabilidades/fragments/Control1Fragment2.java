@@ -167,7 +167,7 @@ public class Control1Fragment2 extends Fragment {
             ((RadioButton)con1_p4_rg5.getChildAt(childPos45)).setChecked(true);}
             //pregunta 46
             if(!control1.getC1_P4_6().equals("")){
-            int childPos46 = Integer.parseInt(control1.getC1_P4_7());
+            int childPos46 = Integer.parseInt(control1.getC1_P4_6());
             ((RadioButton)con1_p4_rg6.getChildAt(childPos46)).setChecked(true);}
             //pregunta 4.7
             if(!control1.getC1_P4_7().equals("")){

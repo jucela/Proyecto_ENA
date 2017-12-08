@@ -27,6 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(SQLConstantes.SQL_CREATE_TABLA_IDENTIFICACIONES);
         sqLiteDatabase.execSQL(SQLConstantes.SQL_CREATE_TABLA_FRAGMENTS);
         sqLiteDatabase.execSQL(SQLConstantes.SQL_CREATE_TABLA_CONTROL1);
+        sqLiteDatabase.execSQL(SQLConstantes.SQL_CREATE_TABLA_CONTROL2);
         sqLiteDatabase.execSQL(SQLConstantes.SQL_CREATE_TABLA_MODULO2);
         sqLiteDatabase.execSQL(SQLConstantes.SQL_CREATE_TABLA_MODULO3);
         sqLiteDatabase.execSQL(SQLConstantes.SQL_CREATE_TABLA_MODULO4);

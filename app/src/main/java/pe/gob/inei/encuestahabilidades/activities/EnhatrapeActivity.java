@@ -40,6 +40,8 @@ import pe.gob.inei.encuestahabilidades.fragments.InicioFragment;
 import pe.gob.inei.encuestahabilidades.fragments.Modulo10Fragment1;
 import pe.gob.inei.encuestahabilidades.fragments.Control1Fragment1;
 import pe.gob.inei.encuestahabilidades.fragments.Control1Fragment2;
+import pe.gob.inei.encuestahabilidades.fragments.Control2Fragment1;
+import pe.gob.inei.encuestahabilidades.fragments.Control2Fragment2;
 import pe.gob.inei.encuestahabilidades.fragments.Modulo1Fragment3;
 import pe.gob.inei.encuestahabilidades.fragments.Modulo2Fragment1;
 import pe.gob.inei.encuestahabilidades.fragments.Modulo2Fragment2;
@@ -348,254 +350,254 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
                 Control1Fragment2 Control1Fragment2= (Control1Fragment2) fragmentActual;
                 correcto = Control1Fragment2.validar();
                 break;
+//            case 2:
+//                Modulo1Fragment3 modulo1Fragment3= (Modulo1Fragment3) fragmentActual;
+//                correcto = modulo1Fragment3.validar();
+//                break;
             case 2:
-                Modulo1Fragment3 modulo1Fragment3= (Modulo1Fragment3) fragmentActual;
-                correcto = modulo1Fragment3.validar();
+                Control2Fragment1 Control2Fragment1= (Control2Fragment1) fragmentActual;
+                correcto = Control2Fragment1.validar();
                 break;
             case 3:
-                Modulo2Fragment1 modulo2Fragment1= (Modulo2Fragment1) fragmentActual;
-                correcto = modulo2Fragment1.validar();
+                Control2Fragment2 Control2Fragment2 = (Control2Fragment2) fragmentActual;
+                correcto = Control2Fragment2.validar();
                 break;
-            case 4:
-                Modulo2Fragment2 modulo2Fragment2 = (Modulo2Fragment2) fragmentActual;
-                correcto = modulo2Fragment2.validar();
-                break;
-            case 5:
-                Modulo2Fragment3 modulo2Fragment3 = (Modulo2Fragment3) fragmentActual;
-                correcto = modulo2Fragment3.validar();
-                break;
-            case 6:
-                Modulo2Fragment4 modulo2Fragment4 = (Modulo2Fragment4) fragmentActual;
-                correcto = modulo2Fragment4.validar();
-                break;
-            case 7:
-                Modulo2Fragment5 modulo2Fragment5 = (Modulo2Fragment5) fragmentActual;
-                correcto = modulo2Fragment5.validar();
-                break;
-            case 8:
-                Modulo2Fragment6 modulo2Fragment6 = (Modulo2Fragment6) fragmentActual;
-                correcto = modulo2Fragment6.validar();
-                break;
-            case 9:
-                Modulo3Fragment1 modulo3Fragment1 = (Modulo3Fragment1) fragmentActual;
-                correcto = modulo3Fragment1.validar();
-                break;
-            case 10:
-                Modulo3Fragment2 modulo3Fragment2 = (Modulo3Fragment2) fragmentActual;
-                correcto = modulo3Fragment2.validar();
-                break;
-            case 15:
-                Modulo4Fragment1 modulo4Fragment1 = (Modulo4Fragment1) fragmentActual;
-                correcto = modulo4Fragment1.validar();
-                break;
-            case 16:
-                Modulo4Fragment2 modulo4Fragment2 = (Modulo4Fragment2) fragmentActual;
-                correcto = modulo4Fragment2.validar();
-                break;
-            case 17:
-                Modulo4Fragment3 modulo4Fragment3 = (Modulo4Fragment3) fragmentActual;
-                correcto = modulo4Fragment3.validar();
-                break;
-            case 18:
-                Modulo5Fragment1 modulo5Fragment1 = (Modulo5Fragment1) fragmentActual;
-                correcto = modulo5Fragment1.validar();
-                break;
-            case 19:
-                Modulo5Fragment2 modulo5Fragment2 = (Modulo5Fragment2) fragmentActual;
-                correcto = modulo5Fragment2.validar();
-                break;
-            case 20:
-                Modulo5Fragment3 modulo5Fragment3 = (Modulo5Fragment3) fragmentActual;
-                correcto = modulo5Fragment3.validar();
-                break;
-            case 21:
-                Modulo5Fragment4 modulo5Fragment4 = (Modulo5Fragment4) fragmentActual;
-                correcto = modulo5Fragment4.validar();
-                break;
-            case 22:
-                Modulo5Fragment5 modulo5Fragment5 = (Modulo5Fragment5) fragmentActual;
-                correcto = modulo5Fragment5.validar();
-                break;
-            case 23:
-                Modulo5Fragment6 modulo5Fragment6 = (Modulo5Fragment6) fragmentActual;
-                correcto = modulo5Fragment6.validar();
-                break;
-            case 24:
-                Modulo5Fragment7 modulo5Fragment7 = (Modulo5Fragment7) fragmentActual;
-                correcto = modulo5Fragment7.validar();
-                break;
-            case 25:
-                Modulo5Fragment8 modulo5Fragment8 = (Modulo5Fragment8) fragmentActual;
-                correcto = modulo5Fragment8.validar();
-                break;
-            case 26:
-                Modulo5Fragment9 modulo5Fragment9 = (Modulo5Fragment9) fragmentActual;
-                correcto = modulo5Fragment9.validar();
-                break;
-            case 27:
-                Modulo5Fragment10 modulo5Fragment10 = (Modulo5Fragment10) fragmentActual;
-                correcto = modulo5Fragment10.validar();
-                break;
-            case 28:
-                Modulo5Fragment11 modulo5Fragment11 = (Modulo5Fragment11) fragmentActual;
-                correcto = modulo5Fragment11.validar();
-                break;
-            case 29:
-                Modulo5Fragment12 modulo5Fragment12 = (Modulo5Fragment12) fragmentActual;
-                correcto = modulo5Fragment12.validar();
-                break;
-            case 30:
-                Modulo5Fragment13 modulo5Fragment13 = (Modulo5Fragment13) fragmentActual;
-                correcto = modulo5Fragment13.validar();
-                break;
-            case 31:
-                Modulo5Fragment14 modulo5Fragment14 = (Modulo5Fragment14) fragmentActual;
-                correcto = modulo5Fragment14.validar();
-                break;
-            case 32:
-                Modulo5Fragment15 modulo5Fragment15 = (Modulo5Fragment15) fragmentActual;
-                correcto = modulo5Fragment15.validar();
-                break;
-            case 33:
-                Modulo5Fragment16 modulo5Fragment16 = (Modulo5Fragment16) fragmentActual;
-                correcto = modulo5Fragment16.validar();
-                break;
-            case 34:
-                Modulo5Fragment17 modulo5Fragment17 = (Modulo5Fragment17) fragmentActual;
-                correcto = modulo5Fragment17.validar();
-                break;
-            case 35:
-                Modulo5Fragment18 modulo5Fragment18 = (Modulo5Fragment18) fragmentActual;
-                correcto = modulo5Fragment18.validar();
-                break;
-            case 36:
-                Modulo5Fragment19 modulo5Fragment19 = (Modulo5Fragment19) fragmentActual;
-                correcto = modulo5Fragment19.validar();
-                break;
-            case 37:
-                Modulo5Fragment20 modulo5Fragment20 = (Modulo5Fragment20) fragmentActual;
-                correcto = modulo5Fragment20.validar();
-                break;
-            case 38:
-                Modulo5Fragment21 modulo5Fragment21 = (Modulo5Fragment21) fragmentActual;
-                correcto = modulo5Fragment21.validar();
-                break;
-            case 39:
-                Modulo5Fragment22 modulo5Fragment22 = (Modulo5Fragment22) fragmentActual;
-                correcto = modulo5Fragment22.validar();
-                break;
-            case 40:
-                Modulo5Fragment23 modulo5Fragment23 = (Modulo5Fragment23) fragmentActual;
-                correcto = modulo5Fragment23.validar();
-                break;
-            case 41:
-                Modulo6Fragment1 modulo6Fragment1 = (Modulo6Fragment1) fragmentActual;
-                correcto = modulo6Fragment1.validar();
-                break;
-            case 42:
-                Modulo6Fragment2 modulo6Fragment2 = (Modulo6Fragment2) fragmentActual;
-                correcto = modulo6Fragment2.validar();
-                break;
-            case 43:
-                Modulo6Fragment3 modulo6Fragment3 = (Modulo6Fragment3) fragmentActual;
-                correcto = modulo6Fragment3.validar();
-                break;
-            case 44:
-                Modulo6Fragment4 modulo6Fragment4 = (Modulo6Fragment4) fragmentActual;
-                correcto = modulo6Fragment4.validar();
-                break;
-            case 45:
-                Modulo6Fragment5 modulo6Fragment5 = (Modulo6Fragment5) fragmentActual;
-                correcto = modulo6Fragment5.validar();
-                break;
-            case 46:
-                Modulo6Fragment6 modulo6Fragment6 = (Modulo6Fragment6) fragmentActual;
-                correcto = modulo6Fragment6.validar();
-                break;
-            case 47:
-                Modulo7Fragment1 modulo7Fragment1 = (Modulo7Fragment1) fragmentActual;
-                correcto = modulo7Fragment1.validar();
-                break;
-            case 48:
-                Modulo7Fragment2 modulo7Fragment2 = (Modulo7Fragment2) fragmentActual;
-                correcto = modulo7Fragment2.validar();
-                break;
-            case 49:
-                Modulo7Fragment3 modulo7Fragment3 = (Modulo7Fragment3) fragmentActual;
-                correcto = modulo7Fragment3.validar();
-                break;
-            case 50:
-                Modulo7Fragment4 modulo7Fragment4 = (Modulo7Fragment4) fragmentActual;
-                correcto = modulo7Fragment4.validar();
-                break;
-            case 51:
-                Modulo7Fragment5 modulo7Fragment5 = (Modulo7Fragment5) fragmentActual;
-                correcto = modulo7Fragment5.validar();
-                break;
-            case 52:
-                Modulo7Fragment6 modulo7Fragment6 = (Modulo7Fragment6) fragmentActual;
-                correcto = modulo7Fragment6.validar();
-                break;
-            case 53:
-                Modulo7Fragment7 modulo7Fragment7 = (Modulo7Fragment7) fragmentActual;
-                correcto = modulo7Fragment7.validar();
-                break;
-            case 54:
-                Modulo7Fragment8 modulo7Fragment8 = (Modulo7Fragment8) fragmentActual;
-                correcto = modulo7Fragment8.validar();
-                break;
-            case 55:
-                Modulo7Fragment9 modulo7Fragment9 = (Modulo7Fragment9) fragmentActual;
-                correcto = modulo7Fragment9.validar();
-                break;
-            case 56:
-                Modulo7Fragment10 modulo7Fragment10 = (Modulo7Fragment10) fragmentActual;
-                correcto = modulo7Fragment10.validar();
-                break;
-            case 57:
-                Modulo7Fragment11 modulo7Fragment11 = (Modulo7Fragment11) fragmentActual;
-                correcto = modulo7Fragment11.validar();
-                break;
-            case 58:
-                Modulo7Fragment12 modulo7Fragment12 = (Modulo7Fragment12) fragmentActual;
-                correcto = modulo7Fragment12.validar();
-                break;
-            case 59:
-                Modulo7Fragment13 modulo7Fragment13 = (Modulo7Fragment13) fragmentActual;
-                correcto = modulo7Fragment13.validar();
-                break;
-            case 60:
-                Modulo8Fragment1 modulo8Fragment1 = (Modulo8Fragment1) fragmentActual;
-                correcto = modulo8Fragment1.validar();
-                break;
-            case 61:
-                Modulo8Fragment2 modulo8Fragment2 = (Modulo8Fragment2) fragmentActual;
-                correcto = modulo8Fragment2.validar();
-                break;
-            case 62:
-                Modulo8Fragment3 modulo8Fragment3 = (Modulo8Fragment3) fragmentActual;
-                correcto = modulo8Fragment3.validar();
-                break;
-            case 63:
-                Modulo8Fragment4 modulo8Fragment4 = (Modulo8Fragment4) fragmentActual;
-                correcto = modulo8Fragment4.validar();
-                break;
-            case 64:
-                Modulo8Fragment5 modulo8Fragment5 = (Modulo8Fragment5) fragmentActual;
-                correcto = modulo8Fragment5.validar();
-                break;
-            case 65:
-                Modulo8Fragment6 modulo8Fragment6 = (Modulo8Fragment6) fragmentActual;
-                correcto = modulo8Fragment6.validar();
-                break;
-            case 66:
-                Modulo9Fragment1 modulo9Fragment1 = (Modulo9Fragment1) fragmentActual;
-                correcto = modulo9Fragment1.validar();
-                break;
-            case 67:
-                Modulo10Fragment1 modulo10Fragment1 = (Modulo10Fragment1) fragmentActual;
-                correcto = modulo10Fragment1.validar();
-                break;
+//            case 5:
+//                Modulo2Fragment3 modulo2Fragment3 = (Modulo2Fragment3) fragmentActual;
+//                correcto = modulo2Fragment3.validar();
+//                break;
+//            case 6:
+//                Modulo2Fragment4 modulo2Fragment4 = (Modulo2Fragment4) fragmentActual;
+//                correcto = modulo2Fragment4.validar();
+//                break;
+//            case 7:
+//                Modulo2Fragment5 modulo2Fragment5 = (Modulo2Fragment5) fragmentActual;
+//                correcto = modulo2Fragment5.validar();
+//                break;
+//            case 8:
+//                Modulo2Fragment6 modulo2Fragment6 = (Modulo2Fragment6) fragmentActual;
+//                correcto = modulo2Fragment6.validar();
+//                break;
+//            case 9:
+//                Modulo3Fragment1 modulo3Fragment1 = (Modulo3Fragment1) fragmentActual;
+//                correcto = modulo3Fragment1.validar();
+//                break;
+//            case 10:
+//                Modulo3Fragment2 modulo3Fragment2 = (Modulo3Fragment2) fragmentActual;
+//                correcto = modulo3Fragment2.validar();
+//                break;
+//            case 15:
+//                Modulo4Fragment1 modulo4Fragment1 = (Modulo4Fragment1) fragmentActual;
+//                correcto = modulo4Fragment1.validar();
+//                break;
+//            case 16:
+//                Modulo4Fragment2 modulo4Fragment2 = (Modulo4Fragment2) fragmentActual;
+//                correcto = modulo4Fragment2.validar();
+//                break;
+//            case 17:
+//                Modulo4Fragment3 modulo4Fragment3 = (Modulo4Fragment3) fragmentActual;
+//                correcto = modulo4Fragment3.validar();
+//                break;
+//            case 18:
+//                Modulo5Fragment1 modulo5Fragment1 = (Modulo5Fragment1) fragmentActual;
+//                correcto = modulo5Fragment1.validar();
+//                break;
+//            case 19:
+//                Modulo5Fragment2 modulo5Fragment2 = (Modulo5Fragment2) fragmentActual;
+//                correcto = modulo5Fragment2.validar();
+//                break;
+//            case 20:
+//                Modulo5Fragment3 modulo5Fragment3 = (Modulo5Fragment3) fragmentActual;
+//                correcto = modulo5Fragment3.validar();
+//                break;
+//            case 21:
+//                Modulo5Fragment4 modulo5Fragment4 = (Modulo5Fragment4) fragmentActual;
+//                correcto = modulo5Fragment4.validar();
+//                break;
+//            case 22:
+//                Modulo5Fragment5 modulo5Fragment5 = (Modulo5Fragment5) fragmentActual;
+//                correcto = modulo5Fragment5.validar();
+//                break;
+//            case 23:
+//                Modulo5Fragment6 modulo5Fragment6 = (Modulo5Fragment6) fragmentActual;
+//                correcto = modulo5Fragment6.validar();
+//                break;
+//            case 24:
+//                Modulo5Fragment7 modulo5Fragment7 = (Modulo5Fragment7) fragmentActual;
+//                correcto = modulo5Fragment7.validar();
+//                break;
+//            case 25:
+//                Modulo5Fragment8 modulo5Fragment8 = (Modulo5Fragment8) fragmentActual;
+//                correcto = modulo5Fragment8.validar();
+//                break;
+//            case 26:
+//                Modulo5Fragment9 modulo5Fragment9 = (Modulo5Fragment9) fragmentActual;
+//                correcto = modulo5Fragment9.validar();
+//                break;
+//            case 27:
+//                Modulo5Fragment10 modulo5Fragment10 = (Modulo5Fragment10) fragmentActual;
+//                correcto = modulo5Fragment10.validar();
+//                break;
+//            case 28:
+//                Modulo5Fragment11 modulo5Fragment11 = (Modulo5Fragment11) fragmentActual;
+//                correcto = modulo5Fragment11.validar();
+//                break;
+//            case 29:
+//                Modulo5Fragment12 modulo5Fragment12 = (Modulo5Fragment12) fragmentActual;
+//                correcto = modulo5Fragment12.validar();
+//                break;
+//            case 30:
+//                Modulo5Fragment13 modulo5Fragment13 = (Modulo5Fragment13) fragmentActual;
+//                correcto = modulo5Fragment13.validar();
+//                break;
+//            case 31:
+//                Modulo5Fragment14 modulo5Fragment14 = (Modulo5Fragment14) fragmentActual;
+//                correcto = modulo5Fragment14.validar();
+//                break;
+//            case 32:
+//                Modulo5Fragment15 modulo5Fragment15 = (Modulo5Fragment15) fragmentActual;
+//                correcto = modulo5Fragment15.validar();
+//                break;
+//            case 33:
+//                Modulo5Fragment16 modulo5Fragment16 = (Modulo5Fragment16) fragmentActual;
+//                correcto = modulo5Fragment16.validar();
+//                break;
+//            case 34:
+//                Modulo5Fragment17 modulo5Fragment17 = (Modulo5Fragment17) fragmentActual;
+//                correcto = modulo5Fragment17.validar();
+//                break;
+//            case 35:
+//                Modulo5Fragment18 modulo5Fragment18 = (Modulo5Fragment18) fragmentActual;
+//                correcto = modulo5Fragment18.validar();
+//                break;
+//            case 36:
+//                Modulo5Fragment19 modulo5Fragment19 = (Modulo5Fragment19) fragmentActual;
+//                correcto = modulo5Fragment19.validar();
+//                break;
+//            case 37:
+//                Modulo5Fragment20 modulo5Fragment20 = (Modulo5Fragment20) fragmentActual;
+//                correcto = modulo5Fragment20.validar();
+//                break;
+//            case 38:
+//                Modulo5Fragment21 modulo5Fragment21 = (Modulo5Fragment21) fragmentActual;
+//                correcto = modulo5Fragment21.validar();
+//                break;
+//            case 39:
+//                Modulo5Fragment22 modulo5Fragment22 = (Modulo5Fragment22) fragmentActual;
+//                correcto = modulo5Fragment22.validar();
+//                break;
+//            case 40:
+//                Modulo5Fragment23 modulo5Fragment23 = (Modulo5Fragment23) fragmentActual;
+//                correcto = modulo5Fragment23.validar();
+//                break;
+//            case 41:
+//                Modulo6Fragment1 modulo6Fragment1 = (Modulo6Fragment1) fragmentActual;
+//                correcto = modulo6Fragment1.validar();
+//                break;
+//            case 42:
+//                Modulo6Fragment2 modulo6Fragment2 = (Modulo6Fragment2) fragmentActual;
+//                correcto = modulo6Fragment2.validar();
+//                break;
+//            case 43:
+//                Modulo6Fragment3 modulo6Fragment3 = (Modulo6Fragment3) fragmentActual;
+//                correcto = modulo6Fragment3.validar();
+//                break;
+//            case 44:
+//                Modulo6Fragment4 modulo6Fragment4 = (Modulo6Fragment4) fragmentActual;
+//                correcto = modulo6Fragment4.validar();
+//                break;
+//            case 45:
+//                Modulo6Fragment5 modulo6Fragment5 = (Modulo6Fragment5) fragmentActual;
+//                correcto = modulo6Fragment5.validar();
+//                break;
+//            case 46:
+//                Modulo6Fragment6 modulo6Fragment6 = (Modulo6Fragment6) fragmentActual;
+//                correcto = modulo6Fragment6.validar();
+//                break;
+//            case 47:
+//                Modulo7Fragment1 modulo7Fragment1 = (Modulo7Fragment1) fragmentActual;
+//                correcto = modulo7Fragment1.validar();
+//                break;
+//            case 48:
+//                Modulo7Fragment2 modulo7Fragment2 = (Modulo7Fragment2) fragmentActual;
+//                correcto = modulo7Fragment2.validar();
+//                break;
+//            case 49:
+//                Modulo7Fragment3 modulo7Fragment3 = (Modulo7Fragment3) fragmentActual;
+//                correcto = modulo7Fragment3.validar();
+//                break;
+//            case 50:
+//                Modulo7Fragment4 modulo7Fragment4 = (Modulo7Fragment4) fragmentActual;
+//                correcto = modulo7Fragment4.validar();
+//                break;
+//            case 51:
+//                Modulo7Fragment5 modulo7Fragment5 = (Modulo7Fragment5) fragmentActual;
+//                correcto = modulo7Fragment5.validar();
+//                break;
+//            case 52:
+//                Modulo7Fragment6 modulo7Fragment6 = (Modulo7Fragment6) fragmentActual;
+//                correcto = modulo7Fragment6.validar();
+//                break;
+//            case 53:
+//                Modulo7Fragment7 modulo7Fragment7 = (Modulo7Fragment7) fragmentActual;
+//                correcto = modulo7Fragment7.validar();
+//                break;
+//            case 54:
+//                Modulo7Fragment8 modulo7Fragment8 = (Modulo7Fragment8) fragmentActual;
+//                correcto = modulo7Fragment8.validar();
+//                break;
+//            case 55:
+//                Modulo7Fragment9 modulo7Fragment9 = (Modulo7Fragment9) fragmentActual;
+//                correcto = modulo7Fragment9.validar();
+//                break;
+//            case 56:
+//                Modulo7Fragment10 modulo7Fragment10 = (Modulo7Fragment10) fragmentActual;
+//                correcto = modulo7Fragment10.validar();
+//                break;
+//            case 57:
+//                Modulo7Fragment11 modulo7Fragment11 = (Modulo7Fragment11) fragmentActual;
+//                correcto = modulo7Fragment11.validar();
+//                break;
+//            case 58:
+//                Modulo7Fragment12 modulo7Fragment12 = (Modulo7Fragment12) fragmentActual;
+//                correcto = modulo7Fragment12.validar();
+//                break;
+//            case 59:
+//                Modulo7Fragment13 modulo7Fragment13 = (Modulo7Fragment13) fragmentActual;
+//                correcto = modulo7Fragment13.validar();
+//                break;
+//            case 60:
+//                Modulo8Fragment1 modulo8Fragment1 = (Modulo8Fragment1) fragmentActual;
+//                correcto = modulo8Fragment1.validar();
+//                break;
+//            case 61:
+//                Modulo8Fragment2 modulo8Fragment2 = (Modulo8Fragment2) fragmentActual;
+//                correcto = modulo8Fragment2.validar();
+//                break;
+//            case 62:
+//                Modulo8Fragment3 modulo8Fragment3 = (Modulo8Fragment3) fragmentActual;
+//                correcto = modulo8Fragment3.validar();
+//                break;
+//            case 63:
+//                Modulo8Fragment4 modulo8Fragment4 = (Modulo8Fragment4) fragmentActual;
+//                correcto = modulo8Fragment4.validar();
+//                break;
+//            case 64:
+//                Modulo8Fragment5 modulo8Fragment5 = (Modulo8Fragment5) fragmentActual;
+//                correcto = modulo8Fragment5.validar();
+//                break;
+//            case 65:
+//                Modulo8Fragment6 modulo8Fragment6 = (Modulo8Fragment6) fragmentActual;
+//                correcto = modulo8Fragment6.validar();
+//                break;
+//            case 66:
+//                Modulo9Fragment1 modulo9Fragment1 = (Modulo9Fragment1) fragmentActual;
+//                correcto = modulo9Fragment1.validar();
+//                break;
+//            case 67:
+//                Modulo10Fragment1 modulo10Fragment1 = (Modulo10Fragment1) fragmentActual;
+//                correcto = modulo10Fragment1.validar();
+//                break;
         }
         return correcto;
     }
@@ -620,192 +622,192 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
             case 1:
                 Control1Fragment2 Control1Fragment2 = (Control1Fragment2) fragmentActual;
                 Control1Fragment2.guardarDatos();break;
+//            case 2:
+//                Modulo1Fragment3 modulo1Fragment3 = (Modulo1Fragment3) fragmentActual;
+//                modulo1Fragment3.guardarDatos();break;
             case 2:
-                Modulo1Fragment3 modulo1Fragment3 = (Modulo1Fragment3) fragmentActual;
-                modulo1Fragment3.guardarDatos();break;
+                Control2Fragment1 Control2Fragment1= (Control2Fragment1) fragmentActual;
+                Control2Fragment1.guardarDatos();break;
             case 3:
-                Modulo2Fragment1 modulo2Fragment1= (Modulo2Fragment1) fragmentActual;
-                modulo2Fragment1.guardarDatos();break;
-            case 4:
-                Modulo2Fragment2 modulo2Fragment2 = (Modulo2Fragment2) fragmentActual;
-                modulo2Fragment2.guardarDatos();break;
-            case 5:
-                Modulo2Fragment3 modulo2Fragment3 = (Modulo2Fragment3) fragmentActual;
-                modulo2Fragment3.guardarDatos();break;
-            case 6:
-                Modulo2Fragment4 modulo2Fragment4 = (Modulo2Fragment4) fragmentActual;
-                modulo2Fragment4.guardarDatos();break;
-            case 11:
-                Modulo2Fragment5 modulo2Fragment5 = (Modulo2Fragment5) fragmentActual;
-                modulo2Fragment5.guardarDatos();break;
-            case 12:
-                Modulo2Fragment6 modulo2Fragment6 = (Modulo2Fragment6) fragmentActual;
-                modulo2Fragment6.guardarDatos();break;
-            case 13:
-                Modulo3Fragment1 modulo3Fragment1 = (Modulo3Fragment1) fragmentActual;
-                modulo3Fragment1.guardarDatos();break;
-            case 14:
-                Modulo3Fragment2 modulo3Fragment2 = (Modulo3Fragment2) fragmentActual;
-                modulo3Fragment2.guardarDatos();break;
-            case 15:
-                Modulo4Fragment1 modulo4Fragment1 = (Modulo4Fragment1) fragmentActual;
-                modulo4Fragment1.guardarDatos();break;
-            case 16:
-                Modulo4Fragment2 modulo4Fragment2 = (Modulo4Fragment2) fragmentActual;
-                modulo4Fragment2.guardarDatos();break;
-            case 17:
-                Modulo4Fragment3 modulo4Fragment3 = (Modulo4Fragment3) fragmentActual;
-                modulo4Fragment3.guardarDatos();break;
-            case 18:
-                Modulo5Fragment1 modulo5Fragment1 = (Modulo5Fragment1) fragmentActual;
-                modulo5Fragment1.guardarDatos();break;
-            case 19:
-                Modulo5Fragment2 modulo5Fragment2 = (Modulo5Fragment2) fragmentActual;
-                modulo5Fragment2.guardarDatos();break;
-            case 20:
-                Modulo5Fragment3 modulo5Fragment3 = (Modulo5Fragment3) fragmentActual;
-                modulo5Fragment3.guardarDatos();break;
-            case 21:
-                Modulo5Fragment4 modulo5Fragment4 = (Modulo5Fragment4) fragmentActual;
-                modulo5Fragment4.guardarDatos();break;
-            case 22:
-                Modulo5Fragment5 modulo5Fragment5 = (Modulo5Fragment5) fragmentActual;
-                modulo5Fragment5.guardarDatos();break;
-            case 23:
-                Modulo5Fragment6 modulo5Fragment6 = (Modulo5Fragment6) fragmentActual;
-                modulo5Fragment6.guardarDatos();break;
-            case 24:
-                Modulo5Fragment7 modulo5Fragment7 = (Modulo5Fragment7) fragmentActual;
-                modulo5Fragment7.guardarDatos();break;
-            case 25:
-                Modulo5Fragment8 modulo5Fragment8 = (Modulo5Fragment8) fragmentActual;
-                modulo5Fragment8.guardarDatos();break;
-            case 26:
-                Modulo5Fragment9 modulo5Fragment9 = (Modulo5Fragment9) fragmentActual;
-                modulo5Fragment9.guardarDatos();break;
-            case 27:
-                Modulo5Fragment10 modulo5Fragment10 = (Modulo5Fragment10) fragmentActual;
-                modulo5Fragment10.guardarDatos();break;
-            case 28:
-                Modulo5Fragment11 modulo5Fragment11 = (Modulo5Fragment11) fragmentActual;
-                modulo5Fragment11.guardarDatos();break;
-            case 29:
-                Modulo5Fragment12 modulo5Fragment12 = (Modulo5Fragment12) fragmentActual;
-                modulo5Fragment12.guardarDatos();break;
-            case 30:
-                Modulo5Fragment13 modulo5Fragment13 = (Modulo5Fragment13) fragmentActual;
-                modulo5Fragment13.guardarDatos();break;
-            case 31:
-                Modulo5Fragment14 modulo5Fragment14 = (Modulo5Fragment14) fragmentActual;
-                modulo5Fragment14.guardarDatos();break;
-            case 32:
-                Modulo5Fragment15 modulo5Fragment15 = (Modulo5Fragment15) fragmentActual;
-                modulo5Fragment15.guardarDatos();break;
-            case 33:
-                Modulo5Fragment16 modulo5Fragment16 = (Modulo5Fragment16) fragmentActual;
-                modulo5Fragment16.guardarDatos();break;
-            case 34:
-                Modulo5Fragment17 modulo5Fragment17 = (Modulo5Fragment17) fragmentActual;
-                modulo5Fragment17.guardarDatos();break;
-            case 35:
-                Modulo5Fragment18 modulo5Fragment18 = (Modulo5Fragment18) fragmentActual;
-                modulo5Fragment18.guardarDatos();break;
-            case 36:
-                Modulo5Fragment19 modulo5Fragment19 = (Modulo5Fragment19) fragmentActual;
-                modulo5Fragment19.guardarDatos();break;
-            case 37:
-                Modulo5Fragment20 modulo5Fragment20 = (Modulo5Fragment20) fragmentActual;
-                modulo5Fragment20.guardarDatos();break;
-            case 38:
-                Modulo5Fragment21 modulo5Fragment21 = (Modulo5Fragment21) fragmentActual;
-                modulo5Fragment21.guardarDatos();break;
-            case 39:
-                Modulo5Fragment22 modulo5Fragment22 = (Modulo5Fragment22) fragmentActual;
-                modulo5Fragment22.guardarDatos();break;
-            case 40:
-                Modulo5Fragment23 modulo5Fragment23 = (Modulo5Fragment23) fragmentActual;
-                modulo5Fragment23.guardarDatos();break;
-            case 41:
-                Modulo6Fragment1 modulo6Fragment1 = (Modulo6Fragment1) fragmentActual;
-                modulo6Fragment1.guardarDatos();break;
-            case 42:
-                Modulo6Fragment2 modulo6Fragment2 = (Modulo6Fragment2) fragmentActual;
-                modulo6Fragment2.guardarDatos();break;
-            case 43:
-                Modulo6Fragment3 modulo6Fragment3 = (Modulo6Fragment3) fragmentActual;
-                modulo6Fragment3.guardarDatos();break;
-            case 44:
-                Modulo6Fragment4 modulo6Fragment4 = (Modulo6Fragment4) fragmentActual;
-                modulo6Fragment4.guardarDatos();break;
-            case 45:
-                Modulo6Fragment5 modulo6Fragment5 = (Modulo6Fragment5) fragmentActual;
-                modulo6Fragment5.guardarDatos();break;
-            case 46:
-                Modulo6Fragment6 modulo6Fragment6 = (Modulo6Fragment6) fragmentActual;
-                modulo6Fragment6.guardarDatos();break;
-            case 47:
-                Modulo7Fragment1 modulo7Fragment1 = (Modulo7Fragment1) fragmentActual;
-                modulo7Fragment1.guardarDatos();break;
-            case 48:
-                Modulo7Fragment2 modulo7Fragment2 = (Modulo7Fragment2) fragmentActual;
-                modulo7Fragment2.guardarDatos();break;
-            case 49:
-                Modulo7Fragment3 modulo7Fragment3 = (Modulo7Fragment3) fragmentActual;
-                modulo7Fragment3.guardarDatos();break;
-            case 50:
-                Modulo7Fragment4 modulo7Fragment4 = (Modulo7Fragment4) fragmentActual;
-                modulo7Fragment4.guardarDatos();break;
-            case 51:
-                Modulo7Fragment5 modulo7Fragment5 = (Modulo7Fragment5) fragmentActual;
-                modulo7Fragment5.guardarDatos();break;
-            case 52:
-                Modulo7Fragment6 modulo7Fragment6 = (Modulo7Fragment6) fragmentActual;
-                modulo7Fragment6.guardarDatos();break;
-            case 53:
-                Modulo7Fragment7 modulo7Fragment7 = (Modulo7Fragment7) fragmentActual;
-                modulo7Fragment7.guardarDatos();break;
-            case 54:
-                Modulo7Fragment8 modulo7Fragment8 = (Modulo7Fragment8) fragmentActual;
-                modulo7Fragment8.guardarDatos();break;
-            case 55:
-                Modulo7Fragment9 modulo7Fragment9 = (Modulo7Fragment9) fragmentActual;
-                modulo7Fragment9.guardarDatos();break;
-            case 56:
-                Modulo7Fragment10 modulo7Fragment10 = (Modulo7Fragment10) fragmentActual;
-                modulo7Fragment10.guardarDatos();break;
-            case 57:
-                Modulo7Fragment11 modulo7Fragment11 = (Modulo7Fragment11) fragmentActual;
-                modulo7Fragment11.guardarDatos();break;
-            case 58:
-                Modulo7Fragment12 modulo7Fragment12 = (Modulo7Fragment12) fragmentActual;
-                modulo7Fragment12.guardarDatos();break;
-            case 59:
-                Modulo7Fragment13 modulo7Fragment13 = (Modulo7Fragment13) fragmentActual;
-                modulo7Fragment13.guardarDatos();break;
-            case 60:
-                Modulo8Fragment1 modulo8Fragment1 = (Modulo8Fragment1) fragmentActual;
-                modulo8Fragment1.guardarDatos();break;
-            case 61:
-                Modulo8Fragment2 modulo8Fragment2 = (Modulo8Fragment2) fragmentActual;
-                modulo8Fragment2.guardarDatos();break;
-            case 62:
-                Modulo8Fragment3 modulo8Fragment3 = (Modulo8Fragment3) fragmentActual;
-                modulo8Fragment3.guardarDatos();break;
-            case 63:
-                Modulo8Fragment4 modulo8Fragment4 = (Modulo8Fragment4) fragmentActual;
-                modulo8Fragment4.guardarDatos();break;
-            case 64:
-                Modulo8Fragment5 modulo8Fragment5 = (Modulo8Fragment5) fragmentActual;
-                modulo8Fragment5.guardarDatos();break;
-            case 65:
-                Modulo8Fragment6 modulo8Fragment6 = (Modulo8Fragment6) fragmentActual;
-                modulo8Fragment6.guardarDatos();break;
-            case 66:
-                Modulo9Fragment1 modulo9Fragment1 = (Modulo9Fragment1) fragmentActual;
-                modulo9Fragment1.guardarDatos();break;
-            case 67:
-                Modulo10Fragment1 modulo10Fragment1 = (Modulo10Fragment1) fragmentActual;
-                modulo10Fragment1.guardarDatos();break;
+                Control2Fragment2 Control2Fragment2 = (Control2Fragment2) fragmentActual;
+                Control2Fragment2.guardarDatos();break;
+//            case 5:
+//                Modulo2Fragment3 modulo2Fragment3 = (Modulo2Fragment3) fragmentActual;
+//                modulo2Fragment3.guardarDatos();break;
+//            case 6:
+//                Modulo2Fragment4 modulo2Fragment4 = (Modulo2Fragment4) fragmentActual;
+//                modulo2Fragment4.guardarDatos();break;
+//            case 11:
+//                Modulo2Fragment5 modulo2Fragment5 = (Modulo2Fragment5) fragmentActual;
+//                modulo2Fragment5.guardarDatos();break;
+//            case 12:
+//                Modulo2Fragment6 modulo2Fragment6 = (Modulo2Fragment6) fragmentActual;
+//                modulo2Fragment6.guardarDatos();break;
+//            case 13:
+//                Modulo3Fragment1 modulo3Fragment1 = (Modulo3Fragment1) fragmentActual;
+//                modulo3Fragment1.guardarDatos();break;
+//            case 14:
+//                Modulo3Fragment2 modulo3Fragment2 = (Modulo3Fragment2) fragmentActual;
+//                modulo3Fragment2.guardarDatos();break;
+//            case 15:
+//                Modulo4Fragment1 modulo4Fragment1 = (Modulo4Fragment1) fragmentActual;
+//                modulo4Fragment1.guardarDatos();break;
+//            case 16:
+//                Modulo4Fragment2 modulo4Fragment2 = (Modulo4Fragment2) fragmentActual;
+//                modulo4Fragment2.guardarDatos();break;
+//            case 17:
+//                Modulo4Fragment3 modulo4Fragment3 = (Modulo4Fragment3) fragmentActual;
+//                modulo4Fragment3.guardarDatos();break;
+//            case 18:
+//                Modulo5Fragment1 modulo5Fragment1 = (Modulo5Fragment1) fragmentActual;
+//                modulo5Fragment1.guardarDatos();break;
+//            case 19:
+//                Modulo5Fragment2 modulo5Fragment2 = (Modulo5Fragment2) fragmentActual;
+//                modulo5Fragment2.guardarDatos();break;
+//            case 20:
+//                Modulo5Fragment3 modulo5Fragment3 = (Modulo5Fragment3) fragmentActual;
+//                modulo5Fragment3.guardarDatos();break;
+//            case 21:
+//                Modulo5Fragment4 modulo5Fragment4 = (Modulo5Fragment4) fragmentActual;
+//                modulo5Fragment4.guardarDatos();break;
+//            case 22:
+//                Modulo5Fragment5 modulo5Fragment5 = (Modulo5Fragment5) fragmentActual;
+//                modulo5Fragment5.guardarDatos();break;
+//            case 23:
+//                Modulo5Fragment6 modulo5Fragment6 = (Modulo5Fragment6) fragmentActual;
+//                modulo5Fragment6.guardarDatos();break;
+//            case 24:
+//                Modulo5Fragment7 modulo5Fragment7 = (Modulo5Fragment7) fragmentActual;
+//                modulo5Fragment7.guardarDatos();break;
+//            case 25:
+//                Modulo5Fragment8 modulo5Fragment8 = (Modulo5Fragment8) fragmentActual;
+//                modulo5Fragment8.guardarDatos();break;
+//            case 26:
+//                Modulo5Fragment9 modulo5Fragment9 = (Modulo5Fragment9) fragmentActual;
+//                modulo5Fragment9.guardarDatos();break;
+//            case 27:
+//                Modulo5Fragment10 modulo5Fragment10 = (Modulo5Fragment10) fragmentActual;
+//                modulo5Fragment10.guardarDatos();break;
+//            case 28:
+//                Modulo5Fragment11 modulo5Fragment11 = (Modulo5Fragment11) fragmentActual;
+//                modulo5Fragment11.guardarDatos();break;
+//            case 29:
+//                Modulo5Fragment12 modulo5Fragment12 = (Modulo5Fragment12) fragmentActual;
+//                modulo5Fragment12.guardarDatos();break;
+//            case 30:
+//                Modulo5Fragment13 modulo5Fragment13 = (Modulo5Fragment13) fragmentActual;
+//                modulo5Fragment13.guardarDatos();break;
+//            case 31:
+//                Modulo5Fragment14 modulo5Fragment14 = (Modulo5Fragment14) fragmentActual;
+//                modulo5Fragment14.guardarDatos();break;
+//            case 32:
+//                Modulo5Fragment15 modulo5Fragment15 = (Modulo5Fragment15) fragmentActual;
+//                modulo5Fragment15.guardarDatos();break;
+//            case 33:
+//                Modulo5Fragment16 modulo5Fragment16 = (Modulo5Fragment16) fragmentActual;
+//                modulo5Fragment16.guardarDatos();break;
+//            case 34:
+//                Modulo5Fragment17 modulo5Fragment17 = (Modulo5Fragment17) fragmentActual;
+//                modulo5Fragment17.guardarDatos();break;
+//            case 35:
+//                Modulo5Fragment18 modulo5Fragment18 = (Modulo5Fragment18) fragmentActual;
+//                modulo5Fragment18.guardarDatos();break;
+//            case 36:
+//                Modulo5Fragment19 modulo5Fragment19 = (Modulo5Fragment19) fragmentActual;
+//                modulo5Fragment19.guardarDatos();break;
+//            case 37:
+//                Modulo5Fragment20 modulo5Fragment20 = (Modulo5Fragment20) fragmentActual;
+//                modulo5Fragment20.guardarDatos();break;
+//            case 38:
+//                Modulo5Fragment21 modulo5Fragment21 = (Modulo5Fragment21) fragmentActual;
+//                modulo5Fragment21.guardarDatos();break;
+//            case 39:
+//                Modulo5Fragment22 modulo5Fragment22 = (Modulo5Fragment22) fragmentActual;
+//                modulo5Fragment22.guardarDatos();break;
+//            case 40:
+//                Modulo5Fragment23 modulo5Fragment23 = (Modulo5Fragment23) fragmentActual;
+//                modulo5Fragment23.guardarDatos();break;
+//            case 41:
+//                Modulo6Fragment1 modulo6Fragment1 = (Modulo6Fragment1) fragmentActual;
+//                modulo6Fragment1.guardarDatos();break;
+//            case 42:
+//                Modulo6Fragment2 modulo6Fragment2 = (Modulo6Fragment2) fragmentActual;
+//                modulo6Fragment2.guardarDatos();break;
+//            case 43:
+//                Modulo6Fragment3 modulo6Fragment3 = (Modulo6Fragment3) fragmentActual;
+//                modulo6Fragment3.guardarDatos();break;
+//            case 44:
+//                Modulo6Fragment4 modulo6Fragment4 = (Modulo6Fragment4) fragmentActual;
+//                modulo6Fragment4.guardarDatos();break;
+//            case 45:
+//                Modulo6Fragment5 modulo6Fragment5 = (Modulo6Fragment5) fragmentActual;
+//                modulo6Fragment5.guardarDatos();break;
+//            case 46:
+//                Modulo6Fragment6 modulo6Fragment6 = (Modulo6Fragment6) fragmentActual;
+//                modulo6Fragment6.guardarDatos();break;
+//            case 47:
+//                Modulo7Fragment1 modulo7Fragment1 = (Modulo7Fragment1) fragmentActual;
+//                modulo7Fragment1.guardarDatos();break;
+//            case 48:
+//                Modulo7Fragment2 modulo7Fragment2 = (Modulo7Fragment2) fragmentActual;
+//                modulo7Fragment2.guardarDatos();break;
+//            case 49:
+//                Modulo7Fragment3 modulo7Fragment3 = (Modulo7Fragment3) fragmentActual;
+//                modulo7Fragment3.guardarDatos();break;
+//            case 50:
+//                Modulo7Fragment4 modulo7Fragment4 = (Modulo7Fragment4) fragmentActual;
+//                modulo7Fragment4.guardarDatos();break;
+//            case 51:
+//                Modulo7Fragment5 modulo7Fragment5 = (Modulo7Fragment5) fragmentActual;
+//                modulo7Fragment5.guardarDatos();break;
+//            case 52:
+//                Modulo7Fragment6 modulo7Fragment6 = (Modulo7Fragment6) fragmentActual;
+//                modulo7Fragment6.guardarDatos();break;
+//            case 53:
+//                Modulo7Fragment7 modulo7Fragment7 = (Modulo7Fragment7) fragmentActual;
+//                modulo7Fragment7.guardarDatos();break;
+//            case 54:
+//                Modulo7Fragment8 modulo7Fragment8 = (Modulo7Fragment8) fragmentActual;
+//                modulo7Fragment8.guardarDatos();break;
+//            case 55:
+//                Modulo7Fragment9 modulo7Fragment9 = (Modulo7Fragment9) fragmentActual;
+//                modulo7Fragment9.guardarDatos();break;
+//            case 56:
+//                Modulo7Fragment10 modulo7Fragment10 = (Modulo7Fragment10) fragmentActual;
+//                modulo7Fragment10.guardarDatos();break;
+//            case 57:
+//                Modulo7Fragment11 modulo7Fragment11 = (Modulo7Fragment11) fragmentActual;
+//                modulo7Fragment11.guardarDatos();break;
+//            case 58:
+//                Modulo7Fragment12 modulo7Fragment12 = (Modulo7Fragment12) fragmentActual;
+//                modulo7Fragment12.guardarDatos();break;
+//            case 59:
+//                Modulo7Fragment13 modulo7Fragment13 = (Modulo7Fragment13) fragmentActual;
+//                modulo7Fragment13.guardarDatos();break;
+//            case 60:
+//                Modulo8Fragment1 modulo8Fragment1 = (Modulo8Fragment1) fragmentActual;
+//                modulo8Fragment1.guardarDatos();break;
+//            case 61:
+//                Modulo8Fragment2 modulo8Fragment2 = (Modulo8Fragment2) fragmentActual;
+//                modulo8Fragment2.guardarDatos();break;
+//            case 62:
+//                Modulo8Fragment3 modulo8Fragment3 = (Modulo8Fragment3) fragmentActual;
+//                modulo8Fragment3.guardarDatos();break;
+//            case 63:
+//                Modulo8Fragment4 modulo8Fragment4 = (Modulo8Fragment4) fragmentActual;
+//                modulo8Fragment4.guardarDatos();break;
+//            case 64:
+//                Modulo8Fragment5 modulo8Fragment5 = (Modulo8Fragment5) fragmentActual;
+//                modulo8Fragment5.guardarDatos();break;
+//            case 65:
+//                Modulo8Fragment6 modulo8Fragment6 = (Modulo8Fragment6) fragmentActual;
+//                modulo8Fragment6.guardarDatos();break;
+//            case 66:
+//                Modulo9Fragment1 modulo9Fragment1 = (Modulo9Fragment1) fragmentActual;
+//                modulo9Fragment1.guardarDatos();break;
+//            case 67:
+//                Modulo10Fragment1 modulo10Fragment1 = (Modulo10Fragment1) fragmentActual;
+//                modulo10Fragment1.guardarDatos();break;
         }
     }
 
@@ -817,7 +819,7 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
             //observaciones = data.getControl1(idEmpresa).getOBS_MOD_I();
         }
         if(posicionFragment >= 7 && posicionFragment <= 12){
-            observaciones = data.getModulo2(idEmpresa).getOBS_MOD_II();
+            //observaciones = data.getModulo2(idEmpresa).getOBS_MOD_II();
         }
         if(posicionFragment >= 13 && posicionFragment <= 14){
             observaciones = data.getModulo3(idEmpresa).getOBS_MOD_III();
@@ -877,254 +879,254 @@ public class EnhatrapeActivity extends AppCompatActivity implements NavigationVi
                 fragmentActual = new Control1Fragment2(idEmpresa,this);
                 fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
                 break;
+//            case 2:
+//                fragmentActual = new Modulo1Fragment3(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
             case 2:
-                fragmentActual = new Modulo1Fragment3(idEmpresa,this);
+                fragmentActual = new Control2Fragment1(idEmpresa,this);
                 fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
                 break;
             case 3:
-                fragmentActual = new Modulo2Fragment1(idEmpresa,this);
+                fragmentActual = new Control2Fragment2(idEmpresa,this);
                 fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
                 break;
-            case 4:
-                fragmentActual = new Modulo2Fragment2(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 5:
-                fragmentActual = new Modulo2Fragment3(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 6:
-                fragmentActual = new Modulo2Fragment4(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 7:
-                fragmentActual = new Modulo2Fragment5(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 8:
-                fragmentActual = new Modulo2Fragment6(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 13:
-                fragmentActual = new Modulo3Fragment1(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 14:
-                fragmentActual = new Modulo3Fragment2(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 15:
-                fragmentActual = new Modulo4Fragment1(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 16:
-                fragmentActual = new Modulo4Fragment2(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 17:
-                fragmentActual = new Modulo4Fragment3(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 18:
-                fragmentActual = new Modulo5Fragment1(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 19:
-                fragmentActual = new Modulo5Fragment2(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 20:
-                fragmentActual = new Modulo5Fragment3(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 21:
-                fragmentActual = new Modulo5Fragment4(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 22:
-                fragmentActual = new Modulo5Fragment5(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 23:
-                fragmentActual = new Modulo5Fragment6(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 24:
-                fragmentActual = new Modulo5Fragment7(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 25:
-                fragmentActual = new Modulo5Fragment8(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 26:
-                fragmentActual= new Modulo5Fragment9(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 27:
-                fragmentActual = new Modulo5Fragment10(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 28:
-                fragmentActual = new Modulo5Fragment11(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 29:
-                fragmentActual = new Modulo5Fragment12(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 30:
-                fragmentActual = new Modulo5Fragment13(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 31:
-                fragmentActual = new Modulo5Fragment14(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 32:
-                fragmentActual = new Modulo5Fragment15(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 33:
-                fragmentActual = new Modulo5Fragment16(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 34:
-                fragmentActual = new Modulo5Fragment17(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 35:
-                fragmentActual = new Modulo5Fragment18(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 36:
-                fragmentActual = new Modulo5Fragment19(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 37:
-                fragmentActual = new Modulo5Fragment20(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 38:
-                fragmentActual = new Modulo5Fragment21(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 39:
-                fragmentActual = new Modulo5Fragment22(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 40:
-                fragmentActual = new Modulo5Fragment23(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 41:
-                fragmentActual= new Modulo6Fragment1(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 42:
-                fragmentActual = new Modulo6Fragment2(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 43:
-                fragmentActual = new Modulo6Fragment3(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 44:
-                fragmentActual = new Modulo6Fragment4(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 45:
-                fragmentActual = new Modulo6Fragment5(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 46:
-                fragmentActual = new Modulo6Fragment6(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 47:
-                fragmentActual = new Modulo7Fragment1(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 48:
-                fragmentActual = new Modulo7Fragment2(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 49:
-                fragmentActual = new Modulo7Fragment3(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 50:
-                fragmentActual = new Modulo7Fragment4(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 51:
-                fragmentActual = new Modulo7Fragment5(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 52:
-                fragmentActual = new Modulo7Fragment6(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 53:
-                fragmentActual = new Modulo7Fragment7(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 54:
-                fragmentActual = new Modulo7Fragment8(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 55:
-                fragmentActual = new Modulo7Fragment9(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 56:
-                fragmentActual = new Modulo7Fragment10(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 57:
-                fragmentActual = new Modulo7Fragment11(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 58:
-                fragmentActual = new Modulo7Fragment12(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 59:
-                fragmentActual = new Modulo7Fragment13(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 60:
-                fragmentActual = new Modulo8Fragment1(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 61:
-                fragmentActual = new Modulo8Fragment2(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 62:
-                fragmentActual = new Modulo8Fragment3(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 63:
-                fragmentActual = new Modulo8Fragment4(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 64:
-                fragmentActual= new Modulo8Fragment5(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 65:
-                fragmentActual = new Modulo8Fragment6(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 66:
-                fragmentActual = new Modulo9Fragment1(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
-            case 67:
-                fragmentActual = new Modulo10Fragment1(idEmpresa,this);
-                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
-                break;
+//            case 5:
+//                fragmentActual = new Modulo2Fragment3(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 6:
+//                fragmentActual = new Modulo2Fragment4(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 7:
+//                fragmentActual = new Modulo2Fragment5(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 8:
+//                fragmentActual = new Modulo2Fragment6(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 13:
+//                fragmentActual = new Modulo3Fragment1(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 14:
+//                fragmentActual = new Modulo3Fragment2(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 15:
+//                fragmentActual = new Modulo4Fragment1(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 16:
+//                fragmentActual = new Modulo4Fragment2(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 17:
+//                fragmentActual = new Modulo4Fragment3(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 18:
+//                fragmentActual = new Modulo5Fragment1(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 19:
+//                fragmentActual = new Modulo5Fragment2(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 20:
+//                fragmentActual = new Modulo5Fragment3(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 21:
+//                fragmentActual = new Modulo5Fragment4(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 22:
+//                fragmentActual = new Modulo5Fragment5(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 23:
+//                fragmentActual = new Modulo5Fragment6(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 24:
+//                fragmentActual = new Modulo5Fragment7(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 25:
+//                fragmentActual = new Modulo5Fragment8(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 26:
+//                fragmentActual= new Modulo5Fragment9(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 27:
+//                fragmentActual = new Modulo5Fragment10(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 28:
+//                fragmentActual = new Modulo5Fragment11(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 29:
+//                fragmentActual = new Modulo5Fragment12(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 30:
+//                fragmentActual = new Modulo5Fragment13(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 31:
+//                fragmentActual = new Modulo5Fragment14(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 32:
+//                fragmentActual = new Modulo5Fragment15(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 33:
+//                fragmentActual = new Modulo5Fragment16(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 34:
+//                fragmentActual = new Modulo5Fragment17(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 35:
+//                fragmentActual = new Modulo5Fragment18(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 36:
+//                fragmentActual = new Modulo5Fragment19(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 37:
+//                fragmentActual = new Modulo5Fragment20(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 38:
+//                fragmentActual = new Modulo5Fragment21(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 39:
+//                fragmentActual = new Modulo5Fragment22(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 40:
+//                fragmentActual = new Modulo5Fragment23(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 41:
+//                fragmentActual= new Modulo6Fragment1(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 42:
+//                fragmentActual = new Modulo6Fragment2(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 43:
+//                fragmentActual = new Modulo6Fragment3(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 44:
+//                fragmentActual = new Modulo6Fragment4(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 45:
+//                fragmentActual = new Modulo6Fragment5(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 46:
+//                fragmentActual = new Modulo6Fragment6(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 47:
+//                fragmentActual = new Modulo7Fragment1(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 48:
+//                fragmentActual = new Modulo7Fragment2(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 49:
+//                fragmentActual = new Modulo7Fragment3(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 50:
+//                fragmentActual = new Modulo7Fragment4(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 51:
+//                fragmentActual = new Modulo7Fragment5(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 52:
+//                fragmentActual = new Modulo7Fragment6(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 53:
+//                fragmentActual = new Modulo7Fragment7(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 54:
+//                fragmentActual = new Modulo7Fragment8(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 55:
+//                fragmentActual = new Modulo7Fragment9(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 56:
+//                fragmentActual = new Modulo7Fragment10(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 57:
+//                fragmentActual = new Modulo7Fragment11(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 58:
+//                fragmentActual = new Modulo7Fragment12(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 59:
+//                fragmentActual = new Modulo7Fragment13(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 60:
+//                fragmentActual = new Modulo8Fragment1(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 61:
+//                fragmentActual = new Modulo8Fragment2(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 62:
+//                fragmentActual = new Modulo8Fragment3(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 63:
+//                fragmentActual = new Modulo8Fragment4(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 64:
+//                fragmentActual= new Modulo8Fragment5(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 65:
+//                fragmentActual = new Modulo8Fragment6(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 66:
+//                fragmentActual = new Modulo9Fragment1(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
+//            case 67:
+//                fragmentActual = new Modulo10Fragment1(idEmpresa,this);
+//                fragmentTransaction.replace(R.id.container_encuesta_enhatrape, fragmentActual);
+//                break;
         }
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

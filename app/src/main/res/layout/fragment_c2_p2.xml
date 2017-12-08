@@ -41,6 +41,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/c2_p2_sp1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -70,6 +71,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/c2_p2_sp2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -99,6 +101,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/c2_p2_sp3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -128,6 +131,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/c2_p2_sp4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -157,6 +161,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/c2_p2_sp5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -186,6 +191,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/c2_p2_sp6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -215,6 +221,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/c2_p2_sp7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
