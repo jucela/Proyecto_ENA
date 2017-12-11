@@ -389,9 +389,9 @@ public class Modulo2Fragment1 extends Fragment {
         data = new Data(context);
         data.open();
         //verifico si ya existe un objeto con datos llenados previamente
-        if(data.existeModulo2(idempresa)){
-            //si existe traigo el objeto
-            modulo2 = data.getModulo2(idempresa);
+//        if(data.existeModulo2(idempresa)){
+//            //si existe traigo el objeto
+//            modulo2 = data.getModulo2(idempresa);
             //saco los datos del objeto para llenarlos en los elementos del fragment
             //datos cabecera
             if(modulo2.getC2_P0_0().equals("1")) ckMismoInformante2.setChecked(true);
@@ -418,7 +418,7 @@ public class Modulo2Fragment1 extends Fragment {
             edt4.setText(modulo2.getC2_P5_1_4());
             if(modulo2.getC2_P5_0_5().equals("1")) ck5.setChecked(true);
             edt5.setText(modulo2.getC2_P5_1_5());
-        }
+
         data.close();
     }
     public void llenarMapaVariables(){
@@ -455,59 +455,59 @@ public class Modulo2Fragment1 extends Fragment {
         C2_P5_1_5 = edt5.getText().toString();
         C2_P5_1_6 = txtTotal.getText().toString();
     }
-    public void guardarDatos(){
-        data = new Data(context);
-        data.open();
-        if(data.existeModulo2(idempresa)){
-            ContentValues contentValues = new ContentValues(163);
-            contentValues.put(SQLConstantes.MODULO2_P0_0,C2_P0_0);
-            contentValues.put(SQLConstantes.MODULO2_P0_1,C2_P0_1);
-            contentValues.put(SQLConstantes.MODULO2_P0_2,C2_P0_2);
-            contentValues.put(SQLConstantes.MODULO2_P0_3,C2_P0_3);
-            contentValues.put(SQLConstantes.MODULO2_P1,C2_P1);
-            contentValues.put(SQLConstantes.MODULO2_P2,C2_P2);
-            contentValues.put(SQLConstantes.MODULO2_P3,C2_P3);
-            contentValues.put(SQLConstantes.MODULO2_P4,C2_P4);
-            contentValues.put(SQLConstantes.MODULO2_P5_0_1,C2_P5_0_1);
-            contentValues.put(SQLConstantes.MODULO2_P5_0_2,C2_P5_0_2);
-            contentValues.put(SQLConstantes.MODULO2_P5_0_3,C2_P5_0_3);
-            contentValues.put(SQLConstantes.MODULO2_P5_0_4,C2_P5_0_4);
-            contentValues.put(SQLConstantes.MODULO2_P5_0_5,C2_P5_0_5);
-            contentValues.put(SQLConstantes.MODULO2_P5_1_1,C2_P5_1_1);
-            contentValues.put(SQLConstantes.MODULO2_P5_1_2,C2_P5_1_2);
-            contentValues.put(SQLConstantes.MODULO2_P5_1_3,C2_P5_1_3);
-            contentValues.put(SQLConstantes.MODULO2_P5_1_4,C2_P5_1_4);
-            contentValues.put(SQLConstantes.MODULO2_P5_1_5,C2_P5_1_5);
-            contentValues.put(SQLConstantes.MODULO2_P5_1_6,C2_P5_1_6);
-            data.actualizarModulo2(idempresa,contentValues);
-        }else{
-            //si no existe el elemento, lo construye para insertarlo
-            modulo2 = new Modulo2();
-            //llena el objeto a insertar
-            modulo2.setMODULO2_ID(idempresa);
-            modulo2.setC2_P0_0(C2_P0_0+"");
-            modulo2.setC2_P0_1(C2_P0_1);
-            modulo2.setC2_P0_2(C2_P0_2+"");
-            modulo2.setC2_P0_3(C2_P0_3);
-            modulo2.setC2_P1(C2_P1);
-            modulo2.setC2_P2(C2_P2);
-            modulo2.setC2_P3(C2_P3);
-            modulo2.setC2_P4(C2_P4);
-            modulo2.setC2_P5_0_1(C2_P5_0_1+"");
-            modulo2.setC2_P5_0_2(C2_P5_0_2+"");
-            modulo2.setC2_P5_0_3(C2_P5_0_3+"");
-            modulo2.setC2_P5_0_4(C2_P5_0_4+"");
-            modulo2.setC2_P5_0_5(C2_P5_0_5+"");
-            modulo2.setC2_P5_1_1(C2_P5_1_1);
-            modulo2.setC2_P5_1_2(C2_P5_1_2);
-            modulo2.setC2_P5_1_3(C2_P5_1_3);
-            modulo2.setC2_P5_1_4(C2_P5_1_4);
-            modulo2.setC2_P5_1_5(C2_P5_1_5);
-            modulo2.setC2_P5_1_6(C2_P5_1_6);
-            data.insertarModulo2(modulo2);
-        }
-        data.close();
-    }
+//    public void guardarDatos(){
+//        data = new Data(context);
+//        data.open();
+//        if(data.existeModulo2(idempresa)){
+//            ContentValues contentValues = new ContentValues(163);
+//            contentValues.put(SQLConstantes.MODULO2_P0_0,C2_P0_0);
+//            contentValues.put(SQLConstantes.MODULO2_P0_1,C2_P0_1);
+//            contentValues.put(SQLConstantes.MODULO2_P0_2,C2_P0_2);
+//            contentValues.put(SQLConstantes.MODULO2_P0_3,C2_P0_3);
+//            contentValues.put(SQLConstantes.MODULO2_P1,C2_P1);
+//            contentValues.put(SQLConstantes.MODULO2_P2,C2_P2);
+//            contentValues.put(SQLConstantes.MODULO2_P3,C2_P3);
+//            contentValues.put(SQLConstantes.MODULO2_P4,C2_P4);
+//            contentValues.put(SQLConstantes.MODULO2_P5_0_1,C2_P5_0_1);
+//            contentValues.put(SQLConstantes.MODULO2_P5_0_2,C2_P5_0_2);
+//            contentValues.put(SQLConstantes.MODULO2_P5_0_3,C2_P5_0_3);
+//            contentValues.put(SQLConstantes.MODULO2_P5_0_4,C2_P5_0_4);
+//            contentValues.put(SQLConstantes.MODULO2_P5_0_5,C2_P5_0_5);
+//            contentValues.put(SQLConstantes.MODULO2_P5_1_1,C2_P5_1_1);
+//            contentValues.put(SQLConstantes.MODULO2_P5_1_2,C2_P5_1_2);
+//            contentValues.put(SQLConstantes.MODULO2_P5_1_3,C2_P5_1_3);
+//            contentValues.put(SQLConstantes.MODULO2_P5_1_4,C2_P5_1_4);
+//            contentValues.put(SQLConstantes.MODULO2_P5_1_5,C2_P5_1_5);
+//            contentValues.put(SQLConstantes.MODULO2_P5_1_6,C2_P5_1_6);
+//            data.actualizarModulo2(idempresa,contentValues);
+//        }else{
+//            //si no existe el elemento, lo construye para insertarlo
+//            modulo2 = new Modulo2();
+//            //llena el objeto a insertar
+//            modulo2.setMODULO2_ID(idempresa);
+//            modulo2.setC2_P0_0(C2_P0_0+"");
+//            modulo2.setC2_P0_1(C2_P0_1);
+//            modulo2.setC2_P0_2(C2_P0_2+"");
+//            modulo2.setC2_P0_3(C2_P0_3);
+//            modulo2.setC2_P1(C2_P1);
+//            modulo2.setC2_P2(C2_P2);
+//            modulo2.setC2_P3(C2_P3);
+//            modulo2.setC2_P4(C2_P4);
+//            modulo2.setC2_P5_0_1(C2_P5_0_1+"");
+//            modulo2.setC2_P5_0_2(C2_P5_0_2+"");
+//            modulo2.setC2_P5_0_3(C2_P5_0_3+"");
+//            modulo2.setC2_P5_0_4(C2_P5_0_4+"");
+//            modulo2.setC2_P5_0_5(C2_P5_0_5+"");
+//            modulo2.setC2_P5_1_1(C2_P5_1_1);
+//            modulo2.setC2_P5_1_2(C2_P5_1_2);
+//            modulo2.setC2_P5_1_3(C2_P5_1_3);
+//            modulo2.setC2_P5_1_4(C2_P5_1_4);
+//            modulo2.setC2_P5_1_5(C2_P5_1_5);
+//            modulo2.setC2_P5_1_6(C2_P5_1_6);
+//            data.insertarModulo2(modulo2);
+//        }
+//        data.close();
+//    }
     public boolean validar(){
         boolean valido = false;
         llenarMapaVariables();

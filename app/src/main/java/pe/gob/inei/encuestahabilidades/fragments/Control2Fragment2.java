@@ -161,7 +161,7 @@ public class Control2Fragment2 extends Fragment {
             contentValues.put(SQLConstantes.C2_P2_5,C2_P2_5+"");
             contentValues.put(SQLConstantes.C2_P2_6,C2_P2_6+"");
             contentValues.put(SQLConstantes.C2_P2_7,C2_P2_7+"");
-            data.actualizarcontrol2(idempresa,contentValues);       
+            data.actualizarControl2(idempresa,contentValues);
             data.close();
     }
     public boolean validar(){

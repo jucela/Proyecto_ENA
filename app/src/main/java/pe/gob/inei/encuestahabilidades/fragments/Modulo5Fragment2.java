@@ -135,10 +135,10 @@ public class Modulo5Fragment2 extends Fragment {
         this.context = context;
         data = new Data(context);
         data.open();
-        modulo2 =data.getModulo2(idempresa);
-        if (!modulo2.getC2_P7().equals("")) {
-            C2_P7=Integer.parseInt(modulo2.getC2_P7());
-        }
+//        modulo2 =data.getModulo2(idempresa);
+//        if (!modulo2.getC2_P7().equals("")) {
+//            C2_P7=Integer.parseInt(modulo2.getC2_P7());
+//        }
 
     }
 
@@ -346,7 +346,7 @@ public class Modulo5Fragment2 extends Fragment {
                 }
             });
         }
-        cargarDatos();
+//        cargarDatos();
     }
 
     public void ocultarTeclado(View view){
@@ -354,92 +354,92 @@ public class Modulo5Fragment2 extends Fragment {
         mgr.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     //GUARDADO Y CARGADO
-    public void cargarDatos() {
-        data = new Data(context);
-        data.open();
-        modulo5 = data.getModulo5(idempresa);
-        Modulo2 modulo2 = data.getModulo2(idempresa);
-        txtTotalTrab.setText("Total Trabajadores : " + modulo2.getC2_P7());
-        //verifico si ya existe un objeto con datos llenados previamente
-        if (data.existeModulo5(idempresa)) {
-            //si existe traigo el objeto
-
-            //saco los datos del objeto para llenarlos en los elementos del fragment
-            //datos cabecera
-            
-            //pregunta 2
-            if(!modulo5.getC5_P2().equals("") && (!modulo5.getC5_P2().equals("-1")))
-            {int childPos2 = Integer.parseInt(modulo5.getC5_P2());
-            ((RadioButton) rgP2.getChildAt(childPos2)).setChecked(true);}
-            if (modulo5.getC5_P2_0_1().equals("1")) ckSP1.setChecked(true);
-            if (modulo5.getC5_P2_0_1().equals("0")) ckSP1.setChecked(false);
-            if (modulo5.getC5_P2_0_2().equals("1")) ckSp2.setChecked(true);
-            if (modulo5.getC5_P2_0_2().equals("0")) ckSp2.setChecked(false);
-            if (modulo5.getC5_P2_0_3().equals("1")) ckSp3.setChecked(true);
-            if (modulo5.getC5_P2_0_3().equals("0")) ckSp3.setChecked(false);
-            if (modulo5.getC5_P2_0_4().equals("1")) ckSp4.setChecked(true);
-            if (modulo5.getC5_P2_0_4().equals("0")) ckSp4.setChecked(false);
-            if (modulo5.getC5_P2_0_5().equals("1")) ckSp5.setChecked(true);
-            if (modulo5.getC5_P2_0_5().equals("0")) ckSp5.setChecked(false);
-            if (modulo5.getC5_P2_0_6().equals("1")) ckSp6.setChecked(true);
-            if (modulo5.getC5_P2_0_6().equals("0")) ckSp6.setChecked(false);
-            if (modulo5.getC5_P2_0_7().equals("1")) ckSp7.setChecked(true);
-            if (modulo5.getC5_P2_0_7().equals("0")) ckSp7.setChecked(false);
-            if (modulo5.getC5_P2_0_8().equals("1")) ckSp8.setChecked(true);
-            if (modulo5.getC5_P2_0_8().equals("0")) ckSp8.setChecked(false);
-            if (modulo5.getC5_P2_0_9().equals("1")) ckSp9.setChecked(true);
-            if (modulo5.getC5_P2_0_9().equals("0")) ckSp9.setChecked(false);
-
-            if(!modulo5.getC5_P2_1_1().equals("") && (!modulo5.getC5_P2_1_1().equals("-1")))
-            {int childPos21 = Integer.parseInt(modulo5.getC5_P2_1_1());
-            ((RadioButton) rg1P2.getChildAt(childPos21)).setChecked(true);}
-
-            if(!modulo5.getC5_P2_1_2().equals("") && (!modulo5.getC5_P2_1_2().equals("-1")))
-            {int childPos22 = Integer.parseInt(modulo5.getC5_P2_1_2());
-            ((RadioButton) rg2P2.getChildAt(childPos22)).setChecked(true);}
-
-            if(!modulo5.getC5_P2_1_3().equals("") && (!modulo5.getC5_P2_1_3().equals("-1")))
-            {int childPos23 = Integer.parseInt(modulo5.getC5_P2_1_3());
-            ((RadioButton) rg3P2.getChildAt(childPos23)).setChecked(true);}
-
-            if(!modulo5.getC5_P2_1_4().equals("") && (!modulo5.getC5_P2_1_4().equals("-1")))
-            {int childPos24 = Integer.parseInt(modulo5.getC5_P2_1_4());
-            ((RadioButton) rg4P2.getChildAt(childPos24)).setChecked(true);}
-
-            if(!modulo5.getC5_P2_1_5().equals("") && (!modulo5.getC5_P2_1_5().equals("-1")))
-            {int childPos25 = Integer.parseInt(modulo5.getC5_P2_1_5());
-            ((RadioButton) rg5P2.getChildAt(childPos25)).setChecked(true);}
-
-            if(!modulo5.getC5_P2_1_6().equals("") && (!modulo5.getC5_P2_1_6().equals("-1")))
-            {int childPos26 = Integer.parseInt(modulo5.getC5_P2_1_6());
-            ((RadioButton) rg6P2.getChildAt(childPos26)).setChecked(true);}
-
-            if(!modulo5.getC5_P2_1_7().equals("") && (!modulo5.getC5_P2_1_7().equals("-1")))
-            {int childPos27 = Integer.parseInt(modulo5.getC5_P2_1_7());
-            ((RadioButton) rg7P2.getChildAt(childPos27)).setChecked(true);}
-
-            if(!modulo5.getC5_P2_1_8().equals("") && (!modulo5.getC5_P2_1_8().equals("-1")))
-            {int childPos28 = Integer.parseInt(modulo5.getC5_P2_1_8());
-            ((RadioButton) rg8P2.getChildAt(childPos28)).setChecked(true);}
-
-            if(!modulo5.getC5_P2_1_9().equals("") && (!modulo5.getC5_P2_1_9().equals("-1")))
-            {int childPos29 = Integer.parseInt(modulo5.getC5_P2_1_9());
-            ((RadioButton) rg9P2.getChildAt(childPos29)).setChecked(true);}
-
-            edtSP1.setText(modulo5.getC5_P2_2_1());
-            edtSp2.setText(modulo5.getC5_P2_2_2());
-            edtSp3.setText(modulo5.getC5_P2_2_3());
-            edtSp4.setText(modulo5.getC5_P2_2_4());
-            edtSp5.setText(modulo5.getC5_P2_2_5());
-            edtSp6.setText(modulo5.getC5_P2_2_6());
-            edtSp7.setText(modulo5.getC5_P2_2_7());
-            edtSp8.setText(modulo5.getC5_P2_2_8());
-            edtSp9.setText(modulo5.getC5_P2_2_9());
-
-
-        }
-        data.close();
-    }
+//    public void cargarDatos() {
+//        data = new Data(context);
+//        data.open();
+//        modulo5 = data.getModulo5(idempresa);
+//        Modulo2 modulo2 = data.getModulo2(idempresa);
+//        txtTotalTrab.setText("Total Trabajadores : " + modulo2.getC2_P7());
+//        //verifico si ya existe un objeto con datos llenados previamente
+//        if (data.existeModulo5(idempresa)) {
+//            //si existe traigo el objeto
+//
+//            //saco los datos del objeto para llenarlos en los elementos del fragment
+//            //datos cabecera
+//
+//            //pregunta 2
+//            if(!modulo5.getC5_P2().equals("") && (!modulo5.getC5_P2().equals("-1")))
+//            {int childPos2 = Integer.parseInt(modulo5.getC5_P2());
+//            ((RadioButton) rgP2.getChildAt(childPos2)).setChecked(true);}
+//            if (modulo5.getC5_P2_0_1().equals("1")) ckSP1.setChecked(true);
+//            if (modulo5.getC5_P2_0_1().equals("0")) ckSP1.setChecked(false);
+//            if (modulo5.getC5_P2_0_2().equals("1")) ckSp2.setChecked(true);
+//            if (modulo5.getC5_P2_0_2().equals("0")) ckSp2.setChecked(false);
+//            if (modulo5.getC5_P2_0_3().equals("1")) ckSp3.setChecked(true);
+//            if (modulo5.getC5_P2_0_3().equals("0")) ckSp3.setChecked(false);
+//            if (modulo5.getC5_P2_0_4().equals("1")) ckSp4.setChecked(true);
+//            if (modulo5.getC5_P2_0_4().equals("0")) ckSp4.setChecked(false);
+//            if (modulo5.getC5_P2_0_5().equals("1")) ckSp5.setChecked(true);
+//            if (modulo5.getC5_P2_0_5().equals("0")) ckSp5.setChecked(false);
+//            if (modulo5.getC5_P2_0_6().equals("1")) ckSp6.setChecked(true);
+//            if (modulo5.getC5_P2_0_6().equals("0")) ckSp6.setChecked(false);
+//            if (modulo5.getC5_P2_0_7().equals("1")) ckSp7.setChecked(true);
+//            if (modulo5.getC5_P2_0_7().equals("0")) ckSp7.setChecked(false);
+//            if (modulo5.getC5_P2_0_8().equals("1")) ckSp8.setChecked(true);
+//            if (modulo5.getC5_P2_0_8().equals("0")) ckSp8.setChecked(false);
+//            if (modulo5.getC5_P2_0_9().equals("1")) ckSp9.setChecked(true);
+//            if (modulo5.getC5_P2_0_9().equals("0")) ckSp9.setChecked(false);
+//
+//            if(!modulo5.getC5_P2_1_1().equals("") && (!modulo5.getC5_P2_1_1().equals("-1")))
+//            {int childPos21 = Integer.parseInt(modulo5.getC5_P2_1_1());
+//            ((RadioButton) rg1P2.getChildAt(childPos21)).setChecked(true);}
+//
+//            if(!modulo5.getC5_P2_1_2().equals("") && (!modulo5.getC5_P2_1_2().equals("-1")))
+//            {int childPos22 = Integer.parseInt(modulo5.getC5_P2_1_2());
+//            ((RadioButton) rg2P2.getChildAt(childPos22)).setChecked(true);}
+//
+//            if(!modulo5.getC5_P2_1_3().equals("") && (!modulo5.getC5_P2_1_3().equals("-1")))
+//            {int childPos23 = Integer.parseInt(modulo5.getC5_P2_1_3());
+//            ((RadioButton) rg3P2.getChildAt(childPos23)).setChecked(true);}
+//
+//            if(!modulo5.getC5_P2_1_4().equals("") && (!modulo5.getC5_P2_1_4().equals("-1")))
+//            {int childPos24 = Integer.parseInt(modulo5.getC5_P2_1_4());
+//            ((RadioButton) rg4P2.getChildAt(childPos24)).setChecked(true);}
+//
+//            if(!modulo5.getC5_P2_1_5().equals("") && (!modulo5.getC5_P2_1_5().equals("-1")))
+//            {int childPos25 = Integer.parseInt(modulo5.getC5_P2_1_5());
+//            ((RadioButton) rg5P2.getChildAt(childPos25)).setChecked(true);}
+//
+//            if(!modulo5.getC5_P2_1_6().equals("") && (!modulo5.getC5_P2_1_6().equals("-1")))
+//            {int childPos26 = Integer.parseInt(modulo5.getC5_P2_1_6());
+//            ((RadioButton) rg6P2.getChildAt(childPos26)).setChecked(true);}
+//
+//            if(!modulo5.getC5_P2_1_7().equals("") && (!modulo5.getC5_P2_1_7().equals("-1")))
+//            {int childPos27 = Integer.parseInt(modulo5.getC5_P2_1_7());
+//            ((RadioButton) rg7P2.getChildAt(childPos27)).setChecked(true);}
+//
+//            if(!modulo5.getC5_P2_1_8().equals("") && (!modulo5.getC5_P2_1_8().equals("-1")))
+//            {int childPos28 = Integer.parseInt(modulo5.getC5_P2_1_8());
+//            ((RadioButton) rg8P2.getChildAt(childPos28)).setChecked(true);}
+//
+//            if(!modulo5.getC5_P2_1_9().equals("") && (!modulo5.getC5_P2_1_9().equals("-1")))
+//            {int childPos29 = Integer.parseInt(modulo5.getC5_P2_1_9());
+//            ((RadioButton) rg9P2.getChildAt(childPos29)).setChecked(true);}
+//
+//            edtSP1.setText(modulo5.getC5_P2_2_1());
+//            edtSp2.setText(modulo5.getC5_P2_2_2());
+//            edtSp3.setText(modulo5.getC5_P2_2_3());
+//            edtSp4.setText(modulo5.getC5_P2_2_4());
+//            edtSp5.setText(modulo5.getC5_P2_2_5());
+//            edtSp6.setText(modulo5.getC5_P2_2_6());
+//            edtSp7.setText(modulo5.getC5_P2_2_7());
+//            edtSp8.setText(modulo5.getC5_P2_2_8());
+//            edtSp9.setText(modulo5.getC5_P2_2_9());
+//
+//
+//        }
+//        data.close();
+//    }
 
     public void llenarMapaVariables() {
         //preguntas cabecera

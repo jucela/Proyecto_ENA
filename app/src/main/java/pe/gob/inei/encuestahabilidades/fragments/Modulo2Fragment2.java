@@ -1097,7 +1097,7 @@ public class Modulo2Fragment2 extends Fragment {
     public void cargarDatos(){
         data = new Data(context);
         data.open();
-        modulo2 = data.getModulo2(idempresa);
+        //modulo2 = data.getModulo2(idempresa);
         //p6
         if(!modulo2.getC2_P6().equals(""))((RadioButton)rgP6.getChildAt(Integer.parseInt(modulo2.getC2_P6()))).setChecked(true);
         //p7p8p9p10p11p12p13
@@ -1331,7 +1331,7 @@ public class Modulo2Fragment2 extends Fragment {
         contentValues.put(SQLConstantes.MODULO2_P13_2_5,C2_P13_2_5);
         contentValues.put(SQLConstantes.MODULO2_P13_2_6,C2_P13_2_6);
         contentValues.put(SQLConstantes.MODULO2_P13_2_7,C2_P13_2_7);
-        data.actualizarModulo2(idempresa,contentValues);
+        //data.actualizarModulo2(idempresa,contentValues);
         data.close();
     }
 

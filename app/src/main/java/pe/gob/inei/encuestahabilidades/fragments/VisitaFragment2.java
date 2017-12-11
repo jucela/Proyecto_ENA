@@ -805,7 +805,7 @@ public class VisitaFragment2 extends Fragment {
         boolean correcto = false;
         data = new Data(context);
         data.open();
-        boolean existenModulos = data.existeControl1(idEmpresa) && data.existeModulo2(idEmpresa) &&
+        boolean existenModulos = data.existeControl1(idEmpresa) && data.existeControl2(idEmpresa) &&
                 data.existeModulo3(idEmpresa) && data.existeModulo4(idEmpresa) &&
                 data.existeModulo5(idEmpresa) && data.existeModulo6(idEmpresa) &&
                 data.existeModulo7(idEmpresa) && data.existeModulo8(idEmpresa) &&
@@ -916,18 +916,18 @@ public class VisitaFragment2 extends Fragment {
         boolean correcto = true;
         data = new Data(context);
         data.open();
-        Modulo2 modulo2 = data.getModulo2(idEmpresa);
-        data.close();
-        if(!modulo2.getC2_P6().equals("") && !modulo2.getC2_P17().equals("") &&
-                !modulo2.getC2_P21().equals("") && !modulo2.getC2_P23().equals("") &&
-                !modulo2.getC2_P24().equals("") && !modulo2.getC2_P25().equals("")){
-            if(!modulo2.getC2_P1().equals("") && Integer.parseInt(modulo2.getC2_P6())>-1 &&
-                    !modulo2.getC2_P14().equals("") && Integer.parseInt(modulo2.getC2_P17())>-1 &&
-                    Integer.parseInt(modulo2.getC2_P21())>-1 && Integer.parseInt(modulo2.getC2_P23())>-1 &&
-                    Integer.parseInt(modulo2.getC2_P24())>-1 && Integer.parseInt(modulo2.getC2_P25())>-1){
-                correcto = true;
-            }
-        }
+//        Modulo2 modulo2 = data.getModulo2(idEmpresa);
+//        data.close();
+//        if(!modulo2.getC2_P6().equals("") && !modulo2.getC2_P17().equals("") &&
+//                !modulo2.getC2_P21().equals("") && !modulo2.getC2_P23().equals("") &&
+//                !modulo2.getC2_P24().equals("") && !modulo2.getC2_P25().equals("")){
+//            if(!modulo2.getC2_P1().equals("") && Integer.parseInt(modulo2.getC2_P6())>-1 &&
+//                    !modulo2.getC2_P14().equals("") && Integer.parseInt(modulo2.getC2_P17())>-1 &&
+//                    Integer.parseInt(modulo2.getC2_P21())>-1 && Integer.parseInt(modulo2.getC2_P23())>-1 &&
+//                    Integer.parseInt(modulo2.getC2_P24())>-1 && Integer.parseInt(modulo2.getC2_P25())>-1){
+//                correcto = true;
+//            }
+//        }
         if(!correcto){
             if(mensajeCoberturaModulo2.equals("")) mensajeCoberturaModulo2 = "FALTA COMPLETAR EL MODULO 2";
         }

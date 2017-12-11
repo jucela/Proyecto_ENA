@@ -135,7 +135,7 @@ public class Modulo5Fragment1 extends Fragment {
         data = new Data(context);
         data.open();
         identificacion = data.getIdentificacion(idempresa);
-        modulo2 =data.getModulo2(idempresa);
+        //modulo2 =data.getModulo2(idempresa);
 
         if (!modulo2.getC2_P1().equals("")) {
             C2_P1 = Integer.parseInt(modulo2.getC2_P1());
@@ -406,7 +406,7 @@ public class Modulo5Fragment1 extends Fragment {
     public void cargarDatos() {
         data = new Data(context);
         data.open();
-        Modulo2 modulo2 = data.getModulo2(idempresa);
+        //Modulo2 modulo2 = data.getModulo2(idempresa);
         txtTotalTrab.setText("Total Trabajadores : " + modulo2.getC2_P1());
 
         //verifico si ya existe un objeto con datos llenados previamente

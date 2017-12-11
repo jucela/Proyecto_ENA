@@ -122,9 +122,12 @@ public class Modulo1 {
         this.FEC_REGISTRO = "";
     }
 
-    public Modulo1(String MODULO1_ID, String c1_P0_0, String c1_P0_1, String c1_P0_2, String c1_P0_3, String c1_P1_1, String c1_P1_2, String c1_P1_2_DETALLE, String c1_P2_1_1, String c1_P2_1_2, String c1_P2_1_2_DETALLE, String c1_P2_1_NO, String c1_P2_2_1, String c1_P2_2_2, String c1_P2_2_2_DETALLE, String c1_P2_2_NO, String c1_P3, String c1_P3_0, String c1_P4_1_1, String c1_P4_2_1, String c1_P5, String c1_P6_0, String c1_P6_1, String c1_P7_1_1, String c1_P7_2_1, String c1_P7_1_2, String c1_P7_2_2, String c1_P8, String c1_P9, String c1_P10, String c1_P11, String c1_P11_1, String c1_P11_2, String c1_P12_NO, String c1_P12_TIPVIA, String c1_P12_NOMVIA, String c1_P12_NROPTA, String c1_P12_BLOCK, String c1_P12_INT, String c1_P12_PISO, String c1_P12_MZA, String c1_P12_LOTE, String c1_P12_KM, String c1_P12_DIST, String c1_P12_CCDI, String c1_P12_PROV, String c1_P12_CCPP, String c1_P12_DEP, String c1_P12_CCDD, String OBS_MOD_I, String USU_CREACION, String FEC_CREACION, String USU_REGISTRO, String FEC_REGISTRO) {
+
+
+
+    public Modulo1(String MODULO1_ID, String C1_P0_0, String c1_P0_1, String c1_P0_2, String c1_P0_3, String c1_P1_1, String c1_P1_2, String c1_P1_2_DETALLE, String c1_P2_1_1, String c1_P2_1_2, String c1_P2_1_2_DETALLE, String c1_P2_1_NO, String c1_P2_2_1, String c1_P2_2_2, String c1_P2_2_2_DETALLE, String c1_P2_2_NO, String c1_P3, String c1_P3_0, String c1_P4_1_1, String c1_P4_2_1, String c1_P5, String c1_P6_0, String c1_P6_1, String c1_P7_1_1, String c1_P7_2_1, String c1_P7_1_2, String c1_P7_2_2, String c1_P8, String c1_P9, String c1_P10, String c1_P11, String c1_P11_1, String c1_P11_2, String c1_P12_NO, String c1_P12_TIPVIA, String c1_P12_NOMVIA, String c1_P12_NROPTA, String c1_P12_BLOCK, String c1_P12_INT, String c1_P12_PISO, String c1_P12_MZA, String c1_P12_LOTE, String c1_P12_KM, String c1_P12_DIST, String c1_P12_CCDI, String c1_P12_PROV, String c1_P12_CCPP, String c1_P12_DEP, String c1_P12_CCDD, String OBS_MOD_I, String USU_CREACION, String FEC_CREACION, String USU_REGISTRO, String FEC_REGISTRO) {
         this.MODULO1_ID = MODULO1_ID;
-        C1_P0_0 = c1_P0_0;
+        C1_P0_0 = C1_P0_0;
         C1_P0_1 = c1_P0_1;
         C1_P0_2 = c1_P0_2;
         C1_P0_3 = c1_P0_3;

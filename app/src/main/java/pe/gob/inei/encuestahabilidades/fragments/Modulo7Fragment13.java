@@ -74,7 +74,7 @@ public class Modulo7Fragment13 extends Fragment {
 
         data = new Data(context);
         data.open();
-        modulo2 = data.getModulo2(idempresa);
+        //modulo2 = data.getModulo2(idempresa);
         if(!modulo2.getC2_P1().toString().equals(""))
         {C2_P1 = Integer.parseInt(modulo2.getC2_P1());}
     }

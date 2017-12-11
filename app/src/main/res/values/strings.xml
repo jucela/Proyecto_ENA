@@ -148,6 +148,7 @@
     <string name="modulo12_nombre">EVALUACION V</string>
     <string name="modulo13_nombre">EVALUACION VI</string>
     <string name="modulo14_nombre">EVALUACION VII</string>
+    <string name="modulo15_nombre">EVALUACION FINAL</string>
 
     <!--PREGUNTAS-->
     <string name="modulo1_pregunta1">1.Actividad económica principal de la empresa</string>

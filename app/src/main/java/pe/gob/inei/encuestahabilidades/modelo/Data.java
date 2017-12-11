@@ -18,6 +18,20 @@ import pe.gob.inei.encuestahabilidades.pojos.Identificacion;
 import pe.gob.inei.encuestahabilidades.pojos.Marco;
 import pe.gob.inei.encuestahabilidades.pojos.Control1;
 import pe.gob.inei.encuestahabilidades.pojos.Control2;
+import pe.gob.inei.encuestahabilidades.pojos.Control3;
+import pe.gob.inei.encuestahabilidades.pojos.Control4;
+import pe.gob.inei.encuestahabilidades.pojos.Control5;
+import pe.gob.inei.encuestahabilidades.pojos.Control6;
+import pe.gob.inei.encuestahabilidades.pojos.Control7;
+import pe.gob.inei.encuestahabilidades.pojos.Evaluacion1;
+import pe.gob.inei.encuestahabilidades.pojos.Evaluacion2;
+import pe.gob.inei.encuestahabilidades.pojos.Evaluacion3;
+import pe.gob.inei.encuestahabilidades.pojos.Evaluacion4;
+import pe.gob.inei.encuestahabilidades.pojos.Evaluacion5;
+import pe.gob.inei.encuestahabilidades.pojos.Evaluacion6;
+import pe.gob.inei.encuestahabilidades.pojos.Evaluacion7;
+import pe.gob.inei.encuestahabilidades.pojos.EvaluacionFinal;
+
 import pe.gob.inei.encuestahabilidades.pojos.Modulo10;
 import pe.gob.inei.encuestahabilidades.pojos.Modulo2;
 import pe.gob.inei.encuestahabilidades.pojos.Modulo3;
@@ -821,7 +835,7 @@ public class Data {
         return control2;
     }
     public ArrayList<Control2> getAllControl2(){
-        ArrayList<Control2> modulos2 = new ArrayList<Control2>();
+        ArrayList<Control2> controles2 = new ArrayList<Control2>();
         Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl2,
                 SQLConstantes.ALL_COLUMNS_CONTROL2,null,null,null,null,null);
         while(cursor.moveToNext()){
@@ -849,10 +863,10 @@ public class Data {
             control2.setC2_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C2_P2_7)));
 
 
-            modulos2.add(control2);
+            controles2.add(control2);
         }
         cursor.close();
-        return modulos2;
+        return controles2;
     }
     public boolean existeControl2(String idEmpresa){
         boolean encontrado = false;
@@ -867,10 +881,10 @@ public class Data {
         ContentValues contentValues = control2.toValues();
         sqLiteDatabase.insert(SQLConstantes.tableControl2,null,contentValues);
     }
-//    public void insertarModulos2(ArrayList<Control2> modulos2){
+//    public void insertarcontroles2(ArrayList<Control2> controles2){
 //        long items = getNumeroItemscontrol2();
 //        if(items == 0){
-//            for (control2 control2 : modulos2) {
+//            for (control2 control2 : controles2) {
 //                try {
 //                    insertarcontrol2(control2);
 //                }catch (SQLiteException e){
@@ -879,15 +893,1327 @@ public class Data {
 //            }
 //        }
 //    }
-    public void actualizarcontrol2(String idempresa, ContentValues contentValues){
+    public void actualizarControl2(String idempresa, ContentValues contentValues){
         String[] whereArgs = new String[]{idempresa};
         sqLiteDatabase.update(SQLConstantes.tableControl2,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
     }
-    public void deletecontrol2(String idEmpresa){
+    public void deleteControl2(String idEmpresa){
         String[] whereArgs = new String[]{idEmpresa};
         sqLiteDatabase.delete(SQLConstantes.tableControl2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
     }
-    //-------------------------------------FIN MODULO2-----------------------------------------------------------------
+    //-------------------------------------FIN CONTROL 2-----------------------------------------------------------------
+
+    //---------------------------------CONTROL 3-------------------------------------------------------------
+    public Control3 getControl3(String idEmpresa){
+        Control3 control3 = new Control3();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl3,
+                SQLConstantes.ALL_COLUMNS_CONTROL3,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            control3.setCONTROL3_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_ID)));
+            control3.setC3_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_1)));
+            control3.setC3_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_2)));
+            control3.setC3_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_3)));
+            control3.setC3_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_4)));
+            control3.setC3_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_5)));
+            control3.setC3_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_6)));
+            control3.setC3_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_7)));
+            control3.setC3_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_8)));
+            control3.setC3_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_9)));
+            control3.setC3_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_10)));
+            control3.setC3_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_11)));
+            control3.setC3_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_12)));
+            control3.setC3_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_13)));
+            control3.setC3_P1_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_14)));
+            control3.setC3_P1_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_15)));
+            control3.setC3_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_1)));
+            control3.setC3_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_2)));
+            control3.setC3_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_3)));
+            control3.setC3_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_4)));
+            control3.setC3_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_5)));
+
+
+
+        }
+        cursor.close();
+        return control3;
+    }
+    public ArrayList<Control3> getAllControl3(){
+        ArrayList<Control3> controles3 = new ArrayList<Control3>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl3,
+                SQLConstantes.ALL_COLUMNS_CONTROL3,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Control3 control3 = new Control3();
+            control3.setCONTROL3_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_ID)));
+            control3.setC3_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_1)));
+            control3.setC3_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_2)));
+            control3.setC3_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_3)));
+            control3.setC3_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_4)));
+            control3.setC3_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_5)));
+            control3.setC3_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_6)));
+            control3.setC3_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_7)));
+            control3.setC3_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_8)));
+            control3.setC3_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_9)));
+            control3.setC3_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_10)));
+            control3.setC3_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_11)));
+            control3.setC3_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_12)));
+            control3.setC3_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_13)));
+            control3.setC3_P1_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_14)));
+            control3.setC3_P1_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P1_15)));
+            control3.setC3_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_1)));
+            control3.setC3_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_2)));
+            control3.setC3_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_3)));
+            control3.setC3_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_4)));
+            control3.setC3_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C3_P2_5)));
+            controles3.add(control3);
+        }
+        cursor.close();
+        return controles3;
+    }
+    public boolean existeControl3(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl3,
+                SQLConstantes.ALL_COLUMNS_CONTROL3,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarControl3(Control3 control3){
+        ContentValues contentValues = control3.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableControl3,null,contentValues);
+    }
+    //    public void insertarcontroles3(ArrayList<Control3> controles3){
+//        long items = getNumeroItemscontrol3();
+//        if(items == 0){
+//            for (control3 control3 : controles3) {
+//                try {
+//                    insertarcontrol3(control3);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarControl3(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableControl3,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteControl3(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableControl3,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN CONTROL3-----------------------------------------------------------------
+    //---------------------------------CONTROL4-------------------------------------------------------------
+    public Control4 getControl4(String idEmpresa){
+        Control4 control4 = new Control4();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl4,
+                SQLConstantes.ALL_COLUMNS_CONTROL4,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            control4.setCONTROL4_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_ID)));
+            control4.setC4_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_1)));
+            control4.setC4_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_2)));
+            control4.setC4_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_3)));
+            control4.setC4_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_4)));
+            control4.setC4_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_5)));
+            control4.setC4_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_1)));
+            control4.setC4_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_2)));
+            control4.setC4_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_3)));
+            control4.setC4_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_4)));
+            control4.setC4_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_5)));
+            control4.setC4_P2_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_6)));
+            control4.setC4_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_7)));
+            control4.setC4_P2_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_8)));
+            control4.setC4_P2_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_9)));
+            control4.setC4_P2_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_10)));
+            control4.setC4_P2_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_11)));
+            control4.setC4_P2_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_12)));
+            control4.setC4_P2_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_13)));
+            control4.setC4_P2_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_14)));
+            control4.setC4_P2_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_15)));
+
+
+        }
+        cursor.close();
+        return control4;
+    }
+    public ArrayList<Control4> getAllControl4(){
+        ArrayList<Control4> controles4 = new ArrayList<Control4>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl4,
+                SQLConstantes.ALL_COLUMNS_CONTROL4,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Control4 control4 = new Control4();
+            control4.setCONTROL4_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_ID)));
+            control4.setC4_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_1)));
+            control4.setC4_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_2)));
+            control4.setC4_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_3)));
+            control4.setC4_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_4)));
+            control4.setC4_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P1_5)));
+            control4.setC4_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_1)));
+            control4.setC4_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_2)));
+            control4.setC4_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_3)));
+            control4.setC4_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_4)));
+            control4.setC4_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_5)));
+            control4.setC4_P2_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_6)));
+            control4.setC4_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_7)));
+            control4.setC4_P2_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_8)));
+            control4.setC4_P2_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_9)));
+            control4.setC4_P2_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_10)));
+            control4.setC4_P2_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_11)));
+            control4.setC4_P2_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_12)));
+            control4.setC4_P2_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_13)));
+            control4.setC4_P2_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_14)));
+            control4.setC4_P2_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.C4_P2_15)));
+            controles4.add(control4);
+        }
+        cursor.close();
+        return controles4;
+    }
+    public boolean existeControl4(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl4,
+                SQLConstantes.ALL_COLUMNS_CONTROL4,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarControl4(Control4 control4){
+        ContentValues contentValues = control4.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableControl4,null,contentValues);
+    }
+    //    public void insertarcontroles4(ArrayList<Control4> controles4){
+//        long items = getNumeroItemscontrol4();
+//        if(items == 0){
+//            for (control4 control4 : controles4) {
+//                try {
+//                    insertarcontrol4(control4);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarControl4(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableControl4,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteControl4(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableControl4,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN CONTROL5-----------------------------------------------------------------
+
+    //---------------------------------CONTROL5-------------------------------------------------------------
+    public Control5 getControl5(String idEmpresa){
+        Control5 control5 = new Control5();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl5,
+                SQLConstantes.ALL_COLUMNS_CONTROL5,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            control5.setCONTROL5_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_ID)));
+            control5.setC5_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_1)));
+            control5.setC5_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_2)));
+            control5.setC5_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_3)));
+            control5.setC5_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_4)));
+            control5.setC5_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_5)));
+            control5.setC5_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_1)));
+            control5.setC5_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_2)));
+            control5.setC5_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_3)));
+            control5.setC5_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_4)));
+            control5.setC5_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_5)));
+            control5.setC5_P2_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_6)));
+            control5.setC5_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_7)));
+            control5.setC5_P2_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_8)));
+            control5.setC5_P2_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_9)));
+            control5.setC5_P2_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_10)));
+            control5.setC5_P2_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_11)));
+            control5.setC5_P2_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_12)));
+            control5.setC5_P2_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_13)));
+            control5.setC5_P2_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_14)));
+            control5.setC5_P2_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_15)));
+
+        }
+        cursor.close();
+        return control5;
+    }
+    public ArrayList<Control5> getAllControl5(){
+        ArrayList<Control5> controles5 = new ArrayList<Control5>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl5,
+                SQLConstantes.ALL_COLUMNS_CONTROL5,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Control5 control5 = new Control5();
+            control5.setCONTROL5_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_ID)));
+            control5.setC5_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_1)));
+            control5.setC5_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_2)));
+            control5.setC5_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_3)));
+            control5.setC5_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_4)));
+            control5.setC5_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P1_5)));
+            control5.setC5_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_1)));
+            control5.setC5_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_2)));
+            control5.setC5_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_3)));
+            control5.setC5_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_4)));
+            control5.setC5_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_5)));
+            control5.setC5_P2_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_6)));
+            control5.setC5_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_7)));
+            control5.setC5_P2_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_8)));
+            control5.setC5_P2_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_9)));
+            control5.setC5_P2_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_10)));
+            control5.setC5_P2_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_11)));
+            control5.setC5_P2_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_12)));
+            control5.setC5_P2_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_13)));
+            control5.setC5_P2_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_14)));
+            control5.setC5_P2_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.C5_P2_15)));
+            controles5.add(control5);
+        }
+        cursor.close();
+        return controles5;
+    }
+    public boolean existeControl5(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl5,
+                SQLConstantes.ALL_COLUMNS_CONTROL5,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarControl5(Control5 control5){
+        ContentValues contentValues = control5.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableControl5,null,contentValues);
+    }
+    //    public void insertarcontroles5(ArrayList<Control5> controles5){
+//        long items = getNumeroItemscontrol5();
+//        if(items == 0){
+//            for (control5 control5 : controles5) {
+//                try {
+//                    insertarcontrol5(control5);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarControl5(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableControl5,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteControl5(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableControl5,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN CONTROL5-----------------------------------------------------------------
+    //---------------------------------CONTROL6-------------------------------------------------------------
+    public Control6 getControl6(String idEmpresa){
+        Control6 control6 = new Control6();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl6,
+                SQLConstantes.ALL_COLUMNS_CONTROL6,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            control6.setCONTROL6_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_ID)));
+            control6.setC6_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_1)));
+            control6.setC6_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_2)));
+            control6.setC6_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_3)));
+            control6.setC6_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_4)));
+            control6.setC6_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_5)));
+            control6.setC6_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_6)));
+            control6.setC6_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_7)));
+            control6.setC6_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_8)));
+            control6.setC6_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_9)));
+            control6.setC6_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_10)));
+            control6.setC6_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_11)));
+            control6.setC6_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_12)));
+            control6.setC6_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_13)));
+            control6.setC6_P1_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_14)));
+            control6.setC6_P1_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_15)));
+            control6.setC6_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_1)));
+            control6.setC6_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_2)));
+            control6.setC6_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_3)));
+            control6.setC6_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_4)));
+            control6.setC6_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_5)));
+
+        }
+        cursor.close();
+        return control6;
+    }
+    public ArrayList<Control6> getAllControl6(){
+        ArrayList<Control6> controles6 = new ArrayList<Control6>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl6,
+                SQLConstantes.ALL_COLUMNS_CONTROL6,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Control6 control6 = new Control6();
+            control6.setCONTROL6_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_ID)));
+            control6.setC6_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_1)));
+            control6.setC6_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_2)));
+            control6.setC6_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_3)));
+            control6.setC6_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_4)));
+            control6.setC6_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_5)));
+            control6.setC6_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_6)));
+            control6.setC6_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_7)));
+            control6.setC6_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_8)));
+            control6.setC6_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_9)));
+            control6.setC6_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_10)));
+            control6.setC6_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_11)));
+            control6.setC6_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_12)));
+            control6.setC6_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_13)));
+            control6.setC6_P1_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_14)));
+            control6.setC6_P1_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P1_15)));
+            control6.setC6_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_1)));
+            control6.setC6_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_2)));
+            control6.setC6_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_3)));
+            control6.setC6_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_4)));
+            control6.setC6_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C6_P2_5)));
+            controles6.add(control6);
+        }
+        cursor.close();
+        return controles6;
+    }
+    public boolean existeControl6(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl6,
+                SQLConstantes.ALL_COLUMNS_CONTROL6,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarControl6(Control6 control6){
+        ContentValues contentValues = control6.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableControl6,null,contentValues);
+    }
+    //    public void insertarcontroles6(ArrayList<Control6> controles6){
+//        long items = getNumeroItemscontrol6();
+//        if(items == 0){
+//            for (control6 control6 : controles6) {
+//                try {
+//                    insertarcontrol6(control6);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarControl6(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableControl6,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteControl6(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableControl6,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN CONTROL6-----------------------------------------------------------------
+
+    //---------------------------------CONTROL7-------------------------------------------------------------
+    public Control7 getControl7(String idEmpresa){
+        Control7 control7 = new Control7();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl7,
+                SQLConstantes.ALL_COLUMNS_CONTROL7,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            control7.setCONTROL7_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_ID)));
+            control7.setC7_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_1)));
+            control7.setC7_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_2)));
+            control7.setC7_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_3)));
+            control7.setC7_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_4)));
+            control7.setC7_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_5)));
+            control7.setC7_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_6)));
+            control7.setC7_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_1)));
+            control7.setC7_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_2)));
+            control7.setC7_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_3)));
+            control7.setC7_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_4)));
+            control7.setC7_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_5)));
+            control7.setC7_P2_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_6)));
+            control7.setC7_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_7)));
+            control7.setC7_P2_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_8)));
+            control7.setC7_P2_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_9)));
+            control7.setC7_P2_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_10)));
+            control7.setC7_P2_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_11)));
+            control7.setC7_P2_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_12)));
+            control7.setC7_P2_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_13)));
+            control7.setC7_P2_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_14)));
+
+
+
+        }
+        cursor.close();
+        return control7;
+    }
+    public ArrayList<Control7> getAllControl7(){
+        ArrayList<Control7> controles7 = new ArrayList<Control7>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl7,
+                SQLConstantes.ALL_COLUMNS_CONTROL7,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Control7 control7 = new Control7();
+            control7.setCONTROL7_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_ID)));
+            control7.setC7_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_1)));
+            control7.setC7_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_2)));
+            control7.setC7_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_3)));
+            control7.setC7_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_4)));
+            control7.setC7_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_5)));
+            control7.setC7_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P1_6)));
+            control7.setC7_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_1)));
+            control7.setC7_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_2)));
+            control7.setC7_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_3)));
+            control7.setC7_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_4)));
+            control7.setC7_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_5)));
+            control7.setC7_P2_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_6)));
+            control7.setC7_P2_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_7)));
+            control7.setC7_P2_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_8)));
+            control7.setC7_P2_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_9)));
+            control7.setC7_P2_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_10)));
+            control7.setC7_P2_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_11)));
+            control7.setC7_P2_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_12)));
+            control7.setC7_P2_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_13)));
+            control7.setC7_P2_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.C7_P2_14)));
+            controles7.add(control7);
+        }
+        cursor.close();
+        return controles7;
+    }
+    public boolean existeControl7(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableControl7,
+                SQLConstantes.ALL_COLUMNS_CONTROL7,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarControl7(Control7 control7){
+        ContentValues contentValues = control7.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableControl7,null,contentValues);
+    }
+    //    public void insertarcontroles7(ArrayList<Control7> controles7){
+//        long items = getNumeroItemscontrol7();
+//        if(items == 0){
+//            for (control7 control7 : controles7) {
+//                try {
+//                    insertarcontrol7(control7);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarControl7(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableControl7,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteControl7(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableControl7,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN CONTROL7-----------------------------------------------------------------
+
+
+    //---------------------------------EVALUACION 1-------------------------------------------------------------
+    public Evaluacion1 getEvaluacion1(String idEmpresa){
+        Evaluacion1 evaluacion1 = new Evaluacion1();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion1,
+                SQLConstantes.ALL_COLUMNS_EVALUACION1,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            evaluacion1.setEVALUACION1_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_ID)));
+            evaluacion1.setE1_P1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P1)));
+            evaluacion1.setE1_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P2)));
+            evaluacion1.setE1_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P3_1)));
+            evaluacion1.setE1_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P3_2)));
+            evaluacion1.setE1_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P3_3)));
+            evaluacion1.setE1_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P3_4)));
+            evaluacion1.setE1_P4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P4)));
+            evaluacion1.setE1_P5_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_1)));
+            evaluacion1.setE1_P5_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_2)));
+            evaluacion1.setE1_P5_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_3)));
+            evaluacion1.setE1_P5_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_4)));
+            evaluacion1.setE1_P5_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_5)));
+            evaluacion1.setE1_P5_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_6)));
+            evaluacion1.setE1_P5_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_7)));
+            evaluacion1.setE1_P5_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_8)));
+            evaluacion1.setE1_P5_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_9)));
+            evaluacion1.setE1_P5_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_10)));
+            evaluacion1.setE1_P5_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_11)));
+
+
+
+        }
+        cursor.close();
+        return evaluacion1;
+    }
+    public ArrayList<Evaluacion1> getAllEvaluacion1(){
+        ArrayList<Evaluacion1> evaluaciones3 = new ArrayList<Evaluacion1>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion1,
+                SQLConstantes.ALL_COLUMNS_EVALUACION1,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Evaluacion1 evaluacion1 = new Evaluacion1();
+            evaluacion1.setEVALUACION1_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_ID)));
+            evaluacion1.setE1_P1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P1)));
+            evaluacion1.setE1_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P2)));
+            evaluacion1.setE1_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P3_1)));
+            evaluacion1.setE1_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P3_2)));
+            evaluacion1.setE1_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P3_3)));
+            evaluacion1.setE1_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P3_4)));
+            evaluacion1.setE1_P4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P4)));
+            evaluacion1.setE1_P5_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_1)));
+            evaluacion1.setE1_P5_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_2)));
+            evaluacion1.setE1_P5_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_3)));
+            evaluacion1.setE1_P5_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_4)));
+            evaluacion1.setE1_P5_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_5)));
+            evaluacion1.setE1_P5_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_6)));
+            evaluacion1.setE1_P5_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_7)));
+            evaluacion1.setE1_P5_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_8)));
+            evaluacion1.setE1_P5_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_9)));
+            evaluacion1.setE1_P5_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_10)));
+            evaluacion1.setE1_P5_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E1_P5_11)));
+            evaluaciones3.add(evaluacion1);
+        }
+        cursor.close();
+        return evaluaciones3;
+    }
+    public boolean existeEvaluacion1(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion1,
+                SQLConstantes.ALL_COLUMNS_EVALUACION1,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarEvaluacion1(Evaluacion1 evaluacion1){
+        ContentValues contentValues = evaluacion1.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableEvaluacion1,null,contentValues);
+    }
+    //    public void insertarevaluaciones1(ArrayList<Evaluacion1> evaluaciones1){
+//        long items = getNumeroItemsEvaluacion1();
+//        if(items == 0){
+//            for (Evaluacion1 Evaluacion1 : evaluaciones3) {
+//                try {
+//                    insertarEvaluacion1(Evaluacion1);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarEvaluacion1(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableEvaluacion1,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteEvaluacion1(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableEvaluacion1,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN EVALUACION 1-----------------------------------------------------------------
+
+    //---------------------------------EVALUCION 2-------------------------------------------------------------
+    public Evaluacion2 getEvaluacion2(String idEmpresa){
+        Evaluacion2 evaluacion2 = new Evaluacion2();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion2,
+                SQLConstantes.ALL_COLUMNS_EVALUACION2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            evaluacion2.setEVALUACION2_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_ID)));
+            evaluacion2.setE2_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_1)));
+            evaluacion2.setE2_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_2)));
+            evaluacion2.setE2_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_3)));
+            evaluacion2.setE2_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_4)));
+            evaluacion2.setE2_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_5)));
+            evaluacion2.setE2_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_6)));
+            evaluacion2.setE2_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_7)));
+            evaluacion2.setE2_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_8)));
+            evaluacion2.setE2_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_9)));
+            evaluacion2.setE2_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_10)));
+            evaluacion2.setE2_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_11)));
+            evaluacion2.setE2_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_12)));
+            evaluacion2.setE2_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_13)));
+            evaluacion2.setE2_P1_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_14)));
+            evaluacion2.setE2_P1_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_15)));
+            evaluacion2.setE2_P1_16(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_16)));
+            evaluacion2.setE2_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_1)));
+            evaluacion2.setE2_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_2)));
+            evaluacion2.setE2_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_3)));
+            evaluacion2.setE2_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_4)));
+            evaluacion2.setE2_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_5)));
+            evaluacion2.setE2_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_1)));
+            evaluacion2.setE2_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_2)));
+            evaluacion2.setE2_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_3)));
+            evaluacion2.setE2_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_4)));
+            evaluacion2.setE2_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_5)));
+
+        }
+        cursor.close();
+        return evaluacion2;
+    }
+    public ArrayList<Evaluacion2> getAllEvaluacion2(){
+        ArrayList<Evaluacion2> evaluaciones3 = new ArrayList<Evaluacion2>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion2,
+                SQLConstantes.ALL_COLUMNS_EVALUACION2,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Evaluacion2 evaluacion2 = new Evaluacion2();
+            evaluacion2.setEVALUACION2_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_ID)));
+            evaluacion2.setE2_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_1)));
+            evaluacion2.setE2_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_2)));
+            evaluacion2.setE2_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_3)));
+            evaluacion2.setE2_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_4)));
+            evaluacion2.setE2_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_5)));
+            evaluacion2.setE2_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_6)));
+            evaluacion2.setE2_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_7)));
+            evaluacion2.setE2_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_8)));
+            evaluacion2.setE2_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_9)));
+            evaluacion2.setE2_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_10)));
+            evaluacion2.setE2_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_11)));
+            evaluacion2.setE2_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_12)));
+            evaluacion2.setE2_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_13)));
+            evaluacion2.setE2_P1_14(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_14)));
+            evaluacion2.setE2_P1_15(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_15)));
+            evaluacion2.setE2_P1_16(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P1_16)));
+            evaluacion2.setE2_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_1)));
+            evaluacion2.setE2_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_2)));
+            evaluacion2.setE2_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_3)));
+            evaluacion2.setE2_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_4)));
+            evaluacion2.setE2_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P2_5)));
+            evaluacion2.setE2_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_1)));
+            evaluacion2.setE2_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_2)));
+            evaluacion2.setE2_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_3)));
+            evaluacion2.setE2_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_4)));
+            evaluacion2.setE2_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E2_P3_5)));
+            evaluaciones3.add(evaluacion2);
+        }
+        cursor.close();
+        return evaluaciones3;
+    }
+    public boolean existeEvaluacion2(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion2,
+                SQLConstantes.ALL_COLUMNS_EVALUACION2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarEvaluacion2(Evaluacion2 evaluacion2){
+        ContentValues contentValues = evaluacion2.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableEvaluacion2,null,contentValues);
+    }
+    //    public void insertarevaluaciones3(ArrayList<Evaluacion2> evaluaciones3){
+//        long items = getNumeroItemsEvaluacion2();
+//        if(items == 0){
+//            for (Evaluacion2 Evaluacion2 : evaluaciones3) {
+//                try {
+//                    insertarEvaluacion2(Evaluacion2);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarEvaluacion2(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableEvaluacion2,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteEvaluacion2(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableEvaluacion2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN EVALUACION 2-----------------------------------------------------------------
+
+    //---------------------------------EVALUACION 3-------------------------------------------------------------
+    public Evaluacion3 getEvaluacion3(String idEmpresa){
+        Evaluacion3 evaluacion3 = new Evaluacion3();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion3,
+                SQLConstantes.ALL_COLUMNS_EVALUACION3,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            evaluacion3.setEVALUACION3_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_ID)));
+            evaluacion3.setE3_P1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P1)));
+            evaluacion3.setE3_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P2)));
+            evaluacion3.setE3_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P3_1)));
+            evaluacion3.setE3_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P3_2)));
+            evaluacion3.setE3_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P3_3)));
+            evaluacion3.setE3_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P3_4)));
+            evaluacion3.setE3_P4_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_1)));
+            evaluacion3.setE3_P4_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_2)));
+            evaluacion3.setE3_P4_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_3)));
+            evaluacion3.setE3_P4_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_4)));
+            evaluacion3.setE3_P4_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_5)));
+            evaluacion3.setE3_P4_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_6)));
+            evaluacion3.setE3_P4_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_7)));
+            evaluacion3.setE3_P4_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_8)));
+            evaluacion3.setE3_P4_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_9)));
+            evaluacion3.setE3_P4_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_10)));
+        }
+        cursor.close();
+        return evaluacion3;
+    }
+    public ArrayList<Evaluacion3> getAllEvaluacion3(){
+        ArrayList<Evaluacion3> evaluaciones3 = new ArrayList<Evaluacion3>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion3,
+                SQLConstantes.ALL_COLUMNS_EVALUACION3,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Evaluacion3 evaluacion3 = new Evaluacion3();
+            evaluacion3.setEVALUACION3_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_ID)));
+            evaluacion3.setE3_P1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P1)));
+            evaluacion3.setE3_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P2)));
+            evaluacion3.setE3_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P3_1)));
+            evaluacion3.setE3_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P3_2)));
+            evaluacion3.setE3_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P3_3)));
+            evaluacion3.setE3_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P3_4)));
+            evaluacion3.setE3_P4_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_1)));
+            evaluacion3.setE3_P4_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_2)));
+            evaluacion3.setE3_P4_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_3)));
+            evaluacion3.setE3_P4_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_4)));
+            evaluacion3.setE3_P4_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_5)));
+            evaluacion3.setE3_P4_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_6)));
+            evaluacion3.setE3_P4_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_7)));
+            evaluacion3.setE3_P4_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_8)));
+            evaluacion3.setE3_P4_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_9)));
+            evaluacion3.setE3_P4_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_P4_10)));
+            evaluaciones3.add(evaluacion3);
+        }
+        cursor.close();
+        return evaluaciones3;
+    }
+    public boolean existeEvaluacion3(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion3,
+                SQLConstantes.ALL_COLUMNS_EVALUACION3,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarEvaluacion3(Evaluacion3 evaluacion3){
+        ContentValues contentValues = evaluacion3.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableEvaluacion3,null,contentValues);
+    }
+    //    public void insertarevaluaciones3(ArrayList<Evaluacion3> evaluaciones3){
+//        long items = getNumeroItemsEvaluacion3();
+//        if(items == 0){
+//            for (Evaluacion3 Evaluacion3 : evaluaciones3) {
+//                try {
+//                    insertarEvaluacion3(Evaluacion3);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarEvaluacion3(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableEvaluacion3,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteEvaluacion3(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableEvaluacion3,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN EVALUACION 3-----------------------------------------------------------------
+
+    //---------------------------------EVALUCION 4-------------------------------------------------------------
+    public Evaluacion4 getEvaluacion4(String idEmpresa){
+        Evaluacion4 evaluacion4 = new Evaluacion4();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion4,
+                SQLConstantes.ALL_COLUMNS_EVALUACION4,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            evaluacion4.setEVALUACION4_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_ID)));
+            evaluacion4.setE4_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_1)));
+            evaluacion4.setE4_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_2)));
+            evaluacion4.setE4_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_3)));
+            evaluacion4.setE4_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_4)));
+            evaluacion4.setE4_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_5)));
+            evaluacion4.setE4_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_6)));
+            evaluacion4.setE4_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_7)));
+            evaluacion4.setE4_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_8)));
+            evaluacion4.setE4_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_9)));
+            evaluacion4.setE4_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_10)));
+            evaluacion4.setE4_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_1)));
+            evaluacion4.setE4_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_2)));
+            evaluacion4.setE4_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_3)));
+            evaluacion4.setE4_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_4)));
+            evaluacion4.setE4_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_5)));
+            evaluacion4.setE4_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_1)));
+            evaluacion4.setE4_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_2)));
+            evaluacion4.setE4_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_3)));
+            evaluacion4.setE4_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_4)));
+            evaluacion4.setE4_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_5)));
+
+        }
+        cursor.close();
+        return evaluacion4;
+    }
+    public ArrayList<Evaluacion4> getAllEvaluacion4(){
+        ArrayList<Evaluacion4> evaluaciones4 = new ArrayList<Evaluacion4>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion4,
+                SQLConstantes.ALL_COLUMNS_EVALUACION4,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Evaluacion4 evaluacion4 = new Evaluacion4();
+            evaluacion4.setEVALUACION4_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_ID)));
+            evaluacion4.setE4_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_1)));
+            evaluacion4.setE4_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_2)));
+            evaluacion4.setE4_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_3)));
+            evaluacion4.setE4_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_4)));
+            evaluacion4.setE4_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_5)));
+            evaluacion4.setE4_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_6)));
+            evaluacion4.setE4_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_7)));
+            evaluacion4.setE4_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_8)));
+            evaluacion4.setE4_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_9)));
+            evaluacion4.setE4_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P1_10)));
+            evaluacion4.setE4_P2_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_1)));
+            evaluacion4.setE4_P2_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_2)));
+            evaluacion4.setE4_P2_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_3)));
+            evaluacion4.setE4_P2_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_4)));
+            evaluacion4.setE4_P2_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P2_5)));
+            evaluacion4.setE4_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_1)));
+            evaluacion4.setE4_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_2)));
+            evaluacion4.setE4_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_3)));
+            evaluacion4.setE4_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_4)));
+            evaluacion4.setE4_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E4_P3_5)));
+            evaluaciones4.add(evaluacion4);
+        }
+        cursor.close();
+        return evaluaciones4;
+    }
+    public boolean existeEvaluacion4(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion4,
+                SQLConstantes.ALL_COLUMNS_EVALUACION4,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarEvaluacion4(Evaluacion4 evaluacion4){
+        ContentValues contentValues = evaluacion4.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableEvaluacion4,null,contentValues);
+    }
+    //    public void insertarevaluaciones3(ArrayList<Evaluacion4> evaluaciones3){
+//        long items = getNumeroItemsEvaluacion4();
+//        if(items == 0){
+//            for (Evaluacion4 Evaluacion4 : evaluaciones3) {
+//                try {
+//                    insertarEvaluacion4(Evaluacion4);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarEvaluacion4(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableEvaluacion4,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteEvaluacion4(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableEvaluacion4,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN EVALUACION 4-----------------------------------------------------------------
+
+    //---------------------------------EVALUCION 5-------------------------------------------------------------
+    public Evaluacion5 getEvaluacion5(String idEmpresa){
+        Evaluacion5 evaluacion5 = new Evaluacion5();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion5,
+                SQLConstantes.ALL_COLUMNS_EVALUACION5,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            evaluacion5.setEVALUACION5_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_ID)));
+            evaluacion5.setE5_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_1)));
+            evaluacion5.setE5_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_2)));
+            evaluacion5.setE5_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_3)));
+            evaluacion5.setE5_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_4)));
+            evaluacion5.setE5_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_5)));
+            evaluacion5.setE5_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_6)));
+            evaluacion5.setE5_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_7)));
+            evaluacion5.setE5_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_8)));
+            evaluacion5.setE5_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_9)));
+            evaluacion5.setE5_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_10)));
+            evaluacion5.setE5_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_11)));
+            evaluacion5.setE5_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_12)));
+            evaluacion5.setE5_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P2)));
+            evaluacion5.setE5_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_1)));
+            evaluacion5.setE5_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_2)));
+            evaluacion5.setE5_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_3)));
+            evaluacion5.setE5_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_4)));
+            evaluacion5.setE5_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_5)));
+            evaluacion5.setE5_P3_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_6)));
+
+
+        }
+        cursor.close();
+        return evaluacion5;
+    }
+    public ArrayList<Evaluacion5> getAllEvaluacion5(){
+        ArrayList<Evaluacion5> evaluaciones5 = new ArrayList<Evaluacion5>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion5,
+                SQLConstantes.ALL_COLUMNS_EVALUACION5,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Evaluacion5 evaluacion5 = new Evaluacion5();
+            evaluacion5.setEVALUACION5_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_ID)));
+            evaluacion5.setE5_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_1)));
+            evaluacion5.setE5_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_2)));
+            evaluacion5.setE5_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_3)));
+            evaluacion5.setE5_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_4)));
+            evaluacion5.setE5_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_5)));
+            evaluacion5.setE5_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_6)));
+            evaluacion5.setE5_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_7)));
+            evaluacion5.setE5_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_8)));
+            evaluacion5.setE5_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_9)));
+            evaluacion5.setE5_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_10)));
+            evaluacion5.setE5_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_11)));
+            evaluacion5.setE5_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P1_12)));
+            evaluacion5.setE5_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P2)));
+            evaluacion5.setE5_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_1)));
+            evaluacion5.setE5_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_2)));
+            evaluacion5.setE5_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_3)));
+            evaluacion5.setE5_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_4)));
+            evaluacion5.setE5_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_5)));
+            evaluacion5.setE5_P3_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E5_P3_6)));
+            evaluaciones5.add(evaluacion5);
+        }
+        cursor.close();
+        return evaluaciones5;
+    }
+    public boolean existeEvaluacion5(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion5,
+                SQLConstantes.ALL_COLUMNS_EVALUACION5,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarEvaluacion5(Evaluacion5 evaluacion5){
+        ContentValues contentValues = evaluacion5.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableEvaluacion5,null,contentValues);
+    }
+    //    public void insertarevaluaciones3(ArrayList<Evaluacion5> evaluaciones3){
+//        long items = getNumeroItemsEvaluacion5();
+//        if(items == 0){
+//            for (Evaluacion5 Evaluacion5 : evaluaciones3) {
+//                try {
+//                    insertarEvaluacion5(Evaluacion5);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarEvaluacion5(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableEvaluacion5,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteEvaluacion5(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableEvaluacion5,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN EVALUACION 5-----------------------------------------------------------------
+
+    //---------------------------------EVALUCION 6-------------------------------------------------------------
+    public Evaluacion6 getEvaluacion6(String idEmpresa){
+        Evaluacion6 evaluacion6 = new Evaluacion6();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion6,
+                SQLConstantes.ALL_COLUMNS_EVALUACION6,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            evaluacion6.setEVALUACION6_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_ID)));
+            evaluacion6.setE6_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_1)));
+            evaluacion6.setE6_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_2)));
+            evaluacion6.setE6_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_3)));
+            evaluacion6.setE6_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_4)));
+            evaluacion6.setE6_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_5)));
+            evaluacion6.setE6_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_6)));
+            evaluacion6.setE6_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_7)));
+            evaluacion6.setE6_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_8)));
+            evaluacion6.setE6_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_9)));
+            evaluacion6.setE6_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_10)));
+            evaluacion6.setE6_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_11)));
+            evaluacion6.setE6_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_12)));
+            evaluacion6.setE6_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P2)));
+            evaluacion6.setE6_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_1)));
+            evaluacion6.setE6_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_2)));
+            evaluacion6.setE6_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_3)));
+            evaluacion6.setE6_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_4)));
+            evaluacion6.setE6_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_5)));
+            evaluacion6.setE6_P3_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_6)));
+
+        }
+        cursor.close();
+        return evaluacion6;
+    }
+    public ArrayList<Evaluacion6> getAllEvaluacion6(){
+        ArrayList<Evaluacion6> evaluaciones6 = new ArrayList<Evaluacion6>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion6,
+                SQLConstantes.ALL_COLUMNS_EVALUACION6,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Evaluacion6 evaluacion6 = new Evaluacion6();
+            evaluacion6.setEVALUACION6_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_ID)));
+            evaluacion6.setE6_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_1)));
+            evaluacion6.setE6_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_2)));
+            evaluacion6.setE6_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_3)));
+            evaluacion6.setE6_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_4)));
+            evaluacion6.setE6_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_5)));
+            evaluacion6.setE6_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_6)));
+            evaluacion6.setE6_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_7)));
+            evaluacion6.setE6_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_8)));
+            evaluacion6.setE6_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_9)));
+            evaluacion6.setE6_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_10)));
+            evaluacion6.setE6_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_11)));
+            evaluacion6.setE6_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P1_12)));
+            evaluacion6.setE6_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P2)));
+            evaluacion6.setE6_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_1)));
+            evaluacion6.setE6_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_2)));
+            evaluacion6.setE6_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_3)));
+            evaluacion6.setE6_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_4)));
+            evaluacion6.setE6_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_5)));
+            evaluacion6.setE6_P3_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E6_P3_6)));
+            evaluaciones6.add(evaluacion6);
+        }
+        cursor.close();
+        return evaluaciones6;
+    }
+    public boolean existeEvaluacion6(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion6,
+                SQLConstantes.ALL_COLUMNS_EVALUACION6,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarEvaluacion6(Evaluacion6 evaluacion6){
+        ContentValues contentValues = evaluacion6.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableEvaluacion6,null,contentValues);
+    }
+    //    public void insertarevaluaciones3(ArrayList<Evaluacion6> evaluaciones3){
+//        long items = getNumeroItemsEvaluacion6();
+//        if(items == 0){
+//            for (Evaluacion6 Evaluacion6 : evaluaciones3) {
+//                try {
+//                    insertarEvaluacion6(Evaluacion6);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarEvaluacion6(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableEvaluacion6,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteEvaluacion6(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableEvaluacion6,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN EVALUACION 6-----------------------------------------------------------------
+
+    //---------------------------------EVALUCION 7-------------------------------------------------------------
+    public Evaluacion7 getEvaluacion7(String idEmpresa){
+        Evaluacion7 evaluacion7 = new Evaluacion7();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion7,
+                SQLConstantes.ALL_COLUMNS_EVALUACION7,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            evaluacion7.setEVALUACION7_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_ID)));
+            evaluacion7.setE7_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_1)));
+            evaluacion7.setE7_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_2)));
+            evaluacion7.setE7_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_3)));
+            evaluacion7.setE7_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_4)));
+            evaluacion7.setE7_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_5)));
+            evaluacion7.setE7_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_6)));
+            evaluacion7.setE7_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_7)));
+            evaluacion7.setE7_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_8)));
+            evaluacion7.setE7_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_9)));
+            evaluacion7.setE7_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_10)));
+            evaluacion7.setE7_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_11)));
+            evaluacion7.setE7_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_12)));
+            evaluacion7.setE7_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_13)));
+            evaluacion7.setE7_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P2)));
+            evaluacion7.setE7_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_1)));
+            evaluacion7.setE7_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_2)));
+            evaluacion7.setE7_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_3)));
+            evaluacion7.setE7_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_4)));
+            evaluacion7.setE7_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_5)));
+
+        }
+        cursor.close();
+        return evaluacion7;
+    }
+    public ArrayList<Evaluacion7> getAllEvaluacion7(){
+        ArrayList<Evaluacion7> evaluaciones7 = new ArrayList<Evaluacion7>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion7,
+                SQLConstantes.ALL_COLUMNS_EVALUACION7,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Evaluacion7 evaluacion7 = new Evaluacion7();
+            evaluacion7.setEVALUACION7_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.E3_ID)));
+            evaluacion7.setE7_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_1)));
+            evaluacion7.setE7_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_2)));
+            evaluacion7.setE7_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_3)));
+            evaluacion7.setE7_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_4)));
+            evaluacion7.setE7_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_5)));
+            evaluacion7.setE7_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_6)));
+            evaluacion7.setE7_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_7)));
+            evaluacion7.setE7_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_8)));
+            evaluacion7.setE7_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_9)));
+            evaluacion7.setE7_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_10)));
+            evaluacion7.setE7_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_11)));
+            evaluacion7.setE7_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_12)));
+            evaluacion7.setE7_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P1_13)));
+            evaluacion7.setE7_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P2)));
+            evaluacion7.setE7_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_1)));
+            evaluacion7.setE7_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_2)));
+            evaluacion7.setE7_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_3)));
+            evaluacion7.setE7_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_4)));
+            evaluacion7.setE7_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.E7_P3_5)));
+            evaluaciones7.add(evaluacion7);
+        }
+        cursor.close();
+        return evaluaciones7;
+    }
+    public boolean existeEvaluacion7(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacion7,
+                SQLConstantes.ALL_COLUMNS_EVALUACION7,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarEvaluacion7(Evaluacion7 evaluacion7){
+        ContentValues contentValues = evaluacion7.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableEvaluacion7,null,contentValues);
+    }
+    //    public void insertarevaluaciones3(ArrayList<Evaluacion7> evaluaciones3){
+//        long items = getNumeroItemsEvaluacion7();
+//        if(items == 0){
+//            for (Evaluacion7 Evaluacion7 : evaluaciones3) {
+//                try {
+//                    insertarEvaluacion7(Evaluacion7);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarEvaluacion7(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableEvaluacion7,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteEvaluacion7(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableEvaluacion7,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN EVALUACION 7-----------------------------------------------------------------
+
+    //---------------------------------EVALUCION FINAL-------------------------------------------------------------
+    public EvaluacionFinal getEvaluacionFinal(String idEmpresa){
+        EvaluacionFinal evaluacionfinal = new EvaluacionFinal();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacionFinal,
+                SQLConstantes.ALL_COLUMNS_EVALUACIONFINAL,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            evaluacionfinal.setEVALUACIONFINAL_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_ID)));
+            evaluacionfinal.setEF_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_1)));
+            evaluacionfinal.setEF_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_2)));
+            evaluacionfinal.setEF_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_3)));
+            evaluacionfinal.setEF_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_4)));
+            evaluacionfinal.setEF_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_5)));
+            evaluacionfinal.setEF_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_6)));
+            evaluacionfinal.setEF_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_7)));
+            evaluacionfinal.setEF_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_8)));
+            evaluacionfinal.setEF_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_9)));
+            evaluacionfinal.setEF_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_10)));
+            evaluacionfinal.setEF_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_11)));
+            evaluacionfinal.setEF_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_12)));
+            evaluacionfinal.setEF_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_13)));
+            evaluacionfinal.setEF_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P2)));
+            evaluacionfinal.setEF_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_1)));
+            evaluacionfinal.setEF_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_2)));
+            evaluacionfinal.setEF_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_3)));
+            evaluacionfinal.setEF_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_4)));
+            evaluacionfinal.setEF_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_5)));
+
+
+        }
+        cursor.close();
+        return evaluacionfinal;
+    }
+    public ArrayList<EvaluacionFinal> getAllEvaluacionFinal(){
+        ArrayList<EvaluacionFinal> evaluacionesfinales = new ArrayList<EvaluacionFinal>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacionFinal,
+                SQLConstantes.ALL_COLUMNS_EVALUACIONFINAL,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            EvaluacionFinal evaluacionfinal = new EvaluacionFinal();
+            evaluacionfinal.setEVALUACIONFINAL_ID(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_ID)));
+            evaluacionfinal.setEF_P1_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_1)));
+            evaluacionfinal.setEF_P1_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_2)));
+            evaluacionfinal.setEF_P1_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_3)));
+            evaluacionfinal.setEF_P1_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_4)));
+            evaluacionfinal.setEF_P1_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_5)));
+            evaluacionfinal.setEF_P1_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_6)));
+            evaluacionfinal.setEF_P1_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_7)));
+            evaluacionfinal.setEF_P1_8(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_8)));
+            evaluacionfinal.setEF_P1_9(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_9)));
+            evaluacionfinal.setEF_P1_10(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_10)));
+            evaluacionfinal.setEF_P1_11(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_11)));
+            evaluacionfinal.setEF_P1_12(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_12)));
+            evaluacionfinal.setEF_P1_13(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P1_13)));
+            evaluacionfinal.setEF_P2(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P2)));
+            evaluacionfinal.setEF_P3_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_1)));
+            evaluacionfinal.setEF_P3_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_2)));
+            evaluacionfinal.setEF_P3_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_3)));
+            evaluacionfinal.setEF_P3_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_4)));
+            evaluacionfinal.setEF_P3_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.EF_P3_5)));
+            evaluacionesfinales.add(evaluacionfinal);
+        }
+        cursor.close();
+        return evaluacionesfinales;
+    }
+    public boolean existeEvaluacionFinal(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableEvaluacionFinal,
+                SQLConstantes.ALL_COLUMNS_EVALUACIONFINAL,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarEvaluacionFinal(EvaluacionFinal evaluacionFinal){
+        ContentValues contentValues = evaluacionFinal.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableEvaluacionFinal,null,contentValues);
+    }
+    //    public void insertarevaluaciones3(ArrayList<EvaluacionFinal> evaluaciones3){
+//        long items = getNumeroItemsEvaluacionFinal();
+//        if(items == 0){
+//            for (EvaluacionFinal EvaluacionFinal : modulos3) {
+//                try {
+//                    insertarEvaluacionFinal(EvaluacionFinal);
+//                }catch (SQLiteException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    }
+    public void actualizarEvaluacionFinal(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableEvaluacionFinal,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteEvaluacionFinal(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableEvaluacionFinal,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN EVALUACION Final-----------------------------------------------------------------
 
 
     //---------------------------------MODULO2-------------------------------------------------------------
@@ -1281,7 +2607,6 @@ public class Data {
         sqLiteDatabase.delete(SQLConstantes.tableModulo2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
     }
     //-------------------------------------FIN MODULO2-----------------------------------------------------------------
-
 
     //-----------------------------------------MODULO 3---------------------------------------------------------------
 

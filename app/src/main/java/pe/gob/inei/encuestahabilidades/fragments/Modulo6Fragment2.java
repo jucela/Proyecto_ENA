@@ -283,7 +283,7 @@ public class Modulo6Fragment2 extends Fragment {
         C5_t8=modulo5.getC5_P1_2_8();
         C5_t9=modulo5.getC5_P1_2_9();
 
-        modulo2= data.getModulo2(idempresa);
+        //modulo2= data.getModulo2(idempresa);
         C2_p1= modulo2.getC2_P1();
         C6_p3= modulo6.getC6_P3();
         C5_p1=modulo5.getC5_P1();

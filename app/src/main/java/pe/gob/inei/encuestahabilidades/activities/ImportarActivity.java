@@ -24,6 +24,7 @@ import pe.gob.inei.encuestahabilidades.modelo.Data;
 import pe.gob.inei.encuestahabilidades.modelo.SQLConstantes;
 import pe.gob.inei.encuestahabilidades.pojos.Caratula;
 import pe.gob.inei.encuestahabilidades.pojos.Control1;
+import pe.gob.inei.encuestahabilidades.pojos.Control2;
 import pe.gob.inei.encuestahabilidades.pojos.DatosEntrevista;
 import pe.gob.inei.encuestahabilidades.pojos.Identificacion;
 import pe.gob.inei.encuestahabilidades.pojos.Marco;
@@ -52,6 +53,7 @@ public class ImportarActivity extends AppCompatActivity {
     private ArrayList<Visita> visitas;
     private Identificacion identificacion;
     private Control1 control1;
+    private Control2 control2;
     private Modulo2 modulo2;
     private Modulo3 modulo3;
     private Modulo4 modulo4;
@@ -102,6 +104,7 @@ public class ImportarActivity extends AppCompatActivity {
         visitas = new ArrayList<Visita>();
         identificacion = new Identificacion();
         control1 = new Control1();
+        control2 = new Control2();
         modulo2 = new Modulo2();
         modulo3 = new Modulo3();
         modulo4 = new Modulo4();
@@ -159,7 +162,7 @@ public class ImportarActivity extends AppCompatActivity {
             if(visitas.size()>0){data.deleteAllVisitas(idEmpresa);data.insertarVisitas(visitas);}
             if(!identificacion.getID().equals("")){data.deleteIdentificacion(idEmpresa);data.insertarIdentificacion(identificacion);}
             if(!control1.getCONTROL1_ID().equals("")){data.deleteControl1(idEmpresa);data.insertarControl1(control1);}
-            if(!modulo2.getMODULO2_ID().equals("")){data.deleteModulo2(idEmpresa);data.insertarModulo2(modulo2);}
+            if(!modulo2.getMODULO2_ID().equals("")){data.deleteControl2(idEmpresa);data.insertarControl2(control2);}
             if(!modulo3.getMODULO3_ID().equals("")){data.deleteModulo3(idEmpresa);data.insertarModulo3(modulo3);}
             if(!modulo4.getMODULO4_ID().equals("")){data.deleteModulo4(idEmpresa);data.insertarModulo4(modulo4);}
             if(!modulo5.getMODULO5_ID().equals("")){data.deleteModulo5(idEmpresa);data.insertarModulo5(modulo5);}

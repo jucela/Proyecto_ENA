@@ -33,6 +33,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:text="@string/eval02_p01_sub01"/>
                 <RadioGroup
+                    android:id="@+id/e2_p1_rg1"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -59,6 +60,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:text="@string/eval02_p01_sub02"/>
                 <RadioGroup
+                    android:id="@+id/e2_p1_rg2"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -85,6 +87,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:text="@string/eval02_p01_sub03"/>
                 <RadioGroup
+                    android:id="@+id/e2_p1_rg3"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -111,6 +114,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:text="@string/eval02_p01_sub04"/>
                 <RadioGroup
+                    android:id="@+id/e2_p1_rg4"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -137,6 +141,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:text="@string/eval02_p01_sub05"/>
                 <RadioGroup
+                    android:id="@+id/e2_p1_rg5"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -163,6 +168,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:text="@string/eval02_p01_sub06"/>
                 <RadioGroup
+                    android:id="@+id/e2_p1_rg6"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -189,6 +195,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:text="@string/eval02_p01_sub07"/>
                 <RadioGroup
+                    android:id="@+id/e2_p1_rg7"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -215,6 +222,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:text="@string/eval02_p01_sub08"/>
                 <RadioGroup
+                    android:id="@+id/e2_p1_rg8"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

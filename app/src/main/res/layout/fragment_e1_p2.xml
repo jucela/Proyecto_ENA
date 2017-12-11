@@ -29,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioGroup
+                    android:id="@+id/e1_p2_rg"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -88,24 +89,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:id="@+id/e1_p3_et1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:hint="1."
                     android:inputType="text"/>
                 <EditText
+                    android:id="@+id/e1_p3_et2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:hint="2."
                     android:inputType="text"/>
                 <EditText
+                    android:id="@+id/e1_p3_et3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:hint="3."
                     android:inputType="text"/>
                 <EditText
+                    android:id="@+id/e1_p3_et4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"

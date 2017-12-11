@@ -173,7 +173,7 @@ public class Modulo2Fragment6 extends Fragment {
     public void cargarDatos(){
         data = new Data(context);
         data.open();
-        modulo2 = data.getModulo2(idempresa);
+        //modulo2 = data.getModulo2(idempresa);
 
         if(!modulo2.getC2_P23().equals("") && !modulo2.getC2_P23().equals("-1")){
             ((RadioButton)rgP23.getChildAt(Integer.parseInt(modulo2.getC2_P23()))).setChecked(true);
@@ -212,7 +212,7 @@ public class Modulo2Fragment6 extends Fragment {
         contentValues.put(SQLConstantes.MODULO2_P25_H,C2_P25_H);
         contentValues.put(SQLConstantes.MODULO2_P25_M,C2_P25_M);
         contentValues.put(SQLConstantes.MODULO2_OBS_MOD_II,OBS_MOD_II);
-        data.actualizarModulo2(idempresa,contentValues);
+        //data.actualizarModulo2(idempresa,contentValues);
         data.close();
     }
 

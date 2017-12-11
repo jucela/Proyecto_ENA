@@ -248,10 +248,288 @@ public class SQLConstantes {
     public static final String C2_P2_6 = "C2_P2_6";
     public static final String C2_P2_7 = "C2_P2_7";
 
-
-
-
-
+    //CONTROL III
+    public static final String C3_ID = "ID";
+    public static final String C3_P1_1 = "C3_P1_1";
+    public static final String C3_P1_2 = "C3_P1_2";
+    public static final String C3_P1_3 = "C3_P1_3";
+    public static final String C3_P1_4 = "C3_P1_4";
+    public static final String C3_P1_5 = "C3_P1_5";
+    public static final String C3_P1_6 = "C3_P1_6";
+    public static final String C3_P1_7 = "C3_P1_7";
+    public static final String C3_P1_8 = "C3_P1_8";
+    public static final String C3_P1_9 = "C3_P1_9";
+    public static final String C3_P1_10 = "C3_P1_10";
+    public static final String C3_P1_11 = "C3_P1_11";
+    public static final String C3_P1_12 = "C3_P1_12";
+    public static final String C3_P1_13 = "C3_P1_13";
+    public static final String C3_P1_14 = "C3_P1_14";
+    public static final String C3_P1_15 = "C3_P1_15";
+    public static final String C3_P2_1 = "C3_P2_1";
+    public static final String C3_P2_2 = "C3_P2_2";
+    public static final String C3_P2_3 = "C3_P2_3";
+    public static final String C3_P2_4 = "C3_P2_4";
+    public static final String C3_P2_5 = "C3_P2_5";
+    //CONTROL IV
+    public static final String C4_ID = "ID";
+    public static final String C4_P1_1 = "C4_P1_1";
+    public static final String C4_P1_2 = "C4_P1_2";
+    public static final String C4_P1_3 = "C4_P1_3";
+    public static final String C4_P1_4 = "C4_P1_4";
+    public static final String C4_P1_5 = "C4_P1_5";
+    public static final String C4_P2_1 = "C4_P2_1";
+    public static final String C4_P2_2 = "C4_P2_2";
+    public static final String C4_P2_3 = "C4_P2_3";
+    public static final String C4_P2_4 = "C4_P2_4";
+    public static final String C4_P2_5 = "C4_P2_5";
+    public static final String C4_P2_6 = "C4_P2_6";
+    public static final String C4_P2_7 = "C4_P2_7";
+    public static final String C4_P2_8 = "C4_P2_8";
+    public static final String C4_P2_9 = "C4_P2_9";
+    public static final String C4_P2_10 = "C4_P2_10";
+    public static final String C4_P2_11 = "C4_P2_11";
+    public static final String C4_P2_12 = "C4_P2_12";
+    public static final String C4_P2_13 = "C4_P2_13";
+    public static final String C4_P2_14 = "C4_P2_14";
+    public static final String C4_P2_15 = "C4_P2_15";
+    public static final String C5_P1_1 = "C5_P1_1";
+    //CONTROL V
+    public static final String C5_ID = "ID";
+    public static final String C5_P1_2 = "C5_P1_2";
+    public static final String C5_P1_3 = "C5_P1_3";
+    public static final String C5_P1_4 = "C5_P1_4";
+    public static final String C5_P1_5 = "C5_P1_5";
+    public static final String C5_P2_1 = "C5_P2_1";
+    public static final String C5_P2_2 = "C5_P2_2";
+    public static final String C5_P2_3 = "C5_P2_3";
+    public static final String C5_P2_4 = "C5_P2_4";
+    public static final String C5_P2_5 = "C5_P2_5";
+    public static final String C5_P2_6 = "C5_P2_6";
+    public static final String C5_P2_7 = "C5_P2_7";
+    public static final String C5_P2_8 = "C5_P2_8";
+    public static final String C5_P2_9 = "C5_P2_9";
+    public static final String C5_P2_10 = "C5_P2_10";
+    public static final String C5_P2_11 = "C5_P2_11";
+    public static final String C5_P2_12 = "C5_P2_12";
+    public static final String C5_P2_13 = "C5_P2_13";
+    public static final String C5_P2_14 = "C5_P2_14";
+    public static final String C5_P2_15 = "C5_P2_15";
+    //CONTROL VI
+    public static final String C6_ID = "ID";
+    public static final String C6_P1_1 = "C6_P1_1";
+    public static final String C6_P1_2 = "C6_P1_2";
+    public static final String C6_P1_3 = "C6_P1_3";
+    public static final String C6_P1_4 = "C6_P1_4";
+    public static final String C6_P1_5 = "C6_P1_5";
+    public static final String C6_P1_6 = "C6_P1_6";
+    public static final String C6_P1_7 = "C6_P1_7";
+    public static final String C6_P1_8 = "C6_P1_8";
+    public static final String C6_P1_9 = "C6_P1_9";
+    public static final String C6_P1_10 = "C6_P1_10";
+    public static final String C6_P1_11 = "C6_P1_11";
+    public static final String C6_P1_12 = "C6_P1_12";
+    public static final String C6_P1_13 = "C6_P1_13";
+    public static final String C6_P1_14 = "C6_P1_14";
+    public static final String C6_P1_15 = "C6_P1_15";
+    public static final String C6_P2_1 = "C6_P2_1";
+    public static final String C6_P2_2 = "C6_P2_2";
+    public static final String C6_P2_3 = "C6_P2_3";
+    public static final String C6_P2_4 = "C6_P2_4";
+    public static final String C6_P2_5 = "C6_P2_5";
+    //CONTROL VII
+    public static final String C7_ID = "ID";
+    public static final String C7_P1_1 = "C7_P1_1";
+    public static final String C7_P1_2 = "C7_P1_2";
+    public static final String C7_P1_3 = "C7_P1_3";
+    public static final String C7_P1_4 = "C7_P1_4";
+    public static final String C7_P1_5 = "C7_P1_5";
+    public static final String C7_P1_6 = "C7_P1_6";
+    public static final String C7_P2_1 = "C7_P2_1";
+    public static final String C7_P2_2 = "C7_P2_2";
+    public static final String C7_P2_3 = "C7_P2_3";
+    public static final String C7_P2_4 = "C7_P2_4";
+    public static final String C7_P2_5 = "C7_P2_5";
+    public static final String C7_P2_6 = "C7_P2_6";
+    public static final String C7_P2_7 = "C7_P2_7";
+    public static final String C7_P2_8 = "C7_P2_8";
+    public static final String C7_P2_9 = "C7_P2_9";
+    public static final String C7_P2_10 = "C7_P2_10";
+    public static final String C7_P2_11 = "C7_P2_11";
+    public static final String C7_P2_12 = "C7_P2_12";
+    public static final String C7_P2_13 = "C7_P2_13";
+    public static final String C7_P2_14 = "C7_P2_14";
+    //EVALUACION I
+    public static final String E1_ID = "ID";
+    public static final String E1_P1 = "E1_P1";
+    public static final String E1_P2 = "E1_P2";
+    public static final String E1_P3_1 = "E1_P3_1";
+    public static final String E1_P3_2 = "E1_P3_2";
+    public static final String E1_P3_3 = "E1_P3_3";
+    public static final String E1_P3_4 = "E1_P3_4";
+    public static final String E1_P4 = "E1_P4";
+    public static final String E1_P5_1 = "E1_P5_1";
+    public static final String E1_P5_2 = "E1_P5_2";
+    public static final String E1_P5_3 = "E1_P5_3";
+    public static final String E1_P5_4 = "E1_P5_4";
+    public static final String E1_P5_5 = "E1_P5_5";
+    public static final String E1_P5_6 = "E1_P5_6";
+    public static final String E1_P5_7 = "E1_P5_7";
+    public static final String E1_P5_8 = "E1_P5_8";
+    public static final String E1_P5_9 = "E1_P5_9";
+    public static final String E1_P5_10 = "E1_P5_10";
+    public static final String E1_P5_11 = "E1_P5_11";
+    //EVALUACION II
+    public static final String E2_ID = "ID";
+    public static final String E2_P1_1 = "E2_P1_1";
+    public static final String E2_P1_2 = "E2_P1_2";
+    public static final String E2_P1_3 = "E2_P1_3";
+    public static final String E2_P1_4 = "E2_P1_4";
+    public static final String E2_P1_5 = "E2_P1_5";
+    public static final String E2_P1_6 = "E2_P1_6";
+    public static final String E2_P1_7 = "E2_P1_7";
+    public static final String E2_P1_8 = "E2_P1_8";
+    public static final String E2_P1_9 = "E2_P1_9";
+    public static final String E2_P1_10 = "E2_P1_10";
+    public static final String E2_P1_11 = "E2_P1_11";
+    public static final String E2_P1_12 = "E2_P1_12";
+    public static final String E2_P1_13 = "E2_P1_13";
+    public static final String E2_P1_14 = "E2_P1_14";
+    public static final String E2_P1_15 = "E2_P1_15";
+    public static final String E2_P1_16 = "E2_P1_16";
+    public static final String E2_P2_1 = "E2_P2_1";
+    public static final String E2_P2_2 = "E2_P2_2";
+    public static final String E2_P2_3 = "E2_P2_3";
+    public static final String E2_P2_4 = "E2_P2_4";
+    public static final String E2_P2_5 = "E2_P2_5";
+    public static final String E2_P3_1 = "E2_P3_1";
+    public static final String E2_P3_2 = "E2_P3_2";
+    public static final String E2_P3_3 = "E2_P3_3";
+    public static final String E2_P3_4 = "E2_P3_4";
+    public static final String E2_P3_5 = "E2_P3_5";
+    //EVALUACION III
+    public static final String E3_ID = "ID";
+    public static final String E3_P1 = "E3_P1";
+    public static final String E3_P2 = "E3_P2";
+    public static final String E3_P3_1 = "E3_P3_1";
+    public static final String E3_P3_2 = "E3_P3_2";
+    public static final String E3_P3_3 = "E3_P3_3";
+    public static final String E3_P3_4 = "E3_P3_4";
+    public static final String E3_P4_1 = "E3_P4_1";
+    public static final String E3_P4_2 = "E3_P4_2";
+    public static final String E3_P4_3 = "E3_P4_3";
+    public static final String E3_P4_4 = "E3_P4_4";
+    public static final String E3_P4_5 = "E3_P4_5";
+    public static final String E3_P4_6 = "E3_P4_6";
+    public static final String E3_P4_7 = "E3_P4_7";
+    public static final String E3_P4_8 = "E3_P4_8";
+    public static final String E3_P4_9 = "E3_P4_9";
+    public static final String E3_P4_10 = "E3_P4_10";
+    //EVALUACION IV
+    public static final String E4_ID = "ID";
+    public static final String E4_P1_1 = "E4_P1_1";
+    public static final String E4_P1_2 = "E4_P1_2";
+    public static final String E4_P1_3 = "E4_P1_3";
+    public static final String E4_P1_4 = "E4_P1_4";
+    public static final String E4_P1_5 = "E4_P1_5";
+    public static final String E4_P1_6 = "E4_P1_6";
+    public static final String E4_P1_7 = "E4_P1_7";
+    public static final String E4_P1_8 = "E4_P1_8";
+    public static final String E4_P1_9 = "E4_P1_9";
+    public static final String E4_P1_10 = "E4_P1_10";
+    public static final String E4_P2_1 = "E4_P2_1";
+    public static final String E4_P2_2 = "E4_P2_2";
+    public static final String E4_P2_3 = "E4_P2_3";
+    public static final String E4_P2_4 = "E4_P2_4";
+    public static final String E4_P2_5 = "E4_P2_5";
+    public static final String E4_P3_1 = "E4_P3_1";
+    public static final String E4_P3_2 = "E4_P3_2";
+    public static final String E4_P3_3 = "E4_P3_3";
+    public static final String E4_P3_4 = "E4_P3_4";
+    public static final String E4_P3_5 = "E4_P3_5";
+    //EVALUACION V
+    public static final String E5_ID = "ID";
+    public static final String E5_P1_1 = "E5_P1_1";
+    public static final String E5_P1_2 = "E5_P1_2";
+    public static final String E5_P1_3 = "E5_P1_3";
+    public static final String E5_P1_4 = "E5_P1_4";
+    public static final String E5_P1_5 = "E5_P1_5";
+    public static final String E5_P1_6 = "E5_P1_6";
+    public static final String E5_P1_7 = "E5_P1_7";
+    public static final String E5_P1_8 = "E5_P1_8";
+    public static final String E5_P1_9 = "E5_P1_9";
+    public static final String E5_P1_10 = "E5_P1_10";
+    public static final String E5_P1_11 = "E5_P1_11";
+    public static final String E5_P1_12 = "E5_P1_12";
+    public static final String E5_P2 = "E5_P2";
+    public static final String E5_P3_1 = "E5_P3_1";
+    public static final String E5_P3_2 = "E5_P3_2";
+    public static final String E5_P3_3 = "E5_P3_3";
+    public static final String E5_P3_4 = "E5_P3_4";
+    public static final String E5_P3_5 = "E5_P3_5";
+    public static final String E5_P3_6 = "E5_P3_6";
+    //EVALUACION VI
+    public static final String E6_ID = "ID";
+    public static final String E6_P1_1 = "E6_P1_1";
+    public static final String E6_P1_2 = "E6_P1_2";
+    public static final String E6_P1_3 = "E6_P1_3";
+    public static final String E6_P1_4 = "E6_P1_4";
+    public static final String E6_P1_5 = "E6_P1_5";
+    public static final String E6_P1_6 = "E6_P1_6";
+    public static final String E6_P1_7 = "E6_P1_7";
+    public static final String E6_P1_8 = "E6_P1_8";
+    public static final String E6_P1_9 = "E6_P1_9";
+    public static final String E6_P1_10 = "E6_P1_10";
+    public static final String E6_P1_11 = "E6_P1_11";
+    public static final String E6_P1_12 = "E6_P1_12";
+    public static final String E6_P2 = "E6_P2";
+    public static final String E6_P3_1 = "E6_P3_1";
+    public static final String E6_P3_2 = "E6_P3_2";
+    public static final String E6_P3_3 = "E6_P3_3";
+    public static final String E6_P3_4 = "E6_P3_4";
+    public static final String E6_P3_5 = "E6_P3_5";
+    public static final String E6_P3_6 = "E6_P3_6";
+    //EVALUACION VII
+    public static final String E7_ID = "ID";
+    public static final String E7_P1_1 = "E7_P1_1";
+    public static final String E7_P1_2 = "E7_P1_2";
+    public static final String E7_P1_3 = "E7_P1_3";
+    public static final String E7_P1_4 = "E7_P1_4";
+    public static final String E7_P1_5 = "E7_P1_5";
+    public static final String E7_P1_6 = "E7_P1_6";
+    public static final String E7_P1_7 = "E7_P1_7";
+    public static final String E7_P1_8 = "E7_P1_8";
+    public static final String E7_P1_9 = "E7_P1_9";
+    public static final String E7_P1_10 = "E7_P1_10";
+    public static final String E7_P1_11 = "E7_P1_11";
+    public static final String E7_P1_12 = "E7_P1_12";
+    public static final String E7_P1_13 = "E7_P1_13";
+    public static final String E7_P2 = "E7_P2";
+    public static final String E7_P3_1 = "E7_P3_1";
+    public static final String E7_P3_2 = "E7_P3_2";
+    public static final String E7_P3_3 = "E7_P3_3";
+    public static final String E7_P3_4 = "E7_P3_4";
+    public static final String E7_P3_5 = "E7_P3_5";
+    //EVALUACION FINAL
+    public static final String EF_ID = "ID";
+    public static final String EF_P1_1 = "EF_P1_1";
+    public static final String EF_P1_2 = "EF_P1_2";
+    public static final String EF_P1_3 = "EF_P1_3";
+    public static final String EF_P1_4 = "EF_P1_4";
+    public static final String EF_P1_5 = "EF_P1_5";
+    public static final String EF_P1_6 = "EF_P1_6";
+    public static final String EF_P1_7 = "EF_P1_7";
+    public static final String EF_P1_8 = "EF_P1_8";
+    public static final String EF_P1_9 = "EF_P1_9";
+    public static final String EF_P1_10 = "EF_P1_10";
+    public static final String EF_P1_11 = "EF_P1_11";
+    public static final String EF_P1_12 = "EF_P1_12";
+    public static final String EF_P1_13 = "EF_P1_13";
+    public static final String EF_P2 = "EF_P2";
+    public static final String EF_P3_1 = "EF_P3_1";
+    public static final String EF_P3_2 = "EF_P3_2";
+    public static final String EF_P3_3 = "EF_P3_3";
+    public static final String EF_P3_4 = "EF_P3_4";
+    public static final String EF_P3_5 = "EF_P3_5";
 
 
 
@@ -2026,6 +2304,344 @@ public class SQLConstantes {
                     C2_P2_6  +  " TEXT, " +
                     C2_P2_7  +  " TEXT " +");"
             ;
+    //TABLA CONTROL3
+    public static final String SQL_CREATE_TABLA_CONTROL3 =
+            "CREATE TABLE " + tableControl3 + "(" +
+                    C3_ID  + " TEXT PRIMARY KEY," +
+    C3_P1_1  +  " TEXT, " +
+    C3_P1_2  +  " TEXT, " +
+    C3_P1_3  +  " TEXT, " +
+    C3_P1_4  +  " TEXT, " +
+    C3_P1_5  +  " TEXT, " +
+    C3_P1_6  +  " TEXT, " +
+    C3_P1_7  +  " TEXT, " +
+    C3_P1_8  +  " TEXT, " +
+    C3_P1_9  +  " TEXT, " +
+    C3_P1_10  +  " TEXT, " +
+    C3_P1_11  +  " TEXT, " +
+    C3_P1_12  +  " TEXT, " +
+    C3_P1_13  +  " TEXT, " +
+    C3_P1_14  +  " TEXT, " +
+    C3_P1_15  +  " TEXT, " +
+    C3_P2_1  +  " TEXT, " +
+    C3_P2_2  +  " TEXT, " +
+    C3_P2_3  +  " TEXT, " +
+    C3_P2_4  +  " TEXT, " +
+    C3_P2_5  +  " TEXT " +");"
+            ;
+
+    //TABLA CONTROL4
+    public static final String SQL_CREATE_TABLA_CONTROL4 =
+            "CREATE TABLE " + tableControl4 + "(" +
+                    C4_ID  + " TEXT PRIMARY KEY," +
+    C4_P1_1  +  " TEXT, " +
+    C4_P1_2  +  " TEXT, " +
+    C4_P1_3  +  " TEXT, " +
+    C4_P1_4  +  " TEXT, " +
+    C4_P1_5  +  " TEXT, " +
+    C4_P2_1  +  " TEXT, " +
+    C4_P2_2  +  " TEXT, " +
+    C4_P2_3  +  " TEXT, " +
+    C4_P2_4  +  " TEXT, " +
+    C4_P2_5  +  " TEXT, " +
+    C4_P2_6  +  " TEXT, " +
+    C4_P2_7  +  " TEXT, " +
+    C4_P2_8  +  " TEXT, " +
+    C4_P2_9  +  " TEXT, " +
+    C4_P2_10  +  " TEXT, " +
+    C4_P2_11  +  " TEXT, " +
+    C4_P2_12  +  " TEXT, " +
+    C4_P2_13  +  " TEXT, " +
+    C4_P2_14  +  " TEXT, " +
+    C4_P2_15  +  " TEXT " +");"
+            ;
+
+    //TABLA CONTROL5
+    public static final String SQL_CREATE_TABLA_CONTROL5 =
+            "CREATE TABLE " + tableControl5 + "(" +
+                    C5_ID  + " TEXT PRIMARY KEY," +
+    C5_P1_1  +  " TEXT, " +
+    C5_P1_2  +  " TEXT, " +
+    C5_P1_3  +  " TEXT, " +
+    C5_P1_4  +  " TEXT, " +
+    C5_P1_5  +  " TEXT, " +
+    C5_P2_1  +  " TEXT, " +
+    C5_P2_2  +  " TEXT, " +
+    C5_P2_3  +  " TEXT, " +
+    C5_P2_4  +  " TEXT, " +
+    C5_P2_5  +  " TEXT, " +
+    C5_P2_6  +  " TEXT, " +
+    C5_P2_7  +  " TEXT, " +
+    C5_P2_8  +  " TEXT, " +
+    C5_P2_9  +  " TEXT, " +
+    C5_P2_10  +  " TEXT, " +
+    C5_P2_11  +  " TEXT, " +
+    C5_P2_12  +  " TEXT, " +
+    C5_P2_13  +  " TEXT, " +
+    C5_P2_14  +  " TEXT, " +
+    C5_P2_15  +  " TEXT " +");"
+            ;
+
+
+    //TABLA CONTROL6
+    public static final String SQL_CREATE_TABLA_CONTROL6 =
+            "CREATE TABLE " + tableControl6 + "(" +
+                    C6_ID  + " TEXT PRIMARY KEY," +
+    C6_P1_1  +  " TEXT, " +
+    C6_P1_2  +  " TEXT, " +
+    C6_P1_3  +  " TEXT, " +
+    C6_P1_4  +  " TEXT, " +
+    C6_P1_5  +  " TEXT, " +
+    C6_P1_6  +  " TEXT, " +
+    C6_P1_7  +  " TEXT, " +
+    C6_P1_8  +  " TEXT, " +
+    C6_P1_9  +  " TEXT, " +
+    C6_P1_10  +  " TEXT, " +
+    C6_P1_11  +  " TEXT, " +
+    C6_P1_12  +  " TEXT, " +
+    C6_P1_13  +  " TEXT, " +
+    C6_P1_14  +  " TEXT, " +
+    C6_P1_15  +  " TEXT, " +
+    C6_P2_1  +  " TEXT, " +
+    C6_P2_2  +  " TEXT, " +
+    C6_P2_3  +  " TEXT, " +
+    C6_P2_4  +  " TEXT, " +
+    C6_P2_5  +  " TEXT " +");"
+            ;
+
+    //TABLA CONTROL7
+    public static final String SQL_CREATE_TABLA_CONTROL7 =
+            "CREATE TABLE " + tableControl7 + "(" +
+                    C7_ID  + " TEXT PRIMARY KEY," +
+    C7_P1_1  +  " TEXT, " +
+    C7_P1_2  +  " TEXT, " +
+    C7_P1_3  +  " TEXT, " +
+    C7_P1_4  +  " TEXT, " +
+    C7_P1_5  +  " TEXT, " +
+    C7_P1_6  +  " TEXT, " +
+    C7_P2_1  +  " TEXT, " +
+    C7_P2_2  +  " TEXT, " +
+    C7_P2_3  +  " TEXT, " +
+    C7_P2_4  +  " TEXT, " +
+    C7_P2_5  +  " TEXT, " +
+    C7_P2_6  +  " TEXT, " +
+    C7_P2_7  +  " TEXT, " +
+    C7_P2_8  +  " TEXT, " +
+    C7_P2_9  +  " TEXT, " +
+    C7_P2_10  +  " TEXT, " +
+    C7_P2_11  +  " TEXT, " +
+    C7_P2_12  +  " TEXT, " +
+    C7_P2_13  +  " TEXT, " +
+    C7_P2_14  +  " TEXT " +");"
+            ;
+
+    //TABLA EVALUACION1
+    public static final String SQL_CREATE_TABLA_EVALUACION1 =
+            "CREATE TABLE " + tableEvaluacion1 + "(" +
+                    E1_ID  + " TEXT PRIMARY KEY," +
+    E1_P1  +  " TEXT, " +
+    E1_P2  +  " TEXT, " +
+    E1_P3_1  +  " TEXT, " +
+    E1_P3_2  +  " TEXT, " +
+    E1_P3_3  +  " TEXT, " +
+    E1_P3_4  +  " TEXT, " +
+    E1_P4  +  " TEXT, " +
+    E1_P5_1  +  " TEXT, " +
+    E1_P5_2  +  " TEXT, " +
+    E1_P5_3  +  " TEXT, " +
+    E1_P5_4  +  " TEXT, " +
+    E1_P5_5  +  " TEXT, " +
+    E1_P5_6  +  " TEXT, " +
+    E1_P5_7  +  " TEXT, " +
+    E1_P5_8  +  " TEXT, " +
+    E1_P5_9  +  " TEXT, " +
+    E1_P5_10  +  " TEXT, " +
+    E1_P5_11  +  " TEXT " +");"
+            ;
+
+    //TABLA EVALUACION2
+    public static final String SQL_CREATE_TABLA_EVALUACION2 =
+            "CREATE TABLE " + tableEvaluacion2 + "(" +
+                    E2_ID  + " TEXT PRIMARY KEY," +
+    E2_P1_1  +  " TEXT, " +
+    E2_P1_2  +  " TEXT, " +
+    E2_P1_3  +  " TEXT, " +
+    E2_P1_4  +  " TEXT, " +
+    E2_P1_5  +  " TEXT, " +
+    E2_P1_6  +  " TEXT, " +
+    E2_P1_7  +  " TEXT, " +
+    E2_P1_8  +  " TEXT, " +
+    E2_P1_9  +  " TEXT, " +
+    E2_P1_10  +  " TEXT, " +
+    E2_P1_11  +  " TEXT, " +
+    E2_P1_12  +  " TEXT, " +
+    E2_P1_13  +  " TEXT, " +
+    E2_P1_14  +  " TEXT, " +
+    E2_P1_15  +  " TEXT, " +
+    E2_P1_16  +  " TEXT, " +
+    E2_P2_1  +  " TEXT, " +
+    E2_P2_2  +  " TEXT, " +
+    E2_P2_3  +  " TEXT, " +
+    E2_P2_4  +  " TEXT, " +
+    E2_P2_5  +  " TEXT, " +
+    E2_P3_1  +  " TEXT, " +
+    E2_P3_2  +  " TEXT, " +
+    E2_P3_3  +  " TEXT, " +
+    E2_P3_4  +  " TEXT, " +
+    E2_P3_5  +  " TEXT " +");"
+            ;
+
+    //TABLA EVALUACION3
+    public static final String SQL_CREATE_TABLA_EVALUACION3 =
+            "CREATE TABLE " + tableEvaluacion3 + "(" +
+                    E3_ID  + " TEXT PRIMARY KEY," +
+    E3_P1  +  " TEXT, " +
+    E3_P2  +  " TEXT, " +
+    E3_P3_1  +  " TEXT, " +
+    E3_P3_2  +  " TEXT, " +
+    E3_P3_3  +  " TEXT, " +
+    E3_P3_4  +  " TEXT, " +
+    E3_P4_1  +  " TEXT, " +
+    E3_P4_2  +  " TEXT, " +
+    E3_P4_3  +  " TEXT, " +
+    E3_P4_4  +  " TEXT, " +
+    E3_P4_5  +  " TEXT, " +
+    E3_P4_6  +  " TEXT, " +
+    E3_P4_7  +  " TEXT, " +
+    E3_P4_8  +  " TEXT, " +
+    E3_P4_9  +  " TEXT, " +
+    E3_P4_10  +  " TEXT " +");"
+            ;
+
+    //TABLA EVALUACION4
+    public static final String SQL_CREATE_TABLA_EVALUACION4 =
+            "CREATE TABLE " + tableEvaluacion4 + "(" +
+                    E4_ID  + " TEXT PRIMARY KEY," +
+    E4_P1_1  +  " TEXT, " +
+    E4_P1_2  +  " TEXT, " +
+    E4_P1_3  +  " TEXT, " +
+    E4_P1_4  +  " TEXT, " +
+    E4_P1_5  +  " TEXT, " +
+    E4_P1_6  +  " TEXT, " +
+    E4_P1_7  +  " TEXT, " +
+    E4_P1_8  +  " TEXT, " +
+    E4_P1_9  +  " TEXT, " +
+    E4_P1_10  +  " TEXT, " +
+    E4_P2_1  +  " TEXT, " +
+    E4_P2_2  +  " TEXT, " +
+    E4_P2_3  +  " TEXT, " +
+    E4_P2_4  +  " TEXT, " +
+    E4_P2_5  +  " TEXT, " +
+    E4_P3_1  +  " TEXT, " +
+    E4_P3_2  +  " TEXT, " +
+    E4_P3_3  +  " TEXT, " +
+    E4_P3_4  +  " TEXT, " +
+    E4_P3_5  +  " TEXT " +");"
+            ;
+
+    //TABLA EVALUACION5
+    public static final String SQL_CREATE_TABLA_EVALUACION5 =
+            "CREATE TABLE " + tableEvaluacion5 + "(" +
+                    E5_ID  + " TEXT PRIMARY KEY," +
+    E5_P1_1  +  " TEXT, " +
+    E5_P1_2  +  " TEXT, " +
+    E5_P1_3  +  " TEXT, " +
+    E5_P1_4  +  " TEXT, " +
+    E5_P1_5  +  " TEXT, " +
+    E5_P1_6  +  " TEXT, " +
+    E5_P1_7  +  " TEXT, " +
+    E5_P1_8  +  " TEXT, " +
+    E5_P1_9  +  " TEXT, " +
+    E5_P1_10  +  " TEXT, " +
+    E5_P1_11  +  " TEXT, " +
+    E5_P1_12  +  " TEXT, " +
+    E5_P2  +  " TEXT, " +
+    E5_P3_1  +  " TEXT, " +
+    E5_P3_2  +  " TEXT, " +
+    E5_P3_3  +  " TEXT, " +
+    E5_P3_4  +  " TEXT, " +
+    E5_P3_5  +  " TEXT, " +
+    E5_P3_6  +  " TEXT " +");"
+            ;
+
+    //TABLA EVALUACION6
+    public static final String SQL_CREATE_TABLA_EVALUACION6 =
+            "CREATE TABLE " + tableEvaluacion6 + "(" +
+                    E6_ID  + " TEXT PRIMARY KEY," +
+    E6_P1_1  +  " TEXT, " +
+    E6_P1_2  +  " TEXT, " +
+    E6_P1_3  +  " TEXT, " +
+    E6_P1_4  +  " TEXT, " +
+    E6_P1_5  +  " TEXT, " +
+    E6_P1_6  +  " TEXT, " +
+    E6_P1_7  +  " TEXT, " +
+    E6_P1_8  +  " TEXT, " +
+    E6_P1_9  +  " TEXT, " +
+    E6_P1_10  +  " TEXT, " +
+    E6_P1_11  +  " TEXT, " +
+    E6_P1_12  +  " TEXT, " +
+    E6_P2  +  " TEXT, " +
+    E6_P3_1  +  " TEXT, " +
+    E6_P3_2  +  " TEXT, " +
+    E6_P3_3  +  " TEXT, " +
+    E6_P3_4  +  " TEXT, " +
+    E6_P3_5  +  " TEXT, " +
+    E6_P3_6  +  " TEXT " +");"
+            ;
+
+    //TABLA EVALUACION7
+    public static final String SQL_CREATE_TABLA_EVALUACION7 =
+            "CREATE TABLE " + tableEvaluacion7 + "(" +
+                    E7_ID  + " TEXT PRIMARY KEY," +
+    E7_P1_1  +  " TEXT, " +
+    E7_P1_2  +  " TEXT, " +
+    E7_P1_3  +  " TEXT, " +
+    E7_P1_4  +  " TEXT, " +
+    E7_P1_5  +  " TEXT, " +
+    E7_P1_6  +  " TEXT, " +
+    E7_P1_7  +  " TEXT, " +
+    E7_P1_8  +  " TEXT, " +
+    E7_P1_9  +  " TEXT, " +
+    E7_P1_10  +  " TEXT, " +
+    E7_P1_11  +  " TEXT, " +
+    E7_P1_12  +  " TEXT, " +
+    E7_P1_13  +  " TEXT, " +
+    E7_P2  +  " TEXT, " +
+    E7_P3_1  +  " TEXT, " +
+    E7_P3_2  +  " TEXT, " +
+    E7_P3_3  +  " TEXT, " +
+    E7_P3_4  +  " TEXT, " +
+    E7_P3_5  +  " TEXT " +");"
+            ;
+
+    //TABLA EVALUACIONFINAL
+    public static final String SQL_CREATE_TABLA_EVALUACIONFINAL =
+            "CREATE TABLE " + tableEvaluacionFinal + "(" +
+                    EF_ID  + " TEXT PRIMARY KEY," +
+    EF_P1_1  +  " TEXT, " +
+    EF_P1_2  +  " TEXT, " +
+    EF_P1_3  +  " TEXT, " +
+    EF_P1_4  +  " TEXT, " +
+    EF_P1_5  +  " TEXT, " +
+    EF_P1_6  +  " TEXT, " +
+    EF_P1_7  +  " TEXT, " +
+    EF_P1_8  +  " TEXT, " +
+    EF_P1_9  +  " TEXT, " +
+    EF_P1_10  +  " TEXT, " +
+    EF_P1_11  +  " TEXT, " +
+    EF_P1_12  +  " TEXT, " +
+    EF_P1_13  +  " TEXT, " +
+    EF_P2  +  " TEXT, " +
+    EF_P3_1  +  " TEXT, " +
+    EF_P3_2  +  " TEXT, " +
+    EF_P3_3  +  " TEXT, " +
+    EF_P3_4  +  " TEXT, " +
+    EF_P3_5  +  " TEXT " +");"
+            ;
+
+
+
+
 
     //TABLA MODULO2
     public static final String SQL_CREATE_TABLA_MODULO2=
@@ -3772,6 +4388,316 @@ public class SQLConstantes {
             C2_P2_7
 
     };
+    //CONTROL 3
+    public static final String[] ALL_COLUMNS_CONTROL3 = {
+            C3_ID,
+    C3_P1_1,
+    C3_P1_2,
+    C3_P1_3,
+    C3_P1_4,
+    C3_P1_5,
+    C3_P1_6,
+    C3_P1_7,
+    C3_P1_8,
+    C3_P1_9,
+    C3_P1_10,
+    C3_P1_11,
+    C3_P1_12,
+    C3_P1_13,
+    C3_P1_14,
+    C3_P1_15,
+    C3_P2_1,
+    C3_P2_2,
+    C3_P2_3,
+    C3_P2_4,
+    C3_P2_5
+    };
+    //CONTROL 4
+    public static final String[] ALL_COLUMNS_CONTROL4 = {
+            C4_ID,
+    C4_P1_1,
+    C4_P1_2,
+    C4_P1_3,
+    C4_P1_4,
+    C4_P1_5,
+    C4_P2_1,
+    C4_P2_2,
+    C4_P2_3,
+    C4_P2_4,
+    C4_P2_5,
+    C4_P2_6,
+    C4_P2_7,
+    C4_P2_8,
+    C4_P2_9,
+    C4_P2_10,
+    C4_P2_11,
+    C4_P2_12,
+    C4_P2_13,
+    C4_P2_14,
+    C4_P2_15
+    };
+    //CONTROL 5
+    public static final String[] ALL_COLUMNS_CONTROL5 = {
+            C5_ID,
+    C5_P1_1,
+    C5_P1_2,
+    C5_P1_3,
+    C5_P1_4,
+    C5_P1_5,
+    C5_P2_1,
+    C5_P2_2,
+    C5_P2_3,
+    C5_P2_4,
+    C5_P2_5,
+    C5_P2_6,
+    C5_P2_7,
+    C5_P2_8,
+    C5_P2_9,
+    C5_P2_10,
+    C5_P2_11,
+    C5_P2_12,
+    C5_P2_13,
+    C5_P2_14,
+    C5_P2_15
+    };
+    //CONTROL
+    public static final String[] ALL_COLUMNS_CONTROL6 = {
+            C6_ID,
+    C6_P1_1,
+    C6_P1_2,
+    C6_P1_3,
+    C6_P1_4,
+    C6_P1_5,
+    C6_P1_6,
+    C6_P1_7,
+    C6_P1_8,
+    C6_P1_9,
+    C6_P1_10,
+    C6_P1_11,
+    C6_P1_12,
+    C6_P1_13,
+    C6_P1_14,
+    C6_P1_15,
+    C6_P2_1,
+    C6_P2_2,
+    C6_P2_3,
+    C6_P2_4,
+    C6_P2_5
+    };
+    //CONTROL 7
+    public static final String[] ALL_COLUMNS_CONTROL7 = {
+            C7_ID,
+    C7_P1_1,
+    C7_P1_2,
+    C7_P1_3,
+    C7_P1_4,
+    C7_P1_5,
+    C7_P1_6,
+    C7_P2_1,
+    C7_P2_2,
+    C7_P2_3,
+    C7_P2_4,
+    C7_P2_5,
+    C7_P2_6,
+    C7_P2_7,
+    C7_P2_8,
+    C7_P2_9,
+    C7_P2_10,
+    C7_P2_11,
+    C7_P2_12,
+    C7_P2_13,
+    C7_P2_14
+    };
+    //EVALUACION1
+    public static final String[] ALL_COLUMNS_EVALUACION1 = {
+            E1_ID,
+    E1_P1,
+    E1_P2,
+    E1_P3_1,
+    E1_P3_2,
+    E1_P3_3,
+    E1_P3_4,
+    E1_P4,
+    E1_P5_1,
+    E1_P5_2,
+    E1_P5_3,
+    E1_P5_4,
+    E1_P5_5,
+    E1_P5_6,
+    E1_P5_7,
+    E1_P5_8,
+    E1_P5_9,
+    E1_P5_10,
+    E1_P5_11
+    };
+    //EVALUACION2
+    public static final String[] ALL_COLUMNS_EVALUACION2 = {
+            E2_ID,
+    E2_P1_1,
+    E2_P1_2,
+    E2_P1_3,
+    E2_P1_4,
+    E2_P1_5,
+    E2_P1_6,
+    E2_P1_7,
+    E2_P1_8,
+    E2_P1_9,
+    E2_P1_10,
+    E2_P1_11,
+    E2_P1_12,
+    E2_P1_13,
+    E2_P1_14,
+    E2_P1_15,
+    E2_P1_16,
+    E2_P2_1,
+    E2_P2_2,
+    E2_P2_3,
+    E2_P2_4,
+    E2_P2_5,
+    E2_P3_1,
+    E2_P3_2,
+    E2_P3_3,
+    E2_P3_4,
+    E2_P3_5
+    };
+    //EVALUACION 3
+    public static final String[] ALL_COLUMNS_EVALUACION3 = {
+            E3_ID,
+    E3_P1,
+    E3_P2,
+    E3_P3_1,
+    E3_P3_2,
+    E3_P3_3,
+    E3_P3_4,
+    E3_P4_1,
+    E3_P4_2,
+    E3_P4_3,
+    E3_P4_4,
+    E3_P4_5,
+    E3_P4_6,
+    E3_P4_7,
+    E3_P4_8,
+    E3_P4_9,
+    E3_P4_10
+    };
+    //EVALUACION 4
+    public static final String[] ALL_COLUMNS_EVALUACION4 = {
+            E4_ID,
+    E4_P1_1,
+    E4_P1_2,
+    E4_P1_3,
+    E4_P1_4,
+    E4_P1_5,
+    E4_P1_6,
+    E4_P1_7,
+    E4_P1_8,
+    E4_P1_9,
+    E4_P1_10,
+    E4_P2_1,
+    E4_P2_2,
+    E4_P2_3,
+    E4_P2_4,
+    E4_P2_5,
+    E4_P3_1,
+    E4_P3_2,
+    E4_P3_3,
+    E4_P3_4,
+    E4_P3_5
+    };
+    //EVALUACION 5
+    public static final String[] ALL_COLUMNS_EVALUACION5 = {
+            E5_ID,
+    E5_P1_1,
+    E5_P1_2,
+    E5_P1_3,
+    E5_P1_4,
+    E5_P1_5,
+    E5_P1_6,
+    E5_P1_7,
+    E5_P1_8,
+    E5_P1_9,
+    E5_P1_10,
+    E5_P1_11,
+    E5_P1_12,
+    E5_P2,
+    E5_P3_1,
+    E5_P3_2,
+    E5_P3_3,
+    E5_P3_4,
+    E5_P3_5,
+    E5_P3_6
+    };
+    //EVALUACION 6
+    public static final String[] ALL_COLUMNS_EVALUACION6 = {
+            E6_ID,
+    E6_P1_1,
+    E6_P1_2,
+    E6_P1_3,
+    E6_P1_4,
+    E6_P1_5,
+    E6_P1_6,
+    E6_P1_7,
+    E6_P1_8,
+    E6_P1_9,
+    E6_P1_10,
+    E6_P1_11,
+    E6_P1_12,
+    E6_P2,
+    E6_P3_1,
+    E6_P3_2,
+    E6_P3_3,
+    E6_P3_4,
+    E6_P3_5,
+    E6_P3_6
+    };
+    //EVALUACION 7
+    public static final String[] ALL_COLUMNS_EVALUACION7 = {
+    E7_ID,
+    E7_P1_1,
+    E7_P1_2,
+    E7_P1_3,
+    E7_P1_4,
+    E7_P1_5,
+    E7_P1_6,
+    E7_P1_7,
+    E7_P1_8,
+    E7_P1_9,
+    E7_P1_10,
+    E7_P1_11,
+    E7_P1_12,
+    E7_P1_13,
+    E7_P2,
+    E7_P3_1,
+    E7_P3_2,
+    E7_P3_3,
+    E7_P3_4,
+    E7_P3_5
+    };
+    //EVALUACIONFINAL
+    public static final String[] ALL_COLUMNS_EVALUACIONFINAL = {
+            EF_ID,
+    EF_P1_1,
+    EF_P1_2,
+    EF_P1_3,
+    EF_P1_4,
+    EF_P1_5,
+    EF_P1_6,
+    EF_P1_7,
+    EF_P1_8,
+    EF_P1_9,
+    EF_P1_10,
+    EF_P1_11,
+    EF_P1_12,
+    EF_P1_13,
+    EF_P2,
+    EF_P3_1,
+    EF_P3_2,
+    EF_P3_3,
+    EF_P3_4,
+    EF_P3_5};
+
+
+
 
     //MODULO 2
     public static final String[] ALL_COLUMNS_MODULO2 = {

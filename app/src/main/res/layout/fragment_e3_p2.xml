@@ -41,6 +41,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/e3_p3_sp1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -70,6 +71,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/e3_p3_s2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -99,6 +101,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/e3_p3_sp3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -128,6 +131,7 @@
                     android:layout_marginRight="@dimen/layout_margin10dp"
                     android:background="@drawable/borde_pregunta">
                     <Spinner
+                        android:id="@+id/e3_p3_sp4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawSelectorOnTop="true"
@@ -139,8 +143,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/eval03_p03_op04"/>
             </LinearLayout>
-
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

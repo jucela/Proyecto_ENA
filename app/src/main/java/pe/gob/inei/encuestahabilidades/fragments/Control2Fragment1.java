@@ -259,7 +259,7 @@ public class Control2Fragment1 extends Fragment {
         contentValues.put(SQLConstantes.C2_P1_11,C2_P1_11+"");
         contentValues.put(SQLConstantes.C2_P1_12,C2_P1_12+"");
         contentValues.put(SQLConstantes.C2_P1_13,C2_P1_13+"");
-        data.actualizarcontrol2(idempresa,contentValues);
+        data.actualizarControl2(idempresa,contentValues);
         }else{
             //si no existe el elemento, lo construye para insertarlo
             control2 = new Control2();

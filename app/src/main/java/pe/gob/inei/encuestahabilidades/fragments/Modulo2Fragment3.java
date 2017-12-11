@@ -103,9 +103,9 @@ public class Modulo2Fragment3 extends Fragment {
         this.context = context;
         Data data = new Data(context);
         data.open();
-        if (!data.getModulo2(idempresa).getC2_P1().equals("")){
-            mod2P1 = Integer.parseInt(data.getModulo2(idempresa).getC2_P1());
-        }
+//        if (!data.getModulo2(idempresa).getC2_P1().equals("")){
+//            mod2P1 = Integer.parseInt(data.getModulo2(idempresa).getC2_P1());
+//        }
     }
 
     @Override

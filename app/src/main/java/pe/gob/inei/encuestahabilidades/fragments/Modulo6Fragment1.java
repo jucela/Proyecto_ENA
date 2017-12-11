@@ -218,7 +218,7 @@ public class Modulo6Fragment1 extends Fragment {
 //        { cargos= identificacion2.getCARGO_INFORMANTE_ESP();}
 //        else{cargos= identificacion2.getCARGO_INFORMANTE_ESP();}
 
-        modulo2 = data.getModulo2(idempresa);
+        //modulo2 = data.getModulo2(idempresa);
         C2_p1=modulo2.getC2_P1();
 
         modulo5 = data.getModulo5(idempresa);
@@ -1306,7 +1306,7 @@ public class Modulo6Fragment1 extends Fragment {
             suma = suma + Integer.parseInt(mod6_p3_edt9.getText().toString());
         }
 
-        Modulo2 modulo2 = data.getModulo2(idempresa);
+        //Modulo2 modulo2 = data.getModulo2(idempresa);
         ContentValues f = new ContentValues(1);
         if(suma == Integer.parseInt(modulo2.getC2_P1())){
             f.put(SQLConstantes.FRAGMENT_HABILITADO,"0");

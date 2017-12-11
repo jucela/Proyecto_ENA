@@ -540,225 +540,225 @@ public class Modulo2Fragment5 extends Fragment {
         contentValues.put(SQLConstantes.MODULO2_P22_2_4,C2_P22_2_4);
         contentValues.put(SQLConstantes.MODULO2_P22_2_5,C2_P22_2_5);
         contentValues.put(SQLConstantes.MODULO2_P22_2_6,C2_P22_2_6);
-        data.actualizarModulo2(idempresa,contentValues);
+        //data.actualizarModulo2(idempresa,contentValues);
         data.close();
     }
 
-    public boolean validar(){
-        boolean valido = false;
-        llenarMapaVariables();
-        String mensaje = "";
-        data =new Data(context);
-        data.open();
-        int C2_P11_1_6 = Integer.parseInt(data.getModulo2(idempresa).getC2_P11_1_6());
-        int C2_P12_2 = 0;
-        if(C2_P11_1_6 == 1){
-            C2_P12_2 = Integer.parseInt(data.getModulo2(idempresa).getC2_P12_2());
-        }
-        data.close();
-        boolean vC2_P20_1_1=false,
-        vC2_P20_1_2=false,
-        vC2_P20_1_3=false,
-        vC2_P20_1_4=false,
-        vC2_P20_1_5=false,
-        vC2_P20_1_6=false,
-        vC2_P20_1_7=false,
-        vC2_P20_1_8=false,
-        vC2_P20_1_8_0=false,
-        vC2_P20_2_1=false,
-        vC2_P20_2_2=false,
-        vC2_P20_2_3=false,
-        vC2_P20_2_4=false,
-        vC2_P20_2_5=false,
-        vC2_P20_2_6=false,
-        vC2_P20_2_7=false,
-        vC2_P20_2_8=false,
-        vC2_P21=false,
-        vC2_P22_1_1=false,
-        vC2_P22_1_2=false,
-        vC2_P22_1_3=false,
-        vC2_P22_1_4=false,
-        vC2_P22_1_5=false,
-        vC2_P22_1_6=false,
-        vC2_P22_1_6_0=false,
-        vC2_P22_2_1=false,
-        vC2_P22_2_2=false,
-        vC2_P22_2_3=false,
-        vC2_P22_2_4=false,
-        vC2_P22_2_5=false,
-        vC2_P22_2_6=false,
-        vsumaPorcentaje = false,
-        validacionAdicional = true;
-
-        if(C2_P20_1_1 == 1 ||C2_P20_1_2 == 1 ||C2_P20_1_3 == 1 ||C2_P20_1_4 == 1 ||C2_P20_1_5 == 1 ||C2_P20_1_6 == 1 ||C2_P20_1_7 == 1||C2_P20_1_8 == 1) {
-            vC2_P20_1_1 = true;vC2_P20_1_2 = true;vC2_P20_1_3 = true;
-            vC2_P20_1_4 = true;vC2_P20_1_5 = true;vC2_P20_1_6 = true;
-            vC2_P20_1_7 = true;vC2_P20_1_8 = true;
-        }else if(mensaje.equals(""))mensaje = "PREGUNTA 20: DEBE SELECCIONAR ALGUNA OPCION";
-        if(edtEspecifiqueP20.isEnabled()){
-            if(C2_P20_1_8_0.trim().length() != 0) vC2_P20_1_8_0 = true;
-            else if(mensaje.equals(""))mensaje = "PREGUNTA 20: DEBE ESPECIFICAR SI SELECCIONA OTRO";
-        }else vC2_P20_1_8_0=true;
-
-        int opcSeleccionadas = C2_P20_1_1 + C2_P20_1_2 + C2_P20_1_3 + C2_P20_1_4 + C2_P20_1_5 + C2_P20_1_6 + C2_P20_1_7+ C2_P20_1_8;
-        int ordenSeleccionado = C2_P20_2_1 + C2_P20_2_2 + C2_P20_2_3 + C2_P20_2_4 + C2_P20_2_5 + C2_P20_2_6 + C2_P20_2_7+ C2_P20_2_8;
-        if(opcSeleccionadas == 1){
-            if(ordenSeleccionado == 1){
-                vC2_P20_2_1=true;vC2_P20_2_2=true;vC2_P20_2_3=true;vC2_P20_2_4=true;vC2_P20_2_5=true;vC2_P20_2_6=true;vC2_P20_2_7=true;vC2_P20_2_8=true;
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 20: SI SELECCIONO SOLO UNA OPCION, DEBE ASIGNAR 1 PARA EL ORDEN DE IMPORTANCIA DE LA RAZON";
-        }else if(opcSeleccionadas == 2){
-            if(ordenSeleccionado == 3){
-                vC2_P20_2_1=true;vC2_P20_2_2=true;vC2_P20_2_3=true;vC2_P20_2_4=true;vC2_P20_2_5=true;vC2_P20_2_6=true;vC2_P20_2_7=true;vC2_P20_2_8=true;
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 20: SI SELECCIONO SOLO 2 OPCIONES, DEBE ASIGNAR 1 Y 2 PARA EL ORDEN DE IMPORTANCIA DE LAS RAZONES";
-        }else{
-            if(ordenSeleccionado == 6){
-                vC2_P20_2_1=true;vC2_P20_2_2=true;vC2_P20_2_3=true;vC2_P20_2_4=true;vC2_P20_2_5=true;vC2_P20_2_6=true;vC2_P20_2_7=true;vC2_P20_2_8=true;
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 20: DEBE ELEGIR 1, 2 O 3 SEGUN EL ORDEN DE IMPORTANCIA";
-        }
-
-        if(C2_P21 != -1) vC2_P21 = true;
-        else if(mensaje.equals(""))mensaje = "PREGUNTA 21: DEBE ELEGIR UNA OPCION";
-
-        if(C2_P21 == 1){
-            if(C2_P11_1_6 == 1 && C2_P12_2 == 1){
-                validacionAdicional = false;
-                if(mensaje.equals(""))mensaje = "PREGUNTA 21: CONOCE LA REINCORPORACION DE TRABAJADORES " +
-                        "POR FALLAS DEL TRIBUNAL CONSTITUCIONAL PERO NO LO CONSIDERA COMO UNA RAZON DE " +
-                        "QUE ES COSTOSO TERMINAR UN CONTRATO PERMANENTE";
-            }
-        }
-
-        if(C2_P22_1_1 != -1) vC2_P22_1_1 = true;
-        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
-        if(C2_P22_1_2 != -1) vC2_P22_1_2 = true;
-        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
-        if(C2_P22_1_3 != -1) vC2_P22_1_3 = true;
-        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
-        if(C2_P22_1_4 != -1) vC2_P22_1_4 = true;
-        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
-        if(C2_P22_1_5 != -1) vC2_P22_1_5 = true;
-        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
-        if(C2_P22_1_6 != -1) vC2_P22_1_6 = true;
-        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
-
-        if(edtEspecifiqueP22.isEnabled()){
-            if(C2_P22_1_6_0.trim().length() != 0) vC2_P22_1_6_0 = true;
-            else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR SI MARCA OTRO";
-        }else vC2_P22_1_6_0=true;
-
-        if(edt1P22.isEnabled()){
-            if(C2_P22_2_1.trim().length() != 0){
-                if(Integer.parseInt(C2_P22_2_1) <= 100){
-                    vC2_P22_2_1 = true;
-                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
-        }else vC2_P22_2_1=true;
-        if(edt2P22.isEnabled()){
-            if(C2_P22_2_2.trim().length() != 0){
-                if(Integer.parseInt(C2_P22_2_2) <= 100){
-                    vC2_P22_2_2 = true;
-                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
-        }else vC2_P22_2_2=true;
-        if(edt3P22.isEnabled()){
-            if(C2_P22_2_3.trim().length() != 0){
-                if(Integer.parseInt(C2_P22_2_3) <= 100){
-                    vC2_P22_2_3 = true;
-                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
-        }else vC2_P22_2_3=true;
-        if(edt4P22.isEnabled()){
-            if(C2_P22_2_4.trim().length() != 0){
-                if(Integer.parseInt(C2_P22_2_4) <= 100){
-                    vC2_P22_2_4= true;
-                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
-        }else vC2_P22_2_4=true;
-        if(edt5P22.isEnabled()){
-            if(C2_P22_2_5.trim().length() != 0){
-                if(Integer.parseInt(C2_P22_2_5) <= 100){
-                    vC2_P22_2_5 = true;
-                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
-        }else vC2_P22_2_5=true;
-        if(edt6P22.isEnabled()){
-            if(C2_P22_2_6.trim().length() != 0){
-                if(Integer.parseInt(C2_P22_2_6) <= 100){
-                    vC2_P22_2_6 = true;
-                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
-            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
-        }else vC2_P22_2_6=true;
-
-        valido = vC2_P20_1_1 &&
-                vC2_P20_1_2 &&
-                vC2_P20_1_3 &&
-                vC2_P20_1_4 &&
-                vC2_P20_1_5 &&
-                vC2_P20_1_6 &&
-                vC2_P20_1_7 &&
-                vC2_P20_1_8 &&
-                vC2_P20_1_8_0 &&
-                vC2_P20_2_1 &&
-                vC2_P20_2_2 &&
-                vC2_P20_2_3 &&
-                vC2_P20_2_4 &&
-                vC2_P20_2_5 &&
-                vC2_P20_2_6 &&
-                vC2_P20_2_7 &&
-                vC2_P20_2_8 &&
-                vC2_P21 &&
-                vC2_P22_1_1 &&
-                vC2_P22_1_2 &&
-                vC2_P22_1_3 &&
-                vC2_P22_1_4 &&
-                vC2_P22_1_5 &&
-                vC2_P22_1_6 &&
-                vC2_P22_1_6_0 &&
-                vC2_P22_2_1 &&
-                vC2_P22_2_2 &&
-                vC2_P22_2_3 &&
-                vC2_P22_2_4 &&
-                vC2_P22_2_5 &&
-                vC2_P22_2_6 &&
-                //vsumaPorcentaje &&
-                validacionAdicional;
-
-        if(!valido) {
-            mostrarMensaje(mensaje);
-            Log.e("vC2_P20_1_1:",vC2_P20_1_1 + "");
-            Log.e("vC2_P20_1_2:",vC2_P20_1_2 + "");
-            Log.e("vC2_P20_1_3:",vC2_P20_1_3 + "");
-            Log.e("vC2_P20_1_4:",vC2_P20_1_4 + "");
-            Log.e("vC2_P20_1_5:",vC2_P20_1_5 + "");
-            Log.e("vC2_P20_1_6:",vC2_P20_1_6 + "");
-            Log.e("vC2_P20_1_7:",vC2_P20_1_7 + "");
-            Log.e("vC2_P20_1_8:",vC2_P20_1_8 + "");
-            Log.e("vC2_P20_1_8_0:",vC2_P20_1_8_0 + "");
-            Log.e("vC2_P20_2_1:",vC2_P20_2_1 + "");
-            Log.e("vC2_P20_2_2:",vC2_P20_2_2 + "");
-            Log.e("vC2_P20_2_3:",vC2_P20_2_3 + "");
-            Log.e("vC2_P20_2_4:",vC2_P20_2_4 + "");
-            Log.e("vC2_P20_2_5:",vC2_P20_2_5 + "");
-            Log.e("vC2_P20_2_6:",vC2_P20_2_6 + "");
-            Log.e("vC2_P20_2_7:",vC2_P20_2_7 + "");
-            Log.e("vC2_P20_2_8:",vC2_P20_2_8 + "");
-            Log.e("vC2_P21:",vC2_P21 + "");
-            Log.e("vC2_P22_1_1:",vC2_P22_1_1 + "");
-            Log.e("vC2_P22_1_2:",vC2_P22_1_2 + "");
-            Log.e("vC2_P22_1_3:",vC2_P22_1_3 + "");
-            Log.e("vC2_P22_1_4:",vC2_P22_1_4 + "");
-            Log.e("vC2_P22_1_5:",vC2_P22_1_5 + "");
-            Log.e("vC2_P22_1_6:",vC2_P22_1_6 + "");
-            Log.e("vC2_P22_1_6_0:",vC2_P22_1_6_0 + "");
-            Log.e("vC2_P22_2_1:",vC2_P22_2_1 + "");
-            Log.e("vC2_P22_2_2:",vC2_P22_2_2 + "");
-            Log.e("vC2_P22_2_3:",vC2_P22_2_3 + "");
-            Log.e("vC2_P22_2_4:",vC2_P22_2_4 + "");
-            Log.e("vC2_P22_2_5:",vC2_P22_2_5 + "");
-            Log.e("vC2_P22_2_6:",vC2_P22_2_6 + "");
-        }
-        return valido;
-    }
+//    public boolean validar(){
+//        boolean valido = false;
+//        llenarMapaVariables();
+//        String mensaje = "";
+//        data =new Data(context);
+//        data.open();
+////        int C2_P11_1_6 = Integer.parseInt(data.getModulo2(idempresa).getC2_P11_1_6());
+////        int C2_P12_2 = 0;
+////        if(C2_P11_1_6 == 1){
+////            C2_P12_2 = Integer.parseInt(data.getModulo2(idempresa).getC2_P12_2());
+////        }
+//        data.close();
+//        boolean vC2_P20_1_1=false,
+//        vC2_P20_1_2=false,
+//        vC2_P20_1_3=false,
+//        vC2_P20_1_4=false,
+//        vC2_P20_1_5=false,
+//        vC2_P20_1_6=false,
+//        vC2_P20_1_7=false,
+//        vC2_P20_1_8=false,
+//        vC2_P20_1_8_0=false,
+//        vC2_P20_2_1=false,
+//        vC2_P20_2_2=false,
+//        vC2_P20_2_3=false,
+//        vC2_P20_2_4=false,
+//        vC2_P20_2_5=false,
+//        vC2_P20_2_6=false,
+//        vC2_P20_2_7=false,
+//        vC2_P20_2_8=false,
+//        vC2_P21=false,
+//        vC2_P22_1_1=false,
+//        vC2_P22_1_2=false,
+//        vC2_P22_1_3=false,
+//        vC2_P22_1_4=false,
+//        vC2_P22_1_5=false,
+//        vC2_P22_1_6=false,
+//        vC2_P22_1_6_0=false,
+//        vC2_P22_2_1=false,
+//        vC2_P22_2_2=false,
+//        vC2_P22_2_3=false,
+//        vC2_P22_2_4=false,
+//        vC2_P22_2_5=false,
+//        vC2_P22_2_6=false,
+//        vsumaPorcentaje = false,
+//        validacionAdicional = true;
+//
+//        if(C2_P20_1_1 == 1 ||C2_P20_1_2 == 1 ||C2_P20_1_3 == 1 ||C2_P20_1_4 == 1 ||C2_P20_1_5 == 1 ||C2_P20_1_6 == 1 ||C2_P20_1_7 == 1||C2_P20_1_8 == 1) {
+//            vC2_P20_1_1 = true;vC2_P20_1_2 = true;vC2_P20_1_3 = true;
+//            vC2_P20_1_4 = true;vC2_P20_1_5 = true;vC2_P20_1_6 = true;
+//            vC2_P20_1_7 = true;vC2_P20_1_8 = true;
+//        }else if(mensaje.equals(""))mensaje = "PREGUNTA 20: DEBE SELECCIONAR ALGUNA OPCION";
+//        if(edtEspecifiqueP20.isEnabled()){
+//            if(C2_P20_1_8_0.trim().length() != 0) vC2_P20_1_8_0 = true;
+//            else if(mensaje.equals(""))mensaje = "PREGUNTA 20: DEBE ESPECIFICAR SI SELECCIONA OTRO";
+//        }else vC2_P20_1_8_0=true;
+//
+//        int opcSeleccionadas = C2_P20_1_1 + C2_P20_1_2 + C2_P20_1_3 + C2_P20_1_4 + C2_P20_1_5 + C2_P20_1_6 + C2_P20_1_7+ C2_P20_1_8;
+//        int ordenSeleccionado = C2_P20_2_1 + C2_P20_2_2 + C2_P20_2_3 + C2_P20_2_4 + C2_P20_2_5 + C2_P20_2_6 + C2_P20_2_7+ C2_P20_2_8;
+//        if(opcSeleccionadas == 1){
+//            if(ordenSeleccionado == 1){
+//                vC2_P20_2_1=true;vC2_P20_2_2=true;vC2_P20_2_3=true;vC2_P20_2_4=true;vC2_P20_2_5=true;vC2_P20_2_6=true;vC2_P20_2_7=true;vC2_P20_2_8=true;
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 20: SI SELECCIONO SOLO UNA OPCION, DEBE ASIGNAR 1 PARA EL ORDEN DE IMPORTANCIA DE LA RAZON";
+//        }else if(opcSeleccionadas == 2){
+//            if(ordenSeleccionado == 3){
+//                vC2_P20_2_1=true;vC2_P20_2_2=true;vC2_P20_2_3=true;vC2_P20_2_4=true;vC2_P20_2_5=true;vC2_P20_2_6=true;vC2_P20_2_7=true;vC2_P20_2_8=true;
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 20: SI SELECCIONO SOLO 2 OPCIONES, DEBE ASIGNAR 1 Y 2 PARA EL ORDEN DE IMPORTANCIA DE LAS RAZONES";
+//        }else{
+//            if(ordenSeleccionado == 6){
+//                vC2_P20_2_1=true;vC2_P20_2_2=true;vC2_P20_2_3=true;vC2_P20_2_4=true;vC2_P20_2_5=true;vC2_P20_2_6=true;vC2_P20_2_7=true;vC2_P20_2_8=true;
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 20: DEBE ELEGIR 1, 2 O 3 SEGUN EL ORDEN DE IMPORTANCIA";
+//        }
+//
+//        if(C2_P21 != -1) vC2_P21 = true;
+//        else if(mensaje.equals(""))mensaje = "PREGUNTA 21: DEBE ELEGIR UNA OPCION";
+//
+//        if(C2_P21 == 1){
+//            if(C2_P11_1_6 == 1 && C2_P12_2 == 1){
+//                validacionAdicional = false;
+//                if(mensaje.equals(""))mensaje = "PREGUNTA 21: CONOCE LA REINCORPORACION DE TRABAJADORES " +
+//                        "POR FALLAS DEL TRIBUNAL CONSTITUCIONAL PERO NO LO CONSIDERA COMO UNA RAZON DE " +
+//                        "QUE ES COSTOSO TERMINAR UN CONTRATO PERMANENTE";
+//            }
+//        }
+//
+//        if(C2_P22_1_1 != -1) vC2_P22_1_1 = true;
+//        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
+//        if(C2_P22_1_2 != -1) vC2_P22_1_2 = true;
+//        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
+//        if(C2_P22_1_3 != -1) vC2_P22_1_3 = true;
+//        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
+//        if(C2_P22_1_4 != -1) vC2_P22_1_4 = true;
+//        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
+//        if(C2_P22_1_5 != -1) vC2_P22_1_5 = true;
+//        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
+//        if(C2_P22_1_6 != -1) vC2_P22_1_6 = true;
+//        else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE MARCAR SI O NO PARA TODAS LAS OPCIONES";
+//
+//        if(edtEspecifiqueP22.isEnabled()){
+//            if(C2_P22_1_6_0.trim().length() != 0) vC2_P22_1_6_0 = true;
+//            else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR SI MARCA OTRO";
+//        }else vC2_P22_1_6_0=true;
+//
+//        if(edt1P22.isEnabled()){
+//            if(C2_P22_2_1.trim().length() != 0){
+//                if(Integer.parseInt(C2_P22_2_1) <= 100){
+//                    vC2_P22_2_1 = true;
+//                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
+//        }else vC2_P22_2_1=true;
+//        if(edt2P22.isEnabled()){
+//            if(C2_P22_2_2.trim().length() != 0){
+//                if(Integer.parseInt(C2_P22_2_2) <= 100){
+//                    vC2_P22_2_2 = true;
+//                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
+//        }else vC2_P22_2_2=true;
+//        if(edt3P22.isEnabled()){
+//            if(C2_P22_2_3.trim().length() != 0){
+//                if(Integer.parseInt(C2_P22_2_3) <= 100){
+//                    vC2_P22_2_3 = true;
+//                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
+//        }else vC2_P22_2_3=true;
+//        if(edt4P22.isEnabled()){
+//            if(C2_P22_2_4.trim().length() != 0){
+//                if(Integer.parseInt(C2_P22_2_4) <= 100){
+//                    vC2_P22_2_4= true;
+//                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
+//        }else vC2_P22_2_4=true;
+//        if(edt5P22.isEnabled()){
+//            if(C2_P22_2_5.trim().length() != 0){
+//                if(Integer.parseInt(C2_P22_2_5) <= 100){
+//                    vC2_P22_2_5 = true;
+//                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
+//        }else vC2_P22_2_5=true;
+//        if(edt6P22.isEnabled()){
+//            if(C2_P22_2_6.trim().length() != 0){
+//                if(Integer.parseInt(C2_P22_2_6) <= 100){
+//                    vC2_P22_2_6 = true;
+//                }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: EL PORCENTAJE NO PUEDE EXCEDER AL 100%";
+//            }else if(mensaje.equals(""))mensaje = "PREGUNTA 22: DEBE ESPECIFICAR PARA QUE PORCENTAJE DE SUS TRABAJADORES";
+//        }else vC2_P22_2_6=true;
+//
+//        valido = vC2_P20_1_1 &&
+//                vC2_P20_1_2 &&
+//                vC2_P20_1_3 &&
+//                vC2_P20_1_4 &&
+//                vC2_P20_1_5 &&
+//                vC2_P20_1_6 &&
+//                vC2_P20_1_7 &&
+//                vC2_P20_1_8 &&
+//                vC2_P20_1_8_0 &&
+//                vC2_P20_2_1 &&
+//                vC2_P20_2_2 &&
+//                vC2_P20_2_3 &&
+//                vC2_P20_2_4 &&
+//                vC2_P20_2_5 &&
+//                vC2_P20_2_6 &&
+//                vC2_P20_2_7 &&
+//                vC2_P20_2_8 &&
+//                vC2_P21 &&
+//                vC2_P22_1_1 &&
+//                vC2_P22_1_2 &&
+//                vC2_P22_1_3 &&
+//                vC2_P22_1_4 &&
+//                vC2_P22_1_5 &&
+//                vC2_P22_1_6 &&
+//                vC2_P22_1_6_0 &&
+//                vC2_P22_2_1 &&
+//                vC2_P22_2_2 &&
+//                vC2_P22_2_3 &&
+//                vC2_P22_2_4 &&
+//                vC2_P22_2_5 &&
+//                vC2_P22_2_6 &&
+//                //vsumaPorcentaje &&
+//                validacionAdicional;
+//
+//        if(!valido) {
+//            mostrarMensaje(mensaje);
+//            Log.e("vC2_P20_1_1:",vC2_P20_1_1 + "");
+//            Log.e("vC2_P20_1_2:",vC2_P20_1_2 + "");
+//            Log.e("vC2_P20_1_3:",vC2_P20_1_3 + "");
+//            Log.e("vC2_P20_1_4:",vC2_P20_1_4 + "");
+//            Log.e("vC2_P20_1_5:",vC2_P20_1_5 + "");
+//            Log.e("vC2_P20_1_6:",vC2_P20_1_6 + "");
+//            Log.e("vC2_P20_1_7:",vC2_P20_1_7 + "");
+//            Log.e("vC2_P20_1_8:",vC2_P20_1_8 + "");
+//            Log.e("vC2_P20_1_8_0:",vC2_P20_1_8_0 + "");
+//            Log.e("vC2_P20_2_1:",vC2_P20_2_1 + "");
+//            Log.e("vC2_P20_2_2:",vC2_P20_2_2 + "");
+//            Log.e("vC2_P20_2_3:",vC2_P20_2_3 + "");
+//            Log.e("vC2_P20_2_4:",vC2_P20_2_4 + "");
+//            Log.e("vC2_P20_2_5:",vC2_P20_2_5 + "");
+//            Log.e("vC2_P20_2_6:",vC2_P20_2_6 + "");
+//            Log.e("vC2_P20_2_7:",vC2_P20_2_7 + "");
+//            Log.e("vC2_P20_2_8:",vC2_P20_2_8 + "");
+//            Log.e("vC2_P21:",vC2_P21 + "");
+//            Log.e("vC2_P22_1_1:",vC2_P22_1_1 + "");
+//            Log.e("vC2_P22_1_2:",vC2_P22_1_2 + "");
+//            Log.e("vC2_P22_1_3:",vC2_P22_1_3 + "");
+//            Log.e("vC2_P22_1_4:",vC2_P22_1_4 + "");
+//            Log.e("vC2_P22_1_5:",vC2_P22_1_5 + "");
+//            Log.e("vC2_P22_1_6:",vC2_P22_1_6 + "");
+//            Log.e("vC2_P22_1_6_0:",vC2_P22_1_6_0 + "");
+//            Log.e("vC2_P22_2_1:",vC2_P22_2_1 + "");
+//            Log.e("vC2_P22_2_2:",vC2_P22_2_2 + "");
+//            Log.e("vC2_P22_2_3:",vC2_P22_2_3 + "");
+//            Log.e("vC2_P22_2_4:",vC2_P22_2_4 + "");
+//            Log.e("vC2_P22_2_5:",vC2_P22_2_5 + "");
+//            Log.e("vC2_P22_2_6:",vC2_P22_2_6 + "");
+//        }
+//        return valido;
+//    }
     public void mostrarToast(String mensaje){
         int toastDurationInMilliSeconds = 6000;
         mToastToShow = Toast.makeText(context, mensaje, Toast.LENGTH_LONG);
